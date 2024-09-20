@@ -1,4 +1,4 @@
 package com.donbosco.services;
 
-public class UserServices {
+public class UserService {
 }
