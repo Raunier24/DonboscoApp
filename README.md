@@ -60,8 +60,8 @@ Extras:
 * Automatizar pruebas con Postman
 * Aplicar patrón de diseño DTO
  
-
-![KEY POINTS](https://github.com/IsabelGV1985/AnimalShelter/blob/main/10.jpg)
+## ORM
+![ORM](src\main\resources\orm.jpg)
 ## Diagrama Spring Security
 ![KEY POINTS](src\main\resources\11.jpg)
 
