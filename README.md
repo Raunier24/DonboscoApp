@@ -67,12 +67,12 @@ Extras:
 
 
 ## Panel de Administración del Frontend
-![KEY POINTS](https://github.com/IsabelGV1985/AnimalShelter/blob/main/16.jpg)
+![KEY POINTS]()
 
 # Videos funcionamiento del Front
-* [Presentación Front](https://drive.google.com/file/d/1tfTs42YWwlz-9r_pDPaz-jXuEBpcH2Ap/view?usp=sharing)
-* [Logeo OK](https://drive.google.com/file/d/1lekkTPAOttS1Imej3G-7dBhed-fs1O_O/view?usp=sharing)
+* [Presentación Front]()
+* [Logeo OK]()
 
-![KEY POINTS](https://github.com/IsabelGV1985/AnimalShelter/blob/main/12.jpg)
+![KEY POINTS]()
 ## The documentation ;) Summary of the work carried out, in the Backend and the frontend.
 ## * [Documentación](https://www.canva.com/design/DAGRRwTYhYo/pbsLMFyFdP_47cmAtT1z3Q/view?utm_content=DAGRRwTYhYo&utm_campaign=designshare&utm_medium=link&utm_source=editor)
