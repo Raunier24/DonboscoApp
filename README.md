@@ -61,9 +61,9 @@ Extras:
 * Aplicar patrón de diseño DTO
  
 ## ORM
-![ORM](src\main\resources\orm.jpg)
+![ORM](https://github.com/Raunier24/DonboscoApp/blob/feature/flight/src/main/resources/orm.jpg)
 ## Diagrama Spring Security
-![KEY POINTS](src\main\resources\11.jpg)
+![KEY POINTS]([src\main\resources\11.jpg](https://github.com/Raunier24/DonboscoApp/blob/feature/flight/src/main/resources/11.jpg))
 
 
 ## Panel de Administración del Frontend
