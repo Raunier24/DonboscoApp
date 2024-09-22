@@ -1,6 +1,6 @@
 # DonboscoApp Aerolíneas
 
-![Logo](src\main\resources\Logo_F5_d_bosco_airlines.jpg)
+![Logo](https://github.com/Raunier24/DonboscoApp/blob/feature/flight/src/main/resources/Logo_F5_d_bosco_airlines.jpg)
 # Team 4:
 * Ana Maria Martin -------->> https://github.com/anamartin99
 * Isamar Romero Bellorin -->> https://github.com/IsamarRB
