@@ -32,4 +32,12 @@ public class ReservationService {
     public void deleteReservation(Long id) {
         reservationRepository.deleteById(id);
     }
+
+    public Reservation updateReservation(Long id, Reservation reservationDetails) {
+        Reservation existingReservation = findReservationById(id);
+        existingReservation.setName(reservationDetails.getName());
+        existingReservation.setDetails(reservationDetails.getDetails());
+        return reservationRepository.save(existingReservation);
+    }
+    
 }

@@ -50,4 +50,21 @@ public class Reservation {
     public void setFlight(Flight flight) {
         this.flight = flight;
     }
+
+    public Object getDetails() {
+        throw new UnsupportedOperationException("Unimplemented method 'getDetails'");
+    }
+
+    public void setDetails(Object details) {
+        throw new UnsupportedOperationException("Unimplemented method 'setDetails'");
+    }
+
+    public Object getName() {
+        throw new UnsupportedOperationException("Unimplemented method 'getName'");
+    }
+
+    public void setName(Object name) {
+        throw new UnsupportedOperationException("Unimplemented method 'setName'");
+    }
+
 }
