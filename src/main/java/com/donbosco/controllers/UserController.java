@@ -25,7 +25,7 @@ public class UserController {
         this.userService = userService;
     }
 
-    @GetMapping
+    @GetMapping ("/")
     public List<User> getAllUsers() {
         return userService.getAllUsers();
     }
@@ -37,7 +37,7 @@ public class UserController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    @PostMapping
+    @PostMapping ("/")
     public User createUser(@RequestBody User user) {
         return userService.createUser(user);
     }
