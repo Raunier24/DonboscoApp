@@ -2,8 +2,10 @@ package com.donbosco.models;
 
 import jakarta.persistence.*;
 
+import java.util.Collection;
 import java.util.Set;
 
+import org.springframework.security.core.GrantedAuthority;
 
 @Entity
 @Table(name = "user", uniqueConstraints = {@UniqueConstraint(columnNames = {"username"})})
@@ -13,11 +15,8 @@ public class User implements org.springframework.security.core.userdetails.UserD
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
     private Long id;
-
     private String username;
-
     private String password;
-
     private String email;
 
     @Enumerated(EnumType.STRING)
@@ -72,5 +71,21 @@ public class User implements org.springframework.security.core.userdetails.UserD
 
     public void setRole(ERole role) {
         this.role = role;
+    }
+
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        throw new UnsupportedOperationException("Unimplemented method 'getAuthorities'");
+    }
+
+    public class Builder {
+
+        public Object username(String username) {
+            throw new UnsupportedOperationException("Unimplemented method 'username'");
+        }
+
+        public Builder id(int i) {
+            throw new UnsupportedOperationException("Unimplemented method 'id'");
+        }
     }
 }

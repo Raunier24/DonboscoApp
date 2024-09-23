@@ -10,37 +10,37 @@ import java.util.Optional;
 @Service
 public class UserService {
 
-    private final IUserRepository userRepository;
+    private final IUserRepository iUserRepository;
 
-    public UserService(IUserRepository userRepository) {
-        this.userRepository = userRepository;
+    public UserService(IUserRepository iUserRepository) {
+        this.iUserRepository = iUserRepository;
     }
 
     public List<User> getAllUsers() {
-        return userRepository.findAll();
+        return iUserRepository.findAll();
     }
 
 
     public Optional<User> getUserById(Long id) {
-        return userRepository.findById(id);
+        return iUserRepository.findById(id);
     }
 
     public Optional<User> getUserByUsername(String username) {
-        return userRepository.findByUsername(username);
+        return iUserRepository.findByUsername(username);
     }
 
     public User createUser(User user) {
-        if (userRepository.existsByUsername(user.getUsername())) {
+        if (iUserRepository.existsByUsername(user.getUsername())) {
             throw new RuntimeException("Username already exists.");
         }
-        if (userRepository.existsByEmail(user.getEmail())) {
+        if (iUserRepository.existsByEmail(user.getEmail())) {
             throw new RuntimeException("Email already exists.");
         }
-        return userRepository.save(user);
+        return iUserRepository.save(user);
     }
 
     public User updateUser(User id, long userDetails) {
-        User user = userRepository.findById(id.getId())
+        User user = iUserRepository.findById(id.getId())
                 .orElseThrow(() -> new RuntimeException("User not found."));
 
         user.setUsername(userDetails.getUsername());
@@ -48,12 +48,12 @@ public class UserService {
         user.setPassword(userDetails.getPassword());
         user.setRole(userDetails.getRole());
         
-        return userRepository.save(user);
+        return iUserRepository.save(user);
     }
     public boolean deleteUser(Long id) {
-        User user = userRepository.findById(id)
+        User user = iUserRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("User not found."));
-        userRepository.delete(user);
+        iUserRepository.delete(user);
         return false;
     }
 }
