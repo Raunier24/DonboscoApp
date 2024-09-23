@@ -2,37 +2,35 @@ package com.donbosco.models;
 
 import jakarta.persistence.*;
 
-
-
 import java.util.HashSet;
 import java.util.Set;
 
+
 @Entity
-@Table(name = "users")
-public class User {
+@Table(name = "user", uniqueConstraints = {@UniqueConstraint(columnNames = {"username"})})
+public class User implements org.springframework.security.core.userdetails.UserDetails{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column
     private Long id;
 
-    @Column(nullable = false, unique = true)
     private String username;
 
-    @Column(nullable = false)
     private String password;
 
-    @Column(nullable = false, unique = true)
     private String email;
+
+    @Enumerated(EnumType.STRING)
+    ERole role;
 
     @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"))
-    @Column(name = "role")
+
     private Set<String> roles = new HashSet<>();
 
-    // Constructor sin argumentos
     public User() {}
 
-    // Constructor con argumentos
     public User(String username, String password, String email, Set<String> roles) {
         this.username = username;
         this.password = password;
@@ -40,7 +38,6 @@ public class User {
         this.roles = roles;
     }
 
-    // Getters y Setters
     public Long getId() {
         return id;
     }

@@ -1,7 +1,7 @@
 package com.donbosco.controllers;
 
 import com.donbosco.models.User;
-import com.donbosco.repositories.UserService;
+import com.donbosco.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
