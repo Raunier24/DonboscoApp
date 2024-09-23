@@ -28,9 +28,9 @@ public class UserService {
         }
     }
 
-    public Optional<User> getUserById (Long id) {
+    public Optional<User> getUserById (int i) {
         try {
-            return iUserRepository.findById(Long.valueOf(id));
+            return iUserRepository.findById(Long.valueOf(i));
         } catch (Exception e) {
             throw new RuntimeException("Error retrieving donation details.", e);
         }
@@ -48,5 +48,9 @@ public class UserService {
         } catch (Exception e) {
             return false;
         }
+    }
+
+    public Optional<User> getUserById(int i) {
+        throw new UnsupportedOperationException("Unimplemented method 'getUserById'");
     }
 }

@@ -9,6 +9,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 
 @Entity
@@ -23,9 +24,7 @@ public class User implements org.springframework.security.core.userdetails.UserD
     @Basic
     @Column(nullable = false)
     String username;
-
     String email;
-
     String password;
 
     @Enumerated(EnumType.STRING)
@@ -33,7 +32,7 @@ public class User implements org.springframework.security.core.userdetails.UserD
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonManagedReference
-    private Set<Reserve> reserves = new HashSet<>();
+    private Set<Reservation> reservations = new HashSet<>();
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonManagedReference

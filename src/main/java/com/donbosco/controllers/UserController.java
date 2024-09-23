@@ -42,6 +42,7 @@ public class UserController {
         return userService.createUser(user);
     }
 
+    @SuppressWarnings("rawtypes")
     @PutMapping("/{id}")
     public ResponseEntity updateUser(@PathVariable Long id, @RequestBody User userDetails) {
         return (ResponseEntity) ResponseEntity.ok();

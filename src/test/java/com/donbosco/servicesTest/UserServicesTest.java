@@ -31,14 +31,14 @@ public class UserServicesTest {
     @BeforeEach
     public void Setup(){
         MockitoAnnotations.openMocks(this);
-        user1 = new User();
+        user1 = new User(null);
         user1.setId(1L);
         user1.setUsername("isamar");
         user1.setPassword("1234");
         user1.setEmail("isamar@gmail.com");
         user1.setRole(ADMIN);
 
-        user2 = new User();
+        user2 = new User(null);
         user2.setId(2L);
         user2.setUsername("sofi");
         user2.setPassword("1234");
@@ -91,7 +91,7 @@ public class UserServicesTest {
 
     @Test
     void updateUser() {
-        User userToUpdate = new User();
+        User userToUpdate = new User(null);
         userToUpdate.setId(1L);
         userToUpdate.setUsername("UpdatedUsername");
 
