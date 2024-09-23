@@ -21,10 +21,24 @@ public class ReservationController {
 
     @Autowired
     private ReservationService reservationService;
+    
+    public ReservationService getReservationService() {
+        return reservationService;
+    }
+
+    public void setReservationService(ReservationService reservationService) {
+        this.reservationService = reservationService;
+    }
 
     @GetMapping
     public List<Reservation> getAllReservations() {
         return reservationService.findAllReservations();
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Reservation> getReservationById(@PathVariable Long id) {
+        Reservation reservation = reservationService.findReservationById(id);
+        return ResponseEntity.ok(reservation);
     }
 
     @PostMapping
@@ -39,9 +53,4 @@ public class ReservationController {
         return ResponseEntity.noContent().build();
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<Reservation> getReservationById(@PathVariable Long id) {
-        Reservation reservation = reservationService.findReservationById(id);
-        return ResponseEntity.ok(reservation);
-    }
 }
