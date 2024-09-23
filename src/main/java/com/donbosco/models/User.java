@@ -9,10 +9,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Collection;
-import java.util.Set;
 
-import org.springframework.security.core.GrantedAuthority;
 
 @Entity
 @Table(name = "user", uniqueConstraints = {@UniqueConstraint(columnNames = {"username"})})
@@ -21,12 +18,7 @@ public class User implements org.springframework.security.core.userdetails.UserD
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column
-    private Long id;
-    private String username;
-    private String password;
-    private String email;
-    Integer id;
+    Long id;
 
     @Basic
     @Column(nullable = false)
@@ -41,15 +33,11 @@ public class User implements org.springframework.security.core.userdetails.UserD
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonManagedReference
-    private Set<Flight> flight = new HashSet<>();
+    private Set<Reserve> reserves = new HashSet<>();
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonManagedReference
-    private Set<Reserve> reserve = new HashSet<>();
-
-    public User() {
-
-    }
+    private Set<Flight> flights = new HashSet<>();
 
     public User(Builder builder) {
         this.id = builder.id;
@@ -59,9 +47,12 @@ public class User implements org.springframework.security.core.userdetails.UserD
         this.role = builder.role;
     }
 
-    public Long getId() {return Long.valueOf(id);}
 
-    public void setId(Integer id) {
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -73,9 +64,7 @@ public class User implements org.springframework.security.core.userdetails.UserD
         this.username = username;
     }
 
-    public String getEmail() {
-        return email;
-    }
+    public String getEmail() {return email; }
 
     public void setEmail(String email) {
         this.email = email;
@@ -124,13 +113,13 @@ public class User implements org.springframework.security.core.userdetails.UserD
     }
 
     public static class Builder {
-        private Integer id;
+        private Long id;
         private String username;
         private String email;
         private String password;
         private ERole role;
 
-        public Builder id(Integer id) {
+        public Builder id(Long id) {
             this.id = id;
             return this;
         }
@@ -161,19 +150,4 @@ public class User implements org.springframework.security.core.userdetails.UserD
 
     }
 
-    @Override
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-        throw new UnsupportedOperationException("Unimplemented method 'getAuthorities'");
-    }
-
-    public class Builder {
-
-        public Object username(String username) {
-            throw new UnsupportedOperationException("Unimplemented method 'username'");
-        }
-
-        public Builder id(int i) {
-            throw new UnsupportedOperationException("Unimplemented method 'id'");
-        }
-    }
 }

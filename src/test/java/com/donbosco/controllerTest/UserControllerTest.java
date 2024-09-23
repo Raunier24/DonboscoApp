@@ -27,7 +27,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-public class ControllerTest {
+public class UserControllerTest {
     @Mock
     private UserService userService;
 
@@ -47,7 +47,7 @@ public class ControllerTest {
         mockMvc = MockMvcBuilders.standaloneSetup(userController).build();
 
         user1 = new User.Builder()
-                .id(1)
+                .id(1L)
                 .username("juan")
                 .email("juan@gmail.com")
                 .password("123")
@@ -55,7 +55,7 @@ public class ControllerTest {
                 .build();
 
         user2 = new User.Builder()
-                .id(2)
+                .id(2L)
                 .username("juanita")
                 .email("juanita@gmail.com")
                 .password("1234")
@@ -63,7 +63,7 @@ public class ControllerTest {
                 .build();
 
         user3 = new User.Builder()
-                .id(3)
+                .id(3L)
                 .username("paquito")
                 .email("paquito@gmail.com")
                 .password("12345")
@@ -95,7 +95,7 @@ public class ControllerTest {
 
     @Test
     void getAllUsersTest() throws Exception{
-        when(userService.getAllUsers()).thenReturn(userList);
+        when(userService.getAllUser()).thenReturn(userList);
 
         mockMvc.perform(get("/api/user/"))
                 .andExpect(status().isOk())
@@ -116,7 +116,7 @@ public class ControllerTest {
 
     @Test
     void updateUserTest() throws Exception{
-        doNothing().when(userService).updateUser(any(User.class), anyInt());
+        doNothing().when(userService).updateUser(any(User.class), (long) anyInt());
 
         ObjectMapper objectMapper = new ObjectMapper();
         String userJson = objectMapper.writeValueAsString(user2);

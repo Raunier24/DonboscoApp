@@ -27,7 +27,7 @@ public class UserController {
 
     @GetMapping ("/")
     public List<User> getAllUsers() {
-        return userService.getAllUsers();
+        return userService.getAllUser();
     }
 
     @GetMapping("/{id}")
@@ -43,8 +43,8 @@ public class UserController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<User> updateUser(@PathVariable Long id, @RequestBody User userDetails) {
-        return ResponseEntity.ok(userService.updateUser(userDetails, id));
+    public ResponseEntity updateUser(@PathVariable Long id, @RequestBody User userDetails) {
+        return (ResponseEntity) ResponseEntity.ok();
     }
 
     @DeleteMapping("/{id}")

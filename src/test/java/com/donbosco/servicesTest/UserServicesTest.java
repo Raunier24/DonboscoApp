@@ -18,7 +18,7 @@ import static com.donbosco.models.ERole.ADMIN;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
-public class ServicesTest {
+public class UserServicesTest {
     @Mock
     private IUserRepository userRepository;
 
@@ -67,7 +67,7 @@ public class ServicesTest {
 
         when(userRepository.findAll()).thenReturn(userList);
 
-        List<User> allUser = userService.getAllUsers();
+        List<User> allUser = userService.getAllUser();
 
         assertNotNull(allUser);
         assertEquals(2L, allUser.size());
