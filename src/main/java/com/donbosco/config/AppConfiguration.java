@@ -1,4 +1,4 @@
-package com.donbosco.configuration;
+package com.donbosco.config;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
