@@ -44,8 +44,8 @@ public class AuthService {
     }
 
     public RegisterResponse register(RegisterRequest register) {
-        User user = new User.Builder()
-                .username(register.getUsername())
+        User user = ((Object) new User.Builder()
+                .username(register.getUsername()))
                 .email(register.getEmail())
                 .password(passwordEncoder.encode(register.getPassword()))
                 .role(register.getRole())

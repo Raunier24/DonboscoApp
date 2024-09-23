@@ -9,7 +9,10 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Collection;
+import java.util.Set;
 
+import org.springframework.security.core.GrantedAuthority;
 
 @Entity
 @Table(name = "user", uniqueConstraints = {@UniqueConstraint(columnNames = {"username"})})
@@ -18,6 +21,11 @@ public class User implements org.springframework.security.core.userdetails.UserD
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column
+    private Long id;
+    private String username;
+    private String password;
+    private String email;
     Integer id;
 
     @Basic
@@ -151,5 +159,21 @@ public class User implements org.springframework.security.core.userdetails.UserD
             return new User(this);
         }
 
+    }
+
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        throw new UnsupportedOperationException("Unimplemented method 'getAuthorities'");
+    }
+
+    public class Builder {
+
+        public Object username(String username) {
+            throw new UnsupportedOperationException("Unimplemented method 'username'");
+        }
+
+        public Builder id(int i) {
+            throw new UnsupportedOperationException("Unimplemented method 'id'");
+        }
     }
 }
