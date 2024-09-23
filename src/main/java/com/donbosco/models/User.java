@@ -39,6 +39,8 @@ public class User {
     @Column(name = "role")
     private Set<String> roles = new HashSet<>();
 
+    
+
     @ManyToMany(fetch = FetchType.EAGER, cascade=CascadeType.MERGE )//merge y persist recomendadas para manytomany
     @JoinTable(
         name = "user_flight",

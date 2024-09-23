@@ -1,21 +1,20 @@
 package com.donbosco.services;
 
 
-import com.donbosco.models.User;
-import com.donbosco.repositories.IUserRepository;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.Optional;
+
+import org.springframework.stereotype.Service;
+
+import com.donbosco.models.User;
+import com.donbosco.repositories.IUserRepository;
 
 @Service
 public class UserServiceImpl implements UserService {
 
     private final IUserRepository userRepository;
 
-    @Autowired
+    
     public UserServiceImpl(IUserRepository userRepository) {
         this.userRepository = userRepository;
     }
