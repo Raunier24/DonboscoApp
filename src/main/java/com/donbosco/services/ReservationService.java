@@ -2,17 +2,17 @@ package com.donbosco.services;
 
 import java.util.List;
 
+import com.donbosco.repositories.IReservationRepository;
 import org.springframework.stereotype.Service;
 
 import com.donbosco.models.Reservation;
-import com.donbosco.repositories.ReservationRepository;
 
 @Service
 public class ReservationService {
 
-    private final ReservationRepository reservationRepository;
+    private final IReservationRepository reservationRepository;
 
-    public ReservationService(ReservationRepository reservationRepository) {
+    public ReservationService(IReservationRepository reservationRepository) {
         this.reservationRepository = reservationRepository;
     }
 
