@@ -1,10 +1,9 @@
 package com.donbosco.dto.request;
 
-import com.scrumapp.model.ERole;
+import com.donbosco.models.ERole;
 
 public class RegisterResponse {
     private ERole role;
-
 
     public RegisterResponse(ERole role, String message) {
         this.role = role;

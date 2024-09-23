@@ -1,6 +1,6 @@
 package com.donbosco.dto.response;
 
-import com.scrumapp.model.ERole;
+import com.donbosco.models.ERole;
 
 public class RegisterRequest {
     String username;
@@ -46,7 +46,5 @@ public class RegisterRequest {
     public void setRole(ERole role) {
         this.role = role;
     }
-
-
 
 }
