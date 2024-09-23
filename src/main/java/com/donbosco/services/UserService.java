@@ -1,4 +1,4 @@
-package com.donbosco.repositories;
+package com.donbosco.services;
 
 import com.donbosco.models.User;
 
