@@ -1,10 +1,10 @@
 package com.donbosco.controllers;
 
-import com.scrumapp.dto.request.AuthResponse;
-import com.scrumapp.dto.request.RegisterResponse;
-import com.scrumapp.dto.response.LoginRequest;
-import com.scrumapp.dto.response.RegisterRequest;
-import com.scrumapp.service.AuthService;
+import com.donbosco.dto.request.AuthResponse;
+import com.donbosco.dto.request.RegisterResponse;
+import com.donbosco.dto.response.LoginRequest;
+import com.donbosco.dto.response.RegisterRequest;
+import com.donbosco.services.AuthService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

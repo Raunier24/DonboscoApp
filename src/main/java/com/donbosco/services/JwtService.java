@@ -1,10 +1,13 @@
 package com.donbosco.services;
 
+
 import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jwt;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
+import org.springframework.cglib.core.internal.Function;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
@@ -12,7 +15,6 @@ import java.security.Key;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.function.Function;
 
 @Service
 
@@ -27,7 +29,7 @@ public class JwtService {
 
     public String getToken(Map<String, Object> claims, UserDetails user) {
 
-        return Jwts
+        return Jwt
                 .builder()
                 .setClaims(claims)
                 .setSubject(user.getUsername())

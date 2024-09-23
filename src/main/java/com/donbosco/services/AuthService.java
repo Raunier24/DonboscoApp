@@ -1,11 +1,11 @@
 package com.donbosco.services;
 
-import com.scrumapp.dto.request.AuthResponse;
-import com.scrumapp.dto.request.RegisterResponse;
-import com.scrumapp.dto.response.LoginRequest;
-import com.scrumapp.dto.response.RegisterRequest;
-import com.scrumapp.model.User;
-import com.scrumapp.repository.UserRepository;
+import com.donbosco.dto.request.AuthResponse;
+import com.donbosco.dto.request.RegisterResponse;
+import com.donbosco.dto.response.LoginRequest;
+import com.donbosco.dto.response.RegisterRequest;
+import com.donbosco.models.User;
+import com.donbosco.repositories.IUserRepository;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -18,11 +18,11 @@ import org.springframework.stereotype.Service;
 public class AuthService {
 
     private final JwtService jwtService;
-    private final UserRepository userRepository;
+    private final IUserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
     private final AuthenticationManager authenticationManager;
 
-    public AuthService(JwtService jwtService, UserRepository userRepository, PasswordEncoder passwordEncoder, AuthenticationManager authenticationManager) {
+    public AuthService(JwtService jwtService, IUserRepository userRepository, PasswordEncoder passwordEncoder, AuthenticationManager authenticationManager) {
         this.jwtService = jwtService;
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;

@@ -1,6 +1,6 @@
 package com.donbosco.config;
 
-import com.scrumapp.repository.UserRepository;
+import com.donbosco.repositories.IUserRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -16,9 +16,9 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 
 public class ApplicationConfig {
-    private final UserRepository userRepository;
+    private final IUserRepository userRepository;
 
-    public ApplicationConfig(UserRepository userRepository) {
+    public ApplicationConfig(IUserRepository userRepository) {
         this.userRepository = userRepository;
     }
 
@@ -43,6 +43,6 @@ public class ApplicationConfig {
     @Bean
     public UserDetailsService userDetailsService() {
         return username -> (org.springframework.security.core.userdetails.UserDetails) userRepository.findByUsername(username)
-                .orElseThrow(() -> new UsernameNotFoundException("No existe el usuario"));
+                .orElseThrow(() -> new UsernameNotFoundException("User not found"));
     }
 }

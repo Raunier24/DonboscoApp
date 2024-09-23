@@ -1,6 +1,6 @@
 package com.donbosco.jwt;
 
-import com.scrumapp.service.JwtService;
+import com.donbosco.services.JwtService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

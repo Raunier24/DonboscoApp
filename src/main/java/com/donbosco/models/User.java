@@ -22,7 +22,7 @@ public class User implements org.springframework.security.core.userdetails.UserD
     private String email;
 
     @Enumerated(EnumType.STRING)
-    ERole role;
+    private ERole role;
 
     @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"))

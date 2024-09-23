@@ -1,6 +1,6 @@
 package com.donbosco.config;
 
-import com.scrumapp.jwt.AuthTokenFilter;
+import com.donbosco.jwt.AuthTokenFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationProvider;
