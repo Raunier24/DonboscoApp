@@ -1,6 +1,5 @@
 package com.donbosco.services;
 
-
 import com.donbosco.models.User;
 import com.donbosco.repositories.IUserRepository;
 import org.springframework.stereotype.Service;
@@ -40,20 +39,21 @@ public class UserService {
         return userRepository.save(user);
     }
 
-    public User updateUser(Long id, User userDetails) {
-        User user = userRepository.findById(id)
+    public User updateUser(User id, long userDetails) {
+        User user = userRepository.findById(id.getId())
                 .orElseThrow(() -> new RuntimeException("User not found."));
 
         user.setUsername(userDetails.getUsername());
         user.setEmail(userDetails.getEmail());
         user.setPassword(userDetails.getPassword());
-        user.setRoles(userDetails.getRoles());
+        user.setRole(userDetails.getRole());
         
         return userRepository.save(user);
     }
-    public void deleteUser(Long id) {
+    public boolean deleteUser(Long id) {
         User user = userRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("User not found."));
         userRepository.delete(user);
+        return false;
     }
 }

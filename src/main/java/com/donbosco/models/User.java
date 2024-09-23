@@ -2,13 +2,12 @@ package com.donbosco.models;
 
 import jakarta.persistence.*;
 
-import java.util.HashSet;
 import java.util.Set;
 
 
 @Entity
 @Table(name = "user", uniqueConstraints = {@UniqueConstraint(columnNames = {"username"})})
-public class User implements org.springframework.security.core.userdetails.UserDetails{
+public class User implements org.springframework.security.core.userdetails.UserDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,18 +23,13 @@ public class User implements org.springframework.security.core.userdetails.UserD
     @Enumerated(EnumType.STRING)
     private ERole role;
 
-    @ElementCollection(fetch = FetchType.EAGER)
-    @CollectionTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"))
-
-    private Set<String> roles = new HashSet<>();
-
-    public User() {}
+    public User() {
+    }
 
     public User(String username, String password, String email, Set<String> roles) {
         this.username = username;
         this.password = password;
         this.email = email;
-        this.roles = roles;
     }
 
     public Long getId() {
@@ -46,6 +40,7 @@ public class User implements org.springframework.security.core.userdetails.UserD
         this.id = id;
     }
 
+    @Override
     public String getUsername() {
         return username;
     }
@@ -54,6 +49,7 @@ public class User implements org.springframework.security.core.userdetails.UserD
         this.username = username;
     }
 
+    @Override
     public String getPassword() {
         return password;
     }
@@ -70,11 +66,11 @@ public class User implements org.springframework.security.core.userdetails.UserD
         this.email = email;
     }
 
-    public Set<String> getRoles() {
-        return roles;
+    public ERole getRole() {
+        return role;
     }
 
-    public void setRoles(Set<String> roles) {
-        this.roles = roles;
+    public void setRole(ERole role) {
+        this.role = role;
     }
 }
