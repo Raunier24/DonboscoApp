@@ -16,7 +16,6 @@ import org.springframework.stereotype.Service;
 @Service
 
 public class AuthService {
-
     private final JwtService jwtService;
     private final IUserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
@@ -44,8 +43,8 @@ public class AuthService {
     }
 
     public RegisterResponse register(RegisterRequest register) {
-        User user = ((Object) new User.Builder()
-                .username(register.getUsername()))
+        User user = new User.Builder()
+                .username(register.getUsername())
                 .email(register.getEmail())
                 .password(passwordEncoder.encode(register.getPassword()))
                 .role(register.getRole())

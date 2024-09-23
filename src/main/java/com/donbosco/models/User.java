@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
 import java.util.HashSet;
@@ -14,21 +15,22 @@ import java.util.Set;
 
 @Entity
 @Table(name = "user", uniqueConstraints = {@UniqueConstraint(columnNames = {"username"})})
-
-public class User implements org.springframework.security.core.userdetails.UserDetails {
+public class User implements UserDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
+    private Long id;
 
-    @Basic
     @Column(nullable = false)
-    String username;
-    String email;
-    String password;
+    private String username;
+
+    private String email;
+
+    @JsonIgnore
+    private String password;
 
     @Enumerated(EnumType.STRING)
-    ERole role;
+    private ERole role;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonManagedReference
@@ -38,6 +40,10 @@ public class User implements org.springframework.security.core.userdetails.UserD
     @JsonManagedReference
     private Set<Flight> flights = new HashSet<>();
 
+    public User() {
+    }
+
+
     public User(Builder builder) {
         this.id = builder.id;
         this.username = builder.username;
@@ -45,7 +51,6 @@ public class User implements org.springframework.security.core.userdetails.UserD
         this.password = builder.password;
         this.role = builder.role;
     }
-
 
     public Long getId() {
         return id;
@@ -55,6 +60,7 @@ public class User implements org.springframework.security.core.userdetails.UserD
         this.id = id;
     }
 
+    @Override
     public String getUsername() {
         return username;
     }
@@ -63,12 +69,15 @@ public class User implements org.springframework.security.core.userdetails.UserD
         this.username = username;
     }
 
-    public String getEmail() {return email; }
+    public String getEmail() {
+        return email;
+    }
 
     public void setEmail(String email) {
         this.email = email;
     }
 
+    @Override
     public String getPassword() {
         return password;
     }
@@ -85,10 +94,27 @@ public class User implements org.springframework.security.core.userdetails.UserD
         this.role = role;
     }
 
+    public Set<Reservation> getReservations() {
+        return reservations;
+    }
+
+    public void setReservations(Set<Reservation> reservations) {
+        this.reservations = reservations;
+    }
+
+    public Set<Flight> getFlights() {
+        return flights;
+    }
+
+    public void setFlights(Set<Flight> flights) {
+        this.flights = flights;
+    }
+
+    // Implementación de UserDetails
     @Override
     @JsonIgnore
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of(new SimpleGrantedAuthority((role.name())));
+        return List.of(new SimpleGrantedAuthority(role.name()));
     }
 
     @Override
@@ -111,6 +137,7 @@ public class User implements org.springframework.security.core.userdetails.UserD
         return true;
     }
 
+    // Builder
     public static class Builder {
         private Long id;
         private String username;
@@ -146,7 +173,5 @@ public class User implements org.springframework.security.core.userdetails.UserD
         public User build() {
             return new User(this);
         }
-
     }
-
 }

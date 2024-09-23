@@ -21,13 +21,13 @@ import com.donbosco.services.IFlightService;
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("/api/flights")
+@RequestMapping("/flights")
 public class FlightController {
 
     @Autowired
     private IFlightService flightService;
 
-    @GetMapping
+    @GetMapping ("/")
     public ResponseEntity<List<FlightDto>> getAllFlights() {
         List<FlightDto> flights = flightService.getAllFlights();
         if (flights.isEmpty()) {
@@ -42,7 +42,7 @@ public class FlightController {
         return ResponseEntity.ok(flight);  // Código 200: OK si el vuelo existe
     }
 
-    @PostMapping
+    @PostMapping ("/")
     public ResponseEntity<FlightDto> createFlight(@Valid @RequestBody FlightDto flightDto) {
         try {
             FlightDto createdFlight = flightService.save(flightDto);

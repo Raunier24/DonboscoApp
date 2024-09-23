@@ -28,7 +28,7 @@ public class UserService {
         }
     }
 
-    public Optional<User> getUserById (int i) {
+    public Optional<User> getUserById (Long i) {
         try {
             return iUserRepository.findById(Long.valueOf(i));
         } catch (Exception e) {

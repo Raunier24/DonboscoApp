@@ -1,6 +1,7 @@
 package com.donbosco.config;
 
 import com.donbosco.repositories.IUserRepository;
+import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -20,6 +21,11 @@ public class ApplicationConfig {
 
     public ApplicationConfig(IUserRepository userRepository) {
         this.userRepository = userRepository;
+    }
+
+    @Bean
+    public ModelMapper modelMapper(){
+        return new ModelMapper();
     }
 
     @Bean
