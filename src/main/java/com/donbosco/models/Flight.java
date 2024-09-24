@@ -4,12 +4,15 @@ import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToMany;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.EqualsAndHashCode;
 
@@ -42,11 +45,25 @@ public class Flight {
     @Column
     private boolean status;
 
-    //@OneToMany(mappedBy = "flight", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
-    //private Set<Reservation> reservations;
+    @OneToMany(mappedBy = "flight", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+    private Set<Reservation> reservations;
 
     @ManyToMany(mappedBy = "flights")
     private Set<User> users = new HashSet<>();
+
+    public Flight(String flightNumber, String departure, String destination, LocalDateTime departureTime,
+            LocalDateTime arrivalTime, int availableSeats, boolean status, Set<Reservation> reservations,
+            Set<User> users) {
+        this.flightNumber = flightNumber;
+        this.departure = departure;
+        this.destination = destination;
+        this.departureTime = departureTime;
+        this.arrivalTime = arrivalTime;
+        this.availableSeats = availableSeats;
+        this.status = status;
+        this.reservations = reservations;
+        this.users = users;
+    }
 
     public Flight() {
 
@@ -124,7 +141,7 @@ public class Flight {
         this.users = users;
     }
 
-    @Override //tanto hascode usa id tecnico
+    @Override //equals tanto hascode usa id tecnico
     public int hashCode() {
         final int prime = 31;
         int result = 1;
@@ -147,6 +164,14 @@ public class Flight {
         } else if (!id.equals(other.id))
             return false;
         return true;
+    }
+
+    public Set<Reservation> getReservations() {
+        return reservations;
+    }
+
+    public void setReservations(Set<Reservation> reservations) {
+        this.reservations = reservations;
     }
 
     
