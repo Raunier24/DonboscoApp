@@ -28,7 +28,7 @@ public class UserService {
         }
     }
 
-    public Optional<User> getUserById (Long i) {
+    public Optional<User> getUserById(Long i) {
         try {
             return iUserRepository.findById(Long.valueOf(i));
         } catch (Exception e) {
@@ -48,9 +48,5 @@ public class UserService {
         } catch (Exception e) {
             return false;
         }
-    }
-
-    public Optional<User> getUserById(int i) {
-        throw new UnsupportedOperationException("Unimplemented method 'getUserById'");
     }
 }
