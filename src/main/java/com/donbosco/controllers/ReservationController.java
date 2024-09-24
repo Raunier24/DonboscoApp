@@ -23,7 +23,7 @@ public class ReservationController {
     @Autowired
     private ReservationService reservationService;
 
-    @GetMapping("/")
+    @GetMapping("/reservations")
     public List<Reservation> getAllReservations() {
         return reservationService.findAllReservations();
     }
@@ -34,7 +34,7 @@ public class ReservationController {
         return ResponseEntity.ok(reservation);
     }
 
-    @PostMapping("/")
+    @PostMapping("/reservations")
     public ResponseEntity<Reservation> createReservation(@RequestBody Reservation reservation) {
         Reservation newReservation = reservationService.createReservation(reservation);
         return ResponseEntity.ok(newReservation);
