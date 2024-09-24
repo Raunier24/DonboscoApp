@@ -23,7 +23,7 @@ public class SalesServiceImpl implements ISalesService {
     @Override
     public void verifyFlightAvailability(SalesDto salesDto) {
         // Buscar el vuelo en la base de datos usando el flightId y departureTime
-        Flight flight = flightRepository.findByFlightIdAndDepartureTime (salesDto.getFlightId(), salesDto.getDepartureTime())
+        Flight flight = flightRepository.findByIdAndDepartureTime(salesDto.getFlightId(), salesDto.getDepartureTime())
                 .orElseThrow(() -> new RuntimeException("El vuelo no existe o no está disponible"));
 
         // Verificar si el vuelo está activo (status es true)
@@ -41,7 +41,7 @@ public class SalesServiceImpl implements ISalesService {
     @Override
     public void processReservation(SalesDto salesDto) {
         // Lógica para procesar la reserva (descontar asientos y crear reserva)
-        Flight flight = flightRepository.findByFlightIdAndDepartureTime(salesDto.getFlightId(), salesDto.getDepartureTime())
+        Flight flight = flightRepository.findByIdAndDepartureTime(salesDto.getFlightId(), salesDto.getDepartureTime())
                 .orElseThrow(() -> new RuntimeException("El vuelo no existe"));
 
         // Actualizar el número de asientos

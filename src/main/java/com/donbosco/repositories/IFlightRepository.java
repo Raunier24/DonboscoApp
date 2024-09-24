@@ -11,11 +11,12 @@ import com.donbosco.models.Flight;
 
 
 @Repository
-public interface  IFlightRepository extends JpaRepository<Flight, Long> {
+public interface IFlightRepository extends JpaRepository<Flight, Long> {
     Optional<Flight> findByFlightNumber(String flightNumber);
     Optional<Flight> findByAvailableSeats(int availableSeats);
-    Boolean findByStatus(boolean status); 
-    Optional<Flight> findByFlightIdAndDepartureTime(Long flightId, LocalDateTime departureTime);
+    Boolean findByStatus(boolean status);
+    Optional<Flight> findByIdAndDepartureTime(Long id, LocalDateTime departureTime);
 }
+
     
 
