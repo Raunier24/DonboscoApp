@@ -51,6 +51,20 @@ public class Flight {
     @ManyToMany(mappedBy = "flights")
     private Set<User> users = new HashSet<>();
 
+    public Flight(String flightNumber, String departure, String destination, LocalDateTime departureTime,
+            LocalDateTime arrivalTime, int availableSeats, boolean status, Set<Reservation> reservations,
+            Set<User> users) {
+        this.flightNumber = flightNumber;
+        this.departure = departure;
+        this.destination = destination;
+        this.departureTime = departureTime;
+        this.arrivalTime = arrivalTime;
+        this.availableSeats = availableSeats;
+        this.status = status;
+        this.reservations = reservations;
+        this.users = users;
+    }
+
     public Flight() {
 
     }
@@ -127,7 +141,7 @@ public class Flight {
         this.users = users;
     }
 
-    @Override //tanto hascode usa id tecnico
+    @Override //equals tanto hascode usa id tecnico
     public int hashCode() {
         final int prime = 31;
         int result = 1;
@@ -150,6 +164,14 @@ public class Flight {
         } else if (!id.equals(other.id))
             return false;
         return true;
+    }
+
+    public Set<Reservation> getReservations() {
+        return reservations;
+    }
+
+    public void setReservations(Set<Reservation> reservations) {
+        this.reservations = reservations;
     }
 
     

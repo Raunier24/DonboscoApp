@@ -55,7 +55,7 @@ public class FlightController {
     @PutMapping("/{id}")
     public ResponseEntity<FlightDto> updateFlight(@PathVariable Long id, @Valid @RequestBody FlightDto flightDto) {
         try {
-            FlightDto updatedFlight = flightService.save(flightDto);
+            FlightDto updatedFlight = flightService.updateFlight(id, flightDto);
             return ResponseEntity.ok(updatedFlight); // Código 200: OK si se actualiza correctamente
         } catch (ResourceNotFoundException ex) {
             throw new ResourceNotFoundException("Flight not found with id: " + id); // Código 404: Not Found si el vuelo no existe
@@ -73,4 +73,7 @@ public class FlightController {
             throw new ResourceNotFoundException("Flight not found with id: " + id);  // Código 404: Not Found si no se encuentra
         } 
     }
+
+    
+
 }

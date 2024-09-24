@@ -16,7 +16,7 @@ import com.donbosco.models.Reservation;
 import com.donbosco.services.ReservationService;
 
 @RestController
-@RequestMapping("/reservations")
+@RequestMapping("/api/reservations")
 public class ReservationController {
 
     @Autowired

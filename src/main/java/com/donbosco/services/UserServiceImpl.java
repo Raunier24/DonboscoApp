@@ -53,7 +53,7 @@ public class UserServiceImpl implements UserService {
         user.setUsername(userDetails.getUsername());
         user.setEmail(userDetails.getEmail());
         user.setPassword(userDetails.getPassword());  // Deberías cifrar la contraseña
-        user.setRoles(userDetails.getRoles());
+        user.setRoles(userDetails.getRole());
         
         return userRepository.save(user);
     }

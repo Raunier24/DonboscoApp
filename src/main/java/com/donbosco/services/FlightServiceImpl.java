@@ -65,4 +65,21 @@ public class FlightServiceImpl implements IFlightService {
                 .orElseThrow(() -> new ResourceNotFoundException("Flight not found with id: " + id));
         flightRepository.delete(flight);
     }
+
+    @Override
+    public FlightDto updateFlight(Long id, @Valid FlightDto flightDto) {
+    // Buscar el vuelo existente
+    Flight existingFlight = flightRepository.findById(id)
+            .orElseThrow(() -> new ResourceNotFoundException("Flight not found with id: " + id));
+
+    // Usar ModelMapper para actualizar los campos del vuelo existente
+    modelMapper.map(flightDto, existingFlight);
+
+    // Guardar los cambios en la base de datos
+    Flight updatedFlight = flightRepository.save(existingFlight);
+
+    // Convertir entidad a DTO y devolver
+    return modelMapper.map(updatedFlight, FlightDto.class);
+}
+
 }
