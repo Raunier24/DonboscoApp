@@ -32,7 +32,7 @@ public class ReservationControllerTest {
     @BeforeEach
     public void setUp() {
         MockitoAnnotations.openMocks(this);
-        reservationController = new ReservationController(reservationService);
+        reservationController = new ReservationController();
     }
 
     @Test
