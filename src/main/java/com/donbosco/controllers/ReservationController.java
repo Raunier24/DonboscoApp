@@ -2,6 +2,7 @@ package com.donbosco.controllers;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,22 +20,10 @@ import com.donbosco.services.ReservationService;
 @RequestMapping("/reservations")
 public class ReservationController {
 
+    @Autowired
     private ReservationService reservationService;
 
-    public ReservationController(ReservationService reservationService) {
-        this.reservationService = reservationService;
-    }
-    
-
-    public ReservationService getReservationService() {
-        return reservationService;
-    }
-
-    public void setReservationService(ReservationService reservationService) {
-        this.reservationService = reservationService;
-    }
-
-    @GetMapping ("/")
+    @GetMapping("/")
     public List<Reservation> getAllReservations() {
         return reservationService.findAllReservations();
     }
@@ -45,13 +34,13 @@ public class ReservationController {
         return ResponseEntity.ok(reservation);
     }
 
-    @PostMapping ("/")
+    @PostMapping("/")
     public ResponseEntity<Reservation> createReservation(@RequestBody Reservation reservation) {
         Reservation newReservation = reservationService.createReservation(reservation);
         return ResponseEntity.ok(newReservation);
     }
 
-       @PutMapping("/{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<Reservation> updateReservation(@PathVariable Long id, @RequestBody Reservation reservationDetails) {
         Reservation updatedReservation = reservationService.updateReservation(id, reservationDetails);
         return ResponseEntity.ok(updatedReservation);
@@ -62,5 +51,4 @@ public class ReservationController {
         reservationService.deleteReservation(id);
         return ResponseEntity.noContent().build();
     }
-
 }

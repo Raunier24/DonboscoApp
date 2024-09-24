@@ -1,5 +1,7 @@
 package com.donbosco.models;
 
+import java.util.jar.Attributes.Name;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.security.core.userdetails.User;
 
@@ -10,7 +12,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 
 @Entity
-public class Reservation {
+public class Reservation<Details> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,6 +25,9 @@ public class Reservation {
     @ManyToOne
     @JoinColumn(name = "flight_id")
     private Flight flight;
+
+    private String details;
+    private String name;
 
     public Reservation() {
     }
@@ -51,20 +56,20 @@ public class Reservation {
         this.flight = flight;
     }
 
-    public Object getDetails() {
-        throw new UnsupportedOperationException("Unimplemented method 'getDetails'");
+    public String getDetails() {
+        return details;
     }
 
-    public void setDetails(Object details) {
-        throw new UnsupportedOperationException("Unimplemented method 'setDetails'");
+    public void setDetails(String details) {
+        this.details = details;
     }
 
-    public Object getName() {
-        throw new UnsupportedOperationException("Unimplemented method 'getName'");
+   public String getName() {
+    return name;
     }
 
-    public void setName(Object name) {
-        throw new UnsupportedOperationException("Unimplemented method 'setName'");
+    public void setName(String name) {
+    this.name = name;
     }
 
 }
