@@ -40,7 +40,7 @@ public class Reservation {
     private String details;
 
     @Column
-    private String status; // Nuevo atributo para el estado
+    private String status; 
 
     public Reservation(LocalDate reservationTime, int seats, User user, Flight flight, String name, String details,
             String status) {
@@ -50,7 +50,7 @@ public class Reservation {
         this.flight = flight;
         this.name = name;
         this.details = details;
-        this.status = status; // Inicializa el estado
+        this.status = status; 
     }
 
     public Reservation() {
@@ -112,7 +112,7 @@ public class Reservation {
         this.details = details;
     }
 
-    public String getStatus() { // Método getter para el estado
+    public String getStatus() {
         return status;
     }
 
