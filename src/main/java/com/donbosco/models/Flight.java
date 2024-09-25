@@ -46,7 +46,7 @@ public class Flight {
     private boolean status;
 
     @OneToMany(mappedBy = "flight", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
-    private Set<Reservation> reservations;
+    private Set<Reservation> reservations = new HashSet<>();
 
     @ManyToMany(mappedBy = "flights")
     private Set<User> users = new HashSet<>();

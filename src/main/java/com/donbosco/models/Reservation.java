@@ -1,20 +1,29 @@
 package com.donbosco.models;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.security.core.userdetails.User;
+import java.time.LocalDate;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
 
 @Entity
+@Table(name = "reservation")
 public class Reservation {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    
+    @Column
+    private LocalDate reservationTime;
+    
+    @Column
+    private int seats;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
@@ -23,6 +32,13 @@ public class Reservation {
     @ManyToOne
     @JoinColumn(name = "flight_id")
     private Flight flight;
+
+    public Reservation(LocalDate reservationTime, int seats, User user, Flight flight) {
+        this.reservationTime = reservationTime;
+        this.seats = seats;
+        this.user = user;
+        this.flight = flight;
+    }
 
     public Reservation() {
     }
@@ -51,20 +67,22 @@ public class Reservation {
         this.flight = flight;
     }
 
-    public Object getDetails() {
-        throw new UnsupportedOperationException("Unimplemented method 'getDetails'");
+    public LocalDate getReservationTime() {
+        return reservationTime;
     }
 
-    public void setDetails(Object details) {
-        throw new UnsupportedOperationException("Unimplemented method 'setDetails'");
+    public void setReservationTime(LocalDate reservationTime) {
+        this.reservationTime = reservationTime;
     }
 
-    public Object getName() {
-        throw new UnsupportedOperationException("Unimplemented method 'getName'");
+    public int getSeats() {
+        return seats;
     }
 
-    public void setName(Object name) {
-        throw new UnsupportedOperationException("Unimplemented method 'setName'");
+    public void setSeats(int seats) {
+        this.seats = seats;
     }
+
+
 
 }

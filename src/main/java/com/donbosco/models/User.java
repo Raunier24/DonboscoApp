@@ -36,8 +36,11 @@ public class User implements UserDetails {
     @JsonManagedReference
     private Set<Reservation> reservations = new HashSet<>();
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
-    @JsonManagedReference
+    @ManyToMany
+    @JoinTable(
+        name = "user_flight",
+        joinColumns = @JoinColumn(name = "user_id"),
+        inverseJoinColumns = @JoinColumn(name = "flight_id"))
     private Set<Flight> flights = new HashSet<>();
 
     public User() {
