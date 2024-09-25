@@ -44,7 +44,7 @@ public class User {
 
     @ManyToMany(fetch = FetchType.EAGER, cascade=CascadeType.MERGE )//merge y persist recomendadas para manytomany
     @JoinTable(
-        name = "users_flight",
+        name = "user_flight",
         joinColumns = @JoinColumn(name = "user_id"),
         inverseJoinColumns = @JoinColumn(name = "flight_id")
     )

@@ -809,7 +809,897 @@ Unconditional classes:
 
 
 
-2024-09-25T09:34:06.887+02:00  INFO 23632 --- [donbosco] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 8 class path changes (0 additions, 8 deletions, 0 modifications)
-2024-09-25T09:34:09.695+02:00  INFO 23632 --- [donbosco] [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-09-25T09:34:09.866+02:00  INFO 23632 --- [donbosco] [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
-2024-09-25T09:34:10.179+02:00  INFO 23632 --- [donbosco] [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2024-09-25T10:08:09.663+02:00  INFO 43388 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Starting DonboscoApplication using Java 17.0.12 with PID 43388 (C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp\target\classes started by F5 02 SEV in C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp)
+2024-09-25T10:08:09.690+02:00  INFO 43388 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-09-25T10:08:11.654+02:00  INFO 43388 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-25T10:08:11.761+02:00  INFO 43388 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67 ms. Found 3 JPA repository interfaces.
+2024-09-25T10:08:12.419+02:00  INFO 43388 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-25T10:08:12.421+02:00  INFO 43388 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-25T10:08:12.425+02:00  INFO 43388 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-09-25T10:08:12.564+02:00  INFO 43388 --- [donbosco] [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-09-25T10:08:12.565+02:00  INFO 43388 --- [donbosco] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2835 ms
+2024-09-25T10:08:12.589+02:00 ERROR 43388 --- [donbosco] [restartedMain] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'authTokenFilter' defined in file [C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp\target\classes\com\donbosco\jwt\AuthTokenFilter.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'jwtService': Lookup method resolution failed
+2024-09-25T10:08:12.593+02:00  INFO 43388 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-09-25T10:08:12.595+02:00  WARN 43388 --- [donbosco] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2024-09-25T10:08:12.606+02:00  INFO 43388 --- [donbosco] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-09-25T10:08:12.613+02:00 ERROR 43388 --- [donbosco] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:619) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.4.jar:3.3.4]
+	at com.donbosco.DonboscoApplication.main(DonboscoApplication.java:12) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.4.jar:3.3.4]
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:147) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:107) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:516) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:222) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:188) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162) ~[spring-boot-3.3.4.jar:3.3.4]
+	... 13 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authTokenFilter' defined in file [C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp\target\classes\com\donbosco\jwt\AuthTokenFilter.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'jwtService': Lookup method resolution failed
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1375) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1212) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:211) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:174) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:169) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:154) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:87) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:266) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:240) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4412) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(Unknown Source) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(Unknown Source) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:415) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:870) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:437) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:128) ~[spring-boot-3.3.4.jar:3.3.4]
+	... 18 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtService': Lookup method resolution failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:498) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:368) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1314) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1209) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782) ~[spring-beans-6.1.13.jar:6.1.13]
+	... 59 common frames omitted
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.donbosco.services.JwtService] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@dadafc6]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483) ~[spring-core-6.1.13.jar:6.1.13]
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:320) ~[spring-core-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:476) ~[spring-beans-6.1.13.jar:6.1.13]
+	... 73 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: io/jsonwebtoken/Claims
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Unknown Source) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredMethods(Unknown Source) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465) ~[spring-core-6.1.13.jar:6.1.13]
+	... 75 common frames omitted
+Caused by: java.lang.ClassNotFoundException: io.jsonwebtoken.Claims
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(Unknown Source) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Unknown Source) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121) ~[spring-boot-devtools-3.3.4.jar:3.3.4]
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source) ~[na:na]
+	... 79 common frames omitted
+
+2024-09-25T11:18:05.426+02:00  INFO 43388 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Starting DonboscoApplication using Java 17.0.12 with PID 43388 (C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp\target\classes started by F5 02 SEV in C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp)
+2024-09-25T11:18:05.429+02:00  INFO 43388 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-09-25T11:18:06.198+02:00  INFO 43388 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-25T11:18:06.222+02:00  INFO 43388 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 3 JPA repository interfaces.
+2024-09-25T11:18:06.558+02:00  INFO 43388 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-25T11:18:06.560+02:00  INFO 43388 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-25T11:18:06.567+02:00  INFO 43388 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-09-25T11:18:06.604+02:00  INFO 43388 --- [donbosco] [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-09-25T11:18:06.605+02:00  INFO 43388 --- [donbosco] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1141 ms
+2024-09-25T11:18:06.613+02:00 ERROR 43388 --- [donbosco] [restartedMain] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'authTokenFilter' defined in file [C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp\target\classes\com\donbosco\jwt\AuthTokenFilter.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'jwtService': Lookup method resolution failed
+2024-09-25T11:18:06.619+02:00  INFO 43388 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-09-25T11:18:06.626+02:00  WARN 43388 --- [donbosco] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2024-09-25T11:18:06.631+02:00  INFO 43388 --- [donbosco] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-09-25T11:18:06.637+02:00 ERROR 43388 --- [donbosco] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:619) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.4.jar:3.3.4]
+	at com.donbosco.DonboscoApplication.main(DonboscoApplication.java:12) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.4.jar:3.3.4]
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:147) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:107) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:516) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:222) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:188) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162) ~[spring-boot-3.3.4.jar:3.3.4]
+	... 13 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authTokenFilter' defined in file [C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp\target\classes\com\donbosco\jwt\AuthTokenFilter.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'jwtService': Lookup method resolution failed
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1375) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1212) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:211) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:174) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:169) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:154) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:87) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:266) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:240) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4412) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(Unknown Source) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(Unknown Source) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:415) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:870) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:437) ~[tomcat-embed-core-10.1.30.jar:10.1.30]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:128) ~[spring-boot-3.3.4.jar:3.3.4]
+	... 18 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtService': Lookup method resolution failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:498) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:368) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1314) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1209) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782) ~[spring-beans-6.1.13.jar:6.1.13]
+	... 59 common frames omitted
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.donbosco.services.JwtService] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@1133b41b]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483) ~[spring-core-6.1.13.jar:6.1.13]
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:320) ~[spring-core-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:476) ~[spring-beans-6.1.13.jar:6.1.13]
+	... 73 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: io/jsonwebtoken/Claims
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Unknown Source) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredMethods(Unknown Source) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465) ~[spring-core-6.1.13.jar:6.1.13]
+	... 75 common frames omitted
+Caused by: java.lang.ClassNotFoundException: io.jsonwebtoken.Claims
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(Unknown Source) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Unknown Source) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121) ~[spring-boot-devtools-3.3.4.jar:3.3.4]
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source) ~[na:na]
+	... 79 common frames omitted
+
+2024-09-25T13:28:48.069+02:00  INFO 19152 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Starting DonboscoApplication using Java 17.0.12 with PID 19152 (C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp\target\classes started by F5 02 SEV in C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp)
+2024-09-25T13:28:48.084+02:00  INFO 19152 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-09-25T13:28:49.645+02:00  INFO 19152 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-25T13:28:50.104+02:00  INFO 19152 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 89 ms. Found 3 JPA repository interfaces.
+2024-09-25T13:28:50.903+02:00  INFO 19152 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-25T13:28:50.908+02:00  INFO 19152 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-25T13:28:50.909+02:00  INFO 19152 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-09-25T13:28:51.168+02:00  INFO 19152 --- [donbosco] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-25T13:28:51.223+02:00  INFO 19152 --- [donbosco] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3107 ms
+2024-09-25T13:28:51.449+02:00  INFO 19152 --- [donbosco] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-25T13:28:51.466+02:00  INFO 19152 --- [donbosco] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-25T13:28:51.582+02:00  INFO 19152 --- [donbosco] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-25T13:28:51.584+02:00  INFO 19152 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-09-25T13:28:51.629+02:00  INFO 19152 --- [donbosco] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6455d493
+2024-09-25T13:28:51.631+02:00  INFO 19152 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-09-25T13:28:52.388+02:00  INFO 19152 --- [donbosco] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-25T13:28:52.538+02:00  INFO 19152 --- [donbosco] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T13:28:52.890+02:00  WARN 19152 --- [donbosco] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-25T13:28:53.164+02:00  INFO 19152 --- [donbosco] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-09-25T13:28:53.184+02:00 DEBUG 19152 --- [donbosco] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2024-09-25T13:28:53.248+02:00  INFO 19152 --- [donbosco] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-09-25T13:28:53.275+02:00  INFO 19152 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-25T13:28:53.283+02:00  INFO 19152 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Started DonboscoApplication in 5.436 seconds (process running for 1902.898)
+2024-09-25T13:28:53.289+02:00  INFO 19152 --- [donbosco] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-09-25T13:29:04.589+02:00  INFO 19152 --- [donbosco] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-25T13:29:04.591+02:00  INFO 19152 --- [donbosco] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-25T13:29:04.593+02:00  INFO 19152 --- [donbosco] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-09-25T13:29:04.597+02:00 DEBUG 19152 --- [donbosco] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/sales/reserve
+2024-09-25T13:29:04.598+02:00 DEBUG 19152 --- [donbosco] [http-nio-8080-exec-2] o.s.security.web.csrf.CsrfFilter         : Invalid CSRF token found for http://localhost:8080/api/sales/reserve
+2024-09-25T13:29:04.599+02:00 DEBUG 19152 --- [donbosco] [http-nio-8080-exec-2] o.s.s.w.access.AccessDeniedHandlerImpl   : Responding with 403 status code
+2024-09-25T13:29:04.601+02:00 DEBUG 19152 --- [donbosco] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /error
+2024-09-25T13:29:04.602+02:00 DEBUG 19152 --- [donbosco] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-25T13:29:04.618+02:00 DEBUG 19152 --- [donbosco] [http-nio-8080-exec-2] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using And [Not [RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]], MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.ContentNegotiationManager@69391b61, matchingMediaTypes=[application/xhtml+xml, image/*, text/html, text/plain], useEquals=false, ignoredMediaTypes=[*/*]]]
+2024-09-25T13:29:04.624+02:00 DEBUG 19152 --- [donbosco] [http-nio-8080-exec-2] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using Or [RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest], And [Not [MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.ContentNegotiationManager@69391b61, matchingMediaTypes=[text/html], useEquals=false, ignoredMediaTypes=[]]], MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.ContentNegotiationManager@69391b61, matchingMediaTypes=[application/atom+xml, application/x-www-form-urlencoded, application/json, application/octet-stream, application/xml, multipart/form-data, text/xml], useEquals=false, ignoredMediaTypes=[*/*]]], MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.ContentNegotiationManager@69391b61, matchingMediaTypes=[*/*], useEquals=true, ignoredMediaTypes=[]]]
+2024-09-25T13:29:04.629+02:00 DEBUG 19152 --- [donbosco] [http-nio-8080-exec-2] s.w.a.DelegatingAuthenticationEntryPoint : Match found! Executing org.springframework.security.web.authentication.DelegatingAuthenticationEntryPoint@16dd8519
+2024-09-25T13:29:04.630+02:00 DEBUG 19152 --- [donbosco] [http-nio-8080-exec-2] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]
+2024-09-25T13:29:04.631+02:00 DEBUG 19152 --- [donbosco] [http-nio-8080-exec-2] s.w.a.DelegatingAuthenticationEntryPoint : No match found. Using default entry point org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint@fad37fb
+2024-09-25T13:32:27.711+02:00 DEBUG 19152 --- [donbosco] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /api/sales/reserve
+2024-09-25T13:32:27.717+02:00 DEBUG 19152 --- [donbosco] [http-nio-8080-exec-6] o.s.security.web.csrf.CsrfFilter         : Invalid CSRF token found for http://localhost:8080/api/sales/reserve
+2024-09-25T13:32:27.718+02:00 DEBUG 19152 --- [donbosco] [http-nio-8080-exec-6] o.s.s.w.access.AccessDeniedHandlerImpl   : Responding with 403 status code
+2024-09-25T13:32:27.724+02:00 DEBUG 19152 --- [donbosco] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /error
+2024-09-25T13:32:27.727+02:00 DEBUG 19152 --- [donbosco] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-25T13:32:27.729+02:00 DEBUG 19152 --- [donbosco] [http-nio-8080-exec-6] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using And [Not [RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]], MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.ContentNegotiationManager@69391b61, matchingMediaTypes=[application/xhtml+xml, image/*, text/html, text/plain], useEquals=false, ignoredMediaTypes=[*/*]]]
+2024-09-25T13:32:27.732+02:00 DEBUG 19152 --- [donbosco] [http-nio-8080-exec-6] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using Or [RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest], And [Not [MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.ContentNegotiationManager@69391b61, matchingMediaTypes=[text/html], useEquals=false, ignoredMediaTypes=[]]], MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.ContentNegotiationManager@69391b61, matchingMediaTypes=[application/atom+xml, application/x-www-form-urlencoded, application/json, application/octet-stream, application/xml, multipart/form-data, text/xml], useEquals=false, ignoredMediaTypes=[*/*]]], MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.ContentNegotiationManager@69391b61, matchingMediaTypes=[*/*], useEquals=true, ignoredMediaTypes=[]]]
+2024-09-25T13:32:27.734+02:00 DEBUG 19152 --- [donbosco] [http-nio-8080-exec-6] s.w.a.DelegatingAuthenticationEntryPoint : Match found! Executing org.springframework.security.web.authentication.DelegatingAuthenticationEntryPoint@16dd8519
+2024-09-25T13:32:27.734+02:00 DEBUG 19152 --- [donbosco] [http-nio-8080-exec-6] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]
+2024-09-25T13:32:27.735+02:00 DEBUG 19152 --- [donbosco] [http-nio-8080-exec-6] s.w.a.DelegatingAuthenticationEntryPoint : No match found. Using default entry point org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint@fad37fb
+2024-09-25T13:34:37.214+02:00 DEBUG 19152 --- [donbosco] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /api/sales/reserve
+2024-09-25T13:34:37.253+02:00 DEBUG 19152 --- [donbosco] [http-nio-8080-exec-8] o.s.security.web.csrf.CsrfFilter         : Invalid CSRF token found for http://localhost:8080/api/sales/reserve
+2024-09-25T13:34:37.256+02:00 DEBUG 19152 --- [donbosco] [http-nio-8080-exec-8] o.s.s.w.access.AccessDeniedHandlerImpl   : Responding with 403 status code
+2024-09-25T13:34:37.258+02:00 DEBUG 19152 --- [donbosco] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /error
+2024-09-25T13:34:37.260+02:00 DEBUG 19152 --- [donbosco] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-09-25T13:34:37.261+02:00 DEBUG 19152 --- [donbosco] [http-nio-8080-exec-8] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using And [Not [RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]], MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.ContentNegotiationManager@69391b61, matchingMediaTypes=[application/xhtml+xml, image/*, text/html, text/plain], useEquals=false, ignoredMediaTypes=[*/*]]]
+2024-09-25T13:34:37.263+02:00 DEBUG 19152 --- [donbosco] [http-nio-8080-exec-8] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using Or [RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest], And [Not [MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.ContentNegotiationManager@69391b61, matchingMediaTypes=[text/html], useEquals=false, ignoredMediaTypes=[]]], MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.ContentNegotiationManager@69391b61, matchingMediaTypes=[application/atom+xml, application/x-www-form-urlencoded, application/json, application/octet-stream, application/xml, multipart/form-data, text/xml], useEquals=false, ignoredMediaTypes=[*/*]]], MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.ContentNegotiationManager@69391b61, matchingMediaTypes=[*/*], useEquals=true, ignoredMediaTypes=[]]]
+2024-09-25T13:34:37.264+02:00 DEBUG 19152 --- [donbosco] [http-nio-8080-exec-8] s.w.a.DelegatingAuthenticationEntryPoint : Match found! Executing org.springframework.security.web.authentication.DelegatingAuthenticationEntryPoint@16dd8519
+2024-09-25T13:34:37.265+02:00 DEBUG 19152 --- [donbosco] [http-nio-8080-exec-8] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]
+2024-09-25T13:34:37.266+02:00 DEBUG 19152 --- [donbosco] [http-nio-8080-exec-8] s.w.a.DelegatingAuthenticationEntryPoint : No match found. Using default entry point org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint@fad37fb
+2024-09-25T14:12:13.373+02:00  INFO 19152 --- [donbosco] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 30 class path changes (0 additions, 30 deletions, 0 modifications)
+2024-09-25T14:12:13.961+02:00  INFO 19152 --- [donbosco] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T14:12:14.005+02:00  INFO 19152 --- [donbosco] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2024-09-25T14:12:14.049+02:00  INFO 19152 --- [donbosco] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2024-09-25T14:12:14.815+02:00  INFO 19152 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Starting DonboscoApplication using Java 17.0.12 with PID 19152 (C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp\target\classes started by F5 02 SEV in C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp)
+2024-09-25T14:12:14.817+02:00  INFO 19152 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-09-25T14:12:18.595+02:00  INFO 19152 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-25T14:12:18.666+02:00  INFO 19152 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 3 JPA repository interfaces.
+2024-09-25T14:12:19.149+02:00  INFO 19152 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-25T14:12:19.209+02:00  INFO 19152 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-25T14:12:19.230+02:00  INFO 19152 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-09-25T14:12:19.292+02:00  INFO 19152 --- [donbosco] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-25T14:12:19.301+02:00  INFO 19152 --- [donbosco] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4478 ms
+2024-09-25T14:12:19.459+02:00  INFO 19152 --- [donbosco] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-25T14:12:19.486+02:00  INFO 19152 --- [donbosco] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-25T14:12:19.542+02:00  INFO 19152 --- [donbosco] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-25T14:12:19.545+02:00  INFO 19152 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2024-09-25T14:12:19.608+02:00  INFO 19152 --- [donbosco] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@10b232bc
+2024-09-25T14:12:19.609+02:00  INFO 19152 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2024-09-25T14:12:20.072+02:00  INFO 19152 --- [donbosco] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-25T14:12:20.180+02:00  INFO 19152 --- [donbosco] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T14:12:20.463+02:00  WARN 19152 --- [donbosco] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-25T14:12:20.825+02:00  INFO 19152 --- [donbosco] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-09-25T14:12:20.860+02:00 DEBUG 19152 --- [donbosco] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2024-09-25T14:12:20.901+02:00  INFO 19152 --- [donbosco] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-09-25T14:12:20.934+02:00  INFO 19152 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-25T14:12:20.945+02:00  INFO 19152 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Started DonboscoApplication in 6.332 seconds (process running for 4510.561)
+2024-09-25T14:12:20.950+02:00  INFO 19152 --- [donbosco] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-09-25T14:12:22.371+02:00  INFO 19152 --- [donbosco] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 30 class path changes (30 additions, 0 deletions, 0 modifications)
+2024-09-25T14:12:22.822+02:00  INFO 19152 --- [donbosco] [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T14:12:22.833+02:00  INFO 19152 --- [donbosco] [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2024-09-25T14:12:22.876+02:00  INFO 19152 --- [donbosco] [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2024-09-25T14:12:23.303+02:00  INFO 19152 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Starting DonboscoApplication using Java 17.0.12 with PID 19152 (C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp\target\classes started by F5 02 SEV in C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp)
+2024-09-25T14:12:23.367+02:00  INFO 19152 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-09-25T14:12:24.424+02:00  INFO 19152 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-25T14:12:24.520+02:00  INFO 19152 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44 ms. Found 3 JPA repository interfaces.
+2024-09-25T14:12:24.971+02:00  INFO 19152 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-25T14:12:25.053+02:00  INFO 19152 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-25T14:12:25.112+02:00  INFO 19152 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-09-25T14:12:25.193+02:00  INFO 19152 --- [donbosco] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-25T14:12:25.194+02:00  INFO 19152 --- [donbosco] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1709 ms
+2024-09-25T14:12:25.407+02:00  INFO 19152 --- [donbosco] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-25T14:12:25.476+02:00  INFO 19152 --- [donbosco] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-25T14:12:25.551+02:00  INFO 19152 --- [donbosco] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-25T14:12:25.575+02:00  INFO 19152 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2024-09-25T14:12:25.757+02:00  INFO 19152 --- [donbosco] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@769691be
+2024-09-25T14:12:25.759+02:00  INFO 19152 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2024-09-25T14:12:26.102+02:00  INFO 19152 --- [donbosco] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-25T14:12:26.171+02:00  INFO 19152 --- [donbosco] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T14:12:26.540+02:00  WARN 19152 --- [donbosco] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-25T14:12:26.781+02:00  INFO 19152 --- [donbosco] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-09-25T14:12:26.808+02:00 DEBUG 19152 --- [donbosco] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2024-09-25T14:12:26.855+02:00  INFO 19152 --- [donbosco] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-09-25T14:12:26.873+02:00  INFO 19152 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-25T14:12:26.881+02:00  INFO 19152 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Started DonboscoApplication in 3.87 seconds (process running for 4516.497)
+2024-09-25T14:12:26.904+02:00  INFO 19152 --- [donbosco] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-09-25T14:13:34.569+02:00  INFO 19152 --- [donbosco] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T14:13:34.570+02:00  INFO 19152 --- [donbosco] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2024-09-25T14:13:34.579+02:00  INFO 19152 --- [donbosco] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2024-09-25T14:13:45.072+02:00  INFO 44544 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Starting DonboscoApplication using Java 17.0.12 with PID 44544 (C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp\target\classes started by F5 02 SEV in C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp)
+2024-09-25T14:13:45.080+02:00  INFO 44544 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-09-25T14:13:45.246+02:00  INFO 44544 --- [donbosco] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-09-25T14:13:45.247+02:00  INFO 44544 --- [donbosco] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-09-25T14:13:48.225+02:00  INFO 44544 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-25T14:13:48.431+02:00  INFO 44544 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 153 ms. Found 3 JPA repository interfaces.
+2024-09-25T14:13:51.075+02:00  INFO 44544 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-25T14:13:51.209+02:00  INFO 44544 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-25T14:13:51.279+02:00  INFO 44544 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-09-25T14:13:51.892+02:00  INFO 44544 --- [donbosco] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-25T14:13:51.898+02:00  INFO 44544 --- [donbosco] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6648 ms
+2024-09-25T14:13:53.341+02:00  INFO 44544 --- [donbosco] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-25T14:13:53.676+02:00  INFO 44544 --- [donbosco] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-09-25T14:13:53.797+02:00  INFO 44544 --- [donbosco] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-25T14:13:54.842+02:00  INFO 44544 --- [donbosco] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-25T14:13:54.965+02:00  INFO 44544 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-25T14:13:55.715+02:00  INFO 44544 --- [donbosco] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5a225e8c
+2024-09-25T14:13:55.720+02:00  INFO 44544 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-25T14:13:58.285+02:00  INFO 44544 --- [donbosco] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-25T14:13:58.447+02:00  INFO 44544 --- [donbosco] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T14:13:59.567+02:00  WARN 44544 --- [donbosco] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-25T14:14:01.117+02:00  INFO 44544 --- [donbosco] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-09-25T14:14:01.248+02:00  INFO 44544 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-25T14:14:01.311+02:00  INFO 44544 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Started DonboscoApplication in 17.712 seconds (process running for 18.875)
+2024-09-25T14:15:02.531+02:00  INFO 44544 --- [donbosco] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-25T14:15:02.535+02:00  INFO 44544 --- [donbosco] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-25T14:15:02.543+02:00  INFO 44544 --- [donbosco] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2024-09-25T14:27:31.363+02:00  INFO 44544 --- [donbosco] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T14:27:31.421+02:00  INFO 44544 --- [donbosco] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-25T14:27:31.475+02:00  INFO 44544 --- [donbosco] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-25T14:27:36.761+02:00  INFO 11232 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Starting DonboscoApplication using Java 17.0.12 with PID 11232 (C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp\target\classes started by F5 02 SEV in C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp)
+2024-09-25T14:27:36.767+02:00  INFO 11232 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-09-25T14:27:36.909+02:00  INFO 11232 --- [donbosco] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-09-25T14:27:36.918+02:00  INFO 11232 --- [donbosco] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-09-25T14:27:39.053+02:00  INFO 11232 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-25T14:27:39.254+02:00  INFO 11232 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 162 ms. Found 3 JPA repository interfaces.
+2024-09-25T14:27:40.964+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-25T14:27:41.003+02:00  INFO 11232 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-25T14:27:41.006+02:00  INFO 11232 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-09-25T14:27:41.284+02:00  INFO 11232 --- [donbosco] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-25T14:27:41.290+02:00  INFO 11232 --- [donbosco] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4369 ms
+2024-09-25T14:27:42.248+02:00  INFO 11232 --- [donbosco] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-25T14:27:42.426+02:00  INFO 11232 --- [donbosco] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-09-25T14:27:42.549+02:00  INFO 11232 --- [donbosco] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-25T14:27:43.542+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-25T14:27:43.638+02:00  INFO 11232 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-25T14:27:44.286+02:00  INFO 11232 --- [donbosco] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7c4909a
+2024-09-25T14:27:44.302+02:00  INFO 11232 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-25T14:27:46.684+02:00  INFO 11232 --- [donbosco] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-25T14:27:48.079+02:00  INFO 11232 --- [donbosco] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T14:27:49.163+02:00  WARN 11232 --- [donbosco] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-25T14:27:50.412+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-09-25T14:27:50.526+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-25T14:27:50.549+02:00  INFO 11232 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Started DonboscoApplication in 14.821 seconds (process running for 15.701)
+2024-09-25T14:28:22.310+02:00  INFO 11232 --- [donbosco] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-25T14:28:22.312+02:00  INFO 11232 --- [donbosco] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-25T14:28:22.323+02:00  INFO 11232 --- [donbosco] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2024-09-25T15:16:21.848+02:00  INFO 11232 --- [donbosco] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 26 class path changes (0 additions, 0 deletions, 26 modifications)
+2024-09-25T15:16:23.772+02:00  INFO 11232 --- [donbosco] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T15:16:23.865+02:00  INFO 11232 --- [donbosco] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-09-25T15:16:24.005+02:00  INFO 11232 --- [donbosco] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-09-25T15:16:24.600+02:00  INFO 11232 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Starting DonboscoApplication using Java 17.0.12 with PID 11232 (C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp\target\classes started by F5 02 SEV in C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp)
+2024-09-25T15:16:24.601+02:00  INFO 11232 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-09-25T15:16:25.705+02:00  INFO 11232 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-25T15:16:25.747+02:00  INFO 11232 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39 ms. Found 3 JPA repository interfaces.
+2024-09-25T15:16:26.189+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-25T15:16:26.194+02:00  INFO 11232 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-25T15:16:26.195+02:00  INFO 11232 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-09-25T15:16:26.240+02:00  INFO 11232 --- [donbosco] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-25T15:16:26.242+02:00  INFO 11232 --- [donbosco] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1628 ms
+2024-09-25T15:16:26.316+02:00  INFO 11232 --- [donbosco] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-25T15:16:26.325+02:00  INFO 11232 --- [donbosco] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-25T15:16:26.356+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-25T15:16:26.360+02:00  INFO 11232 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-09-25T15:16:26.508+02:00  INFO 11232 --- [donbosco] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@77c4be4e
+2024-09-25T15:16:26.511+02:00  INFO 11232 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-09-25T15:16:27.086+02:00  INFO 11232 --- [donbosco] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-25T15:16:27.283+02:00  INFO 11232 --- [donbosco] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T15:16:27.778+02:00  WARN 11232 --- [donbosco] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-25T15:16:28.981+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-09-25T15:16:29.083+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-25T15:16:29.096+02:00  INFO 11232 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Started DonboscoApplication in 4.595 seconds (process running for 2934.248)
+2024-09-25T15:16:29.166+02:00  INFO 11232 --- [donbosco] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-09-25T15:25:37.518+02:00  INFO 11232 --- [donbosco] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-25T15:25:37.532+02:00  INFO 11232 --- [donbosco] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-25T15:25:37.543+02:00  INFO 11232 --- [donbosco] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2024-09-25T15:36:50.959+02:00  INFO 11232 --- [donbosco] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-09-25T15:36:51.472+02:00  INFO 11232 --- [donbosco] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T15:36:51.516+02:00  INFO 11232 --- [donbosco] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2024-09-25T15:36:51.571+02:00  INFO 11232 --- [donbosco] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2024-09-25T15:36:53.518+02:00  INFO 11232 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Starting DonboscoApplication using Java 17.0.12 with PID 11232 (C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp\target\classes started by F5 02 SEV in C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp)
+2024-09-25T15:36:53.527+02:00  INFO 11232 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-09-25T15:36:54.196+02:00  INFO 11232 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-25T15:36:54.292+02:00  INFO 11232 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 91 ms. Found 3 JPA repository interfaces.
+2024-09-25T15:36:54.601+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-25T15:36:54.603+02:00  INFO 11232 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-25T15:36:54.605+02:00  INFO 11232 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-09-25T15:36:54.667+02:00  INFO 11232 --- [donbosco] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-25T15:36:54.668+02:00  INFO 11232 --- [donbosco] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1135 ms
+2024-09-25T15:36:54.729+02:00  INFO 11232 --- [donbosco] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-25T15:36:54.735+02:00  INFO 11232 --- [donbosco] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-25T15:36:54.793+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-25T15:36:54.795+02:00  INFO 11232 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2024-09-25T15:36:54.907+02:00  INFO 11232 --- [donbosco] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2e4c6cfa
+2024-09-25T15:36:54.909+02:00  INFO 11232 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2024-09-25T15:36:55.263+02:00  INFO 11232 --- [donbosco] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-25T15:36:55.357+02:00  INFO 11232 --- [donbosco] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T15:36:55.891+02:00  WARN 11232 --- [donbosco] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-25T15:36:56.490+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-09-25T15:36:56.520+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-25T15:36:56.551+02:00  INFO 11232 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Started DonboscoApplication in 3.103 seconds (process running for 4161.703)
+2024-09-25T15:36:56.588+02:00  INFO 11232 --- [donbosco] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-09-25T15:37:13.321+02:00  INFO 11232 --- [donbosco] [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-25T15:37:13.321+02:00  INFO 11232 --- [donbosco] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-25T15:37:13.323+02:00  INFO 11232 --- [donbosco] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-09-25T15:38:23.289+02:00  INFO 11232 --- [donbosco] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-09-25T15:38:23.626+02:00  INFO 11232 --- [donbosco] [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T15:38:23.627+02:00  INFO 11232 --- [donbosco] [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2024-09-25T15:38:23.637+02:00  INFO 11232 --- [donbosco] [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2024-09-25T15:38:23.741+02:00  INFO 11232 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Starting DonboscoApplication using Java 17.0.12 with PID 11232 (C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp\target\classes started by F5 02 SEV in C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp)
+2024-09-25T15:38:23.742+02:00  INFO 11232 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-09-25T15:38:24.213+02:00  INFO 11232 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-25T15:38:24.268+02:00  INFO 11232 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50 ms. Found 3 JPA repository interfaces.
+2024-09-25T15:38:24.710+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-25T15:38:24.729+02:00  INFO 11232 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-25T15:38:24.730+02:00  INFO 11232 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-09-25T15:38:24.761+02:00  INFO 11232 --- [donbosco] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-25T15:38:24.762+02:00  INFO 11232 --- [donbosco] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1017 ms
+2024-09-25T15:38:24.813+02:00  INFO 11232 --- [donbosco] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-25T15:38:24.821+02:00  INFO 11232 --- [donbosco] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-25T15:38:24.837+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-25T15:38:24.839+02:00  INFO 11232 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2024-09-25T15:38:24.863+02:00  INFO 11232 --- [donbosco] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@446add51
+2024-09-25T15:38:24.872+02:00  INFO 11232 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2024-09-25T15:38:25.131+02:00  INFO 11232 --- [donbosco] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-25T15:38:25.217+02:00  INFO 11232 --- [donbosco] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T15:38:25.475+02:00  WARN 11232 --- [donbosco] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-25T15:38:25.681+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-09-25T15:38:25.715+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-25T15:38:25.720+02:00  INFO 11232 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Started DonboscoApplication in 2.022 seconds (process running for 4250.872)
+2024-09-25T15:38:25.733+02:00  INFO 11232 --- [donbosco] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-09-25T15:38:35.209+02:00  INFO 11232 --- [donbosco] [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-25T15:38:35.210+02:00  INFO 11232 --- [donbosco] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-25T15:38:35.212+02:00  INFO 11232 --- [donbosco] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-09-25T15:42:23.649+02:00  WARN 11232 --- [donbosco] [http-nio-8080-exec-4] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1048, SQLState: 23000
+2024-09-25T15:42:23.650+02:00 ERROR 11232 --- [donbosco] [http-nio-8080-exec-4] o.h.engine.jdbc.spi.SqlExceptionHelper   : Column 'user_id' cannot be null
+2024-09-25T18:57:20.266+02:00  WARN 11232 --- [donbosco] [HikariPool-4 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Thread starvation or clock leap detected (housekeeper delta=3h1m54s430ms686µs900ns).
+2024-09-25T20:00:39.428+02:00  WARN 11232 --- [donbosco] [HikariPool-4 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Thread starvation or clock leap detected (housekeeper delta=1h3m22s314ms949µs700ns).
+2024-09-25T21:16:43.824+02:00  INFO 11232 --- [donbosco] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-09-25T21:16:44.418+02:00  INFO 11232 --- [donbosco] [Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T21:16:44.542+02:00  INFO 11232 --- [donbosco] [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2024-09-25T21:16:44.645+02:00  INFO 11232 --- [donbosco] [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2024-09-25T21:16:46.637+02:00  INFO 11232 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Starting DonboscoApplication using Java 17.0.12 with PID 11232 (C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp\target\classes started by F5 02 SEV in C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp)
+2024-09-25T21:16:46.646+02:00  INFO 11232 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-09-25T21:16:47.724+02:00  INFO 11232 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-25T21:16:47.767+02:00  INFO 11232 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37 ms. Found 3 JPA repository interfaces.
+2024-09-25T21:16:48.264+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-25T21:16:48.269+02:00  INFO 11232 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-25T21:16:48.270+02:00  INFO 11232 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-09-25T21:16:48.348+02:00  INFO 11232 --- [donbosco] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-25T21:16:48.349+02:00  INFO 11232 --- [donbosco] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1697 ms
+2024-09-25T21:16:48.457+02:00  INFO 11232 --- [donbosco] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-25T21:16:48.466+02:00  INFO 11232 --- [donbosco] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-25T21:16:48.502+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-25T21:16:48.505+02:00  INFO 11232 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2024-09-25T21:16:48.615+02:00  INFO 11232 --- [donbosco] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@730ef335
+2024-09-25T21:16:48.616+02:00  INFO 11232 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2024-09-25T21:16:48.884+02:00  INFO 11232 --- [donbosco] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-25T21:16:49.042+02:00  INFO 11232 --- [donbosco] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T21:16:49.262+02:00  WARN 11232 --- [donbosco] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-25T21:16:49.512+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-09-25T21:16:49.531+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-25T21:16:49.548+02:00  INFO 11232 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Started DonboscoApplication in 3.087 seconds (process running for 24557.277)
+2024-09-25T21:16:49.550+02:00  INFO 11232 --- [donbosco] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-09-25T21:17:12.860+02:00  INFO 11232 --- [donbosco] [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-25T21:17:12.862+02:00  INFO 11232 --- [donbosco] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-25T21:17:12.866+02:00  INFO 11232 --- [donbosco] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-09-25T21:17:34.649+02:00  WARN 11232 --- [donbosco] [http-nio-8080-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1048, SQLState: 23000
+2024-09-25T21:17:34.650+02:00 ERROR 11232 --- [donbosco] [http-nio-8080-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : Column 'user_id' cannot be null
+2024-09-25T21:20:24.697+02:00  INFO 11232 --- [donbosco] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-09-25T21:20:25.118+02:00  INFO 11232 --- [donbosco] [Thread-19] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T21:20:25.156+02:00  INFO 11232 --- [donbosco] [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2024-09-25T21:20:25.192+02:00  INFO 11232 --- [donbosco] [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2024-09-25T21:20:25.523+02:00  INFO 11232 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Starting DonboscoApplication using Java 17.0.12 with PID 11232 (C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp\target\classes started by F5 02 SEV in C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp)
+2024-09-25T21:20:25.524+02:00  INFO 11232 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-09-25T21:20:26.019+02:00  INFO 11232 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-25T21:20:26.075+02:00  INFO 11232 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 3 JPA repository interfaces.
+2024-09-25T21:20:26.247+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-25T21:20:26.251+02:00  INFO 11232 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-25T21:20:26.253+02:00  INFO 11232 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-09-25T21:20:26.295+02:00  INFO 11232 --- [donbosco] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-25T21:20:26.299+02:00  INFO 11232 --- [donbosco] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 757 ms
+2024-09-25T21:20:26.378+02:00  INFO 11232 --- [donbosco] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-25T21:20:26.390+02:00  INFO 11232 --- [donbosco] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-25T21:20:26.511+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-25T21:20:26.513+02:00  INFO 11232 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2024-09-25T21:20:27.168+02:00  INFO 11232 --- [donbosco] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2d9c8c83
+2024-09-25T21:20:27.169+02:00  INFO 11232 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2024-09-25T21:20:27.346+02:00  INFO 11232 --- [donbosco] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-25T21:20:27.453+02:00  INFO 11232 --- [donbosco] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T21:20:27.962+02:00  WARN 11232 --- [donbosco] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-25T21:20:28.424+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-09-25T21:20:28.469+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-25T21:20:28.475+02:00  INFO 11232 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Started DonboscoApplication in 2.999 seconds (process running for 24776.205)
+2024-09-25T21:20:28.477+02:00  INFO 11232 --- [donbosco] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-09-25T21:20:42.167+02:00  INFO 11232 --- [donbosco] [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-25T21:20:42.168+02:00  INFO 11232 --- [donbosco] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-25T21:20:42.170+02:00  INFO 11232 --- [donbosco] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-09-25T21:20:42.238+02:00  WARN 11232 --- [donbosco] [http-nio-8080-exec-3] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1048, SQLState: 23000
+2024-09-25T21:20:42.238+02:00 ERROR 11232 --- [donbosco] [http-nio-8080-exec-3] o.h.engine.jdbc.spi.SqlExceptionHelper   : Column 'user_id' cannot be null
+2024-09-25T21:25:08.722+02:00  WARN 11232 --- [donbosco] [http-nio-8080-exec-5] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1048, SQLState: 23000
+2024-09-25T21:25:08.723+02:00 ERROR 11232 --- [donbosco] [http-nio-8080-exec-5] o.h.engine.jdbc.spi.SqlExceptionHelper   : Column 'user_id' cannot be null
+2024-09-25T21:36:16.817+02:00  INFO 11232 --- [donbosco] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-09-25T21:36:17.647+02:00  INFO 11232 --- [donbosco] [Thread-23] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T21:36:17.719+02:00  INFO 11232 --- [donbosco] [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2024-09-25T21:36:17.814+02:00  INFO 11232 --- [donbosco] [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2024-09-25T21:36:18.572+02:00  INFO 11232 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Starting DonboscoApplication using Java 17.0.12 with PID 11232 (C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp\target\classes started by F5 02 SEV in C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp)
+2024-09-25T21:36:18.579+02:00  INFO 11232 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-09-25T21:36:19.504+02:00  INFO 11232 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-25T21:36:19.868+02:00  INFO 11232 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 303 ms. Found 3 JPA repository interfaces.
+2024-09-25T21:36:20.648+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-25T21:36:20.683+02:00  INFO 11232 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-25T21:36:20.706+02:00  INFO 11232 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-09-25T21:36:20.762+02:00  INFO 11232 --- [donbosco] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-25T21:36:20.775+02:00  INFO 11232 --- [donbosco] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2187 ms
+2024-09-25T21:36:21.251+02:00  INFO 11232 --- [donbosco] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-25T21:36:21.314+02:00  INFO 11232 --- [donbosco] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-25T21:36:21.335+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-25T21:36:21.337+02:00  INFO 11232 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2024-09-25T21:36:21.431+02:00  INFO 11232 --- [donbosco] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection com.mysql.cj.jdbc.ConnectionImpl@67ca3068
+2024-09-25T21:36:21.432+02:00  INFO 11232 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2024-09-25T21:36:21.642+02:00  INFO 11232 --- [donbosco] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-25T21:36:21.791+02:00  INFO 11232 --- [donbosco] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T21:36:22.008+02:00  WARN 11232 --- [donbosco] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-25T21:36:22.200+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-09-25T21:36:22.248+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-25T21:36:22.265+02:00  INFO 11232 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Started DonboscoApplication in 4.056 seconds (process running for 25729.994)
+2024-09-25T21:36:22.277+02:00  INFO 11232 --- [donbosco] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-09-25T21:36:38.926+02:00  INFO 11232 --- [donbosco] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-25T21:36:38.928+02:00  INFO 11232 --- [donbosco] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-25T21:36:38.930+02:00  INFO 11232 --- [donbosco] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-09-25T21:38:16.600+02:00  WARN 11232 --- [donbosco] [http-nio-8080-exec-5] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1048, SQLState: 23000
+2024-09-25T21:38:16.601+02:00 ERROR 11232 --- [donbosco] [http-nio-8080-exec-5] o.h.engine.jdbc.spi.SqlExceptionHelper   : Column 'user_id' cannot be null
+2024-09-25T21:42:08.251+02:00  WARN 11232 --- [donbosco] [http-nio-8080-exec-8] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1048, SQLState: 23000
+2024-09-25T21:42:08.251+02:00 ERROR 11232 --- [donbosco] [http-nio-8080-exec-8] o.h.engine.jdbc.spi.SqlExceptionHelper   : Column 'user_id' cannot be null
+2024-09-25T21:43:55.418+02:00  WARN 11232 --- [donbosco] [http-nio-8080-exec-10] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1048, SQLState: 23000
+2024-09-25T21:43:55.421+02:00 ERROR 11232 --- [donbosco] [http-nio-8080-exec-10] o.h.engine.jdbc.spi.SqlExceptionHelper   : Column 'user_id' cannot be null
+2024-09-25T21:44:36.422+02:00  INFO 11232 --- [donbosco] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-09-25T21:44:36.720+02:00  INFO 11232 --- [donbosco] [Thread-27] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T21:44:36.727+02:00  INFO 11232 --- [donbosco] [Thread-27] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2024-09-25T21:44:36.757+02:00  INFO 11232 --- [donbosco] [Thread-27] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2024-09-25T21:44:36.966+02:00  INFO 11232 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Starting DonboscoApplication using Java 17.0.12 with PID 11232 (C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp\target\classes started by F5 02 SEV in C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp)
+2024-09-25T21:44:36.969+02:00  INFO 11232 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-09-25T21:44:37.531+02:00  INFO 11232 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-25T21:44:37.570+02:00  INFO 11232 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 3 JPA repository interfaces.
+2024-09-25T21:44:37.826+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-25T21:44:37.828+02:00  INFO 11232 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-25T21:44:37.832+02:00  INFO 11232 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-09-25T21:44:37.954+02:00  INFO 11232 --- [donbosco] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-25T21:44:37.955+02:00  INFO 11232 --- [donbosco] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 982 ms
+2024-09-25T21:44:38.104+02:00  INFO 11232 --- [donbosco] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-25T21:44:38.148+02:00  INFO 11232 --- [donbosco] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-25T21:44:38.195+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-25T21:44:38.202+02:00  INFO 11232 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2024-09-25T21:44:38.255+02:00  INFO 11232 --- [donbosco] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6038e051
+2024-09-25T21:44:38.256+02:00  INFO 11232 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2024-09-25T21:44:38.459+02:00  INFO 11232 --- [donbosco] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-25T21:44:38.533+02:00  INFO 11232 --- [donbosco] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T21:44:38.722+02:00  WARN 11232 --- [donbosco] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-25T21:44:39.007+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-09-25T21:44:39.086+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-25T21:44:39.102+02:00  INFO 11232 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Started DonboscoApplication in 2.173 seconds (process running for 26226.832)
+2024-09-25T21:44:39.124+02:00  INFO 11232 --- [donbosco] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-09-25T21:45:07.380+02:00  INFO 11232 --- [donbosco] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-09-25T21:45:07.617+02:00  INFO 11232 --- [donbosco] [Thread-31] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T21:45:07.618+02:00  INFO 11232 --- [donbosco] [Thread-31] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2024-09-25T21:45:07.633+02:00  INFO 11232 --- [donbosco] [Thread-31] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2024-09-25T21:45:07.758+02:00  INFO 11232 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Starting DonboscoApplication using Java 17.0.12 with PID 11232 (C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp\target\classes started by F5 02 SEV in C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp)
+2024-09-25T21:45:07.759+02:00  INFO 11232 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-09-25T21:45:08.010+02:00  INFO 11232 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-25T21:45:08.064+02:00  INFO 11232 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 3 JPA repository interfaces.
+2024-09-25T21:45:08.184+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-25T21:45:08.187+02:00  INFO 11232 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-25T21:45:08.188+02:00  INFO 11232 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-09-25T21:45:08.217+02:00  INFO 11232 --- [donbosco] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-25T21:45:08.218+02:00  INFO 11232 --- [donbosco] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 452 ms
+2024-09-25T21:45:08.268+02:00  INFO 11232 --- [donbosco] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-25T21:45:08.272+02:00  INFO 11232 --- [donbosco] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-25T21:45:08.280+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-25T21:45:08.283+02:00  INFO 11232 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2024-09-25T21:45:08.302+02:00  INFO 11232 --- [donbosco] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-9 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4f2c87a4
+2024-09-25T21:45:08.302+02:00  INFO 11232 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2024-09-25T21:45:08.473+02:00  INFO 11232 --- [donbosco] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-25T21:45:08.518+02:00  INFO 11232 --- [donbosco] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T21:45:08.658+02:00  WARN 11232 --- [donbosco] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-25T21:45:08.791+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-09-25T21:45:08.817+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-25T21:45:08.828+02:00  INFO 11232 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Started DonboscoApplication in 1.109 seconds (process running for 26256.557)
+2024-09-25T21:45:08.868+02:00  INFO 11232 --- [donbosco] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-09-25T21:45:16.720+02:00  INFO 11232 --- [donbosco] [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-25T21:45:16.722+02:00  INFO 11232 --- [donbosco] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-25T21:45:16.724+02:00  INFO 11232 --- [donbosco] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-09-25T21:45:16.805+02:00  WARN 11232 --- [donbosco] [http-nio-8080-exec-3] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1048, SQLState: 23000
+2024-09-25T21:45:16.809+02:00 ERROR 11232 --- [donbosco] [http-nio-8080-exec-3] o.h.engine.jdbc.spi.SqlExceptionHelper   : Column 'user_id' cannot be null
+2024-09-25T21:48:14.085+02:00  INFO 11232 --- [donbosco] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-09-25T21:48:15.800+02:00  INFO 11232 --- [donbosco] [Thread-35] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T21:48:15.872+02:00  INFO 11232 --- [donbosco] [Thread-35] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2024-09-25T21:48:16.325+02:00  INFO 11232 --- [donbosco] [Thread-35] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+2024-09-25T21:48:16.832+02:00  INFO 11232 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Starting DonboscoApplication using Java 17.0.12 with PID 11232 (C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp\target\classes started by F5 02 SEV in C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp)
+2024-09-25T21:48:16.833+02:00  INFO 11232 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-09-25T21:48:17.361+02:00  INFO 11232 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-25T21:48:17.412+02:00  INFO 11232 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50 ms. Found 3 JPA repository interfaces.
+2024-09-25T21:48:17.650+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-25T21:48:17.656+02:00  INFO 11232 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-25T21:48:17.658+02:00  INFO 11232 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-09-25T21:48:17.756+02:00  INFO 11232 --- [donbosco] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-25T21:48:17.758+02:00  INFO 11232 --- [donbosco] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 918 ms
+2024-09-25T21:48:17.844+02:00  INFO 11232 --- [donbosco] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-25T21:48:17.915+02:00  INFO 11232 --- [donbosco] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-25T21:48:17.941+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-25T21:48:17.961+02:00  INFO 11232 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
+2024-09-25T21:48:18.018+02:00  INFO 11232 --- [donbosco] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-10 - Added connection com.mysql.cj.jdbc.ConnectionImpl@428a1180
+2024-09-25T21:48:18.019+02:00  INFO 11232 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
+2024-09-25T21:48:18.374+02:00  INFO 11232 --- [donbosco] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-25T21:48:18.749+02:00  INFO 11232 --- [donbosco] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T21:48:19.088+02:00  WARN 11232 --- [donbosco] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-25T21:48:19.342+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-09-25T21:48:19.369+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-25T21:48:19.374+02:00  INFO 11232 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Started DonboscoApplication in 2.602 seconds (process running for 26447.103)
+2024-09-25T21:48:19.377+02:00  INFO 11232 --- [donbosco] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-09-25T21:48:47.140+02:00  INFO 11232 --- [donbosco] [http-nio-8080-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-25T21:48:47.143+02:00  INFO 11232 --- [donbosco] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-25T21:48:47.144+02:00  INFO 11232 --- [donbosco] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-09-25T21:48:47.203+02:00  WARN 11232 --- [donbosco] [http-nio-8080-exec-4] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1048, SQLState: 23000
+2024-09-25T21:48:47.204+02:00 ERROR 11232 --- [donbosco] [http-nio-8080-exec-4] o.h.engine.jdbc.spi.SqlExceptionHelper   : Column 'user_id' cannot be null
+2024-09-25T22:04:33.620+02:00  INFO 11232 --- [donbosco] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2024-09-25T22:04:34.351+02:00  INFO 11232 --- [donbosco] [Thread-39] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T22:04:34.423+02:00  INFO 11232 --- [donbosco] [Thread-39] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown initiated...
+2024-09-25T22:04:34.607+02:00  INFO 11232 --- [donbosco] [Thread-39] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown completed.
+2024-09-25T22:04:36.502+02:00  INFO 11232 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Starting DonboscoApplication using Java 17.0.12 with PID 11232 (C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp\target\classes started by F5 02 SEV in C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp)
+2024-09-25T22:04:36.503+02:00  INFO 11232 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-09-25T22:04:38.896+02:00  INFO 11232 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-25T22:04:38.959+02:00  INFO 11232 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 3 JPA repository interfaces.
+2024-09-25T22:04:39.175+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-25T22:04:39.177+02:00  INFO 11232 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-25T22:04:39.177+02:00  INFO 11232 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-09-25T22:04:39.214+02:00  INFO 11232 --- [donbosco] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-25T22:04:39.216+02:00  INFO 11232 --- [donbosco] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2709 ms
+2024-09-25T22:04:39.403+02:00  INFO 11232 --- [donbosco] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-25T22:04:39.410+02:00  INFO 11232 --- [donbosco] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-25T22:04:39.430+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-25T22:04:39.434+02:00  INFO 11232 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Starting...
+2024-09-25T22:04:39.522+02:00  INFO 11232 --- [donbosco] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-11 - Added connection com.mysql.cj.jdbc.ConnectionImpl@52799d2d
+2024-09-25T22:04:39.523+02:00  INFO 11232 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Start completed.
+2024-09-25T22:04:39.654+02:00  INFO 11232 --- [donbosco] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-25T22:04:39.735+02:00  INFO 11232 --- [donbosco] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T22:04:39.902+02:00  WARN 11232 --- [donbosco] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-25T22:04:40.032+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-09-25T22:04:40.071+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-25T22:04:40.076+02:00  INFO 11232 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Started DonboscoApplication in 3.727 seconds (process running for 27427.805)
+2024-09-25T22:04:40.078+02:00  INFO 11232 --- [donbosco] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-09-25T22:05:01.533+02:00  INFO 11232 --- [donbosco] [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-25T22:05:01.533+02:00  INFO 11232 --- [donbosco] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-25T22:05:01.534+02:00  INFO 11232 --- [donbosco] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-09-25T22:05:21.628+02:00  WARN 11232 --- [donbosco] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [jakarta.servlet.ServletException: Handler dispatch failed: java.lang.Error: Unresolved compilation problem: <EOL>?The method setUserId(Long) is undefined for the type Reservation<EOL>]
+2024-09-25T22:07:38.748+02:00  INFO 11232 --- [donbosco] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2024-09-25T22:07:39.196+02:00  INFO 11232 --- [donbosco] [Thread-43] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T22:07:39.220+02:00  INFO 11232 --- [donbosco] [Thread-43] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown initiated...
+2024-09-25T22:07:39.262+02:00  INFO 11232 --- [donbosco] [Thread-43] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown completed.
+2024-09-25T22:07:39.684+02:00  INFO 11232 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Starting DonboscoApplication using Java 17.0.12 with PID 11232 (C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp\target\classes started by F5 02 SEV in C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp)
+2024-09-25T22:07:39.686+02:00  INFO 11232 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-09-25T22:07:40.014+02:00  INFO 11232 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-25T22:07:40.037+02:00  INFO 11232 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 3 JPA repository interfaces.
+2024-09-25T22:07:40.198+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-25T22:07:40.199+02:00  INFO 11232 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-25T22:07:40.201+02:00  INFO 11232 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-09-25T22:07:40.225+02:00  INFO 11232 --- [donbosco] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-25T22:07:40.226+02:00  INFO 11232 --- [donbosco] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 528 ms
+2024-09-25T22:07:40.280+02:00  INFO 11232 --- [donbosco] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-25T22:07:40.283+02:00  INFO 11232 --- [donbosco] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-25T22:07:40.304+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-25T22:07:40.306+02:00  INFO 11232 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Starting...
+2024-09-25T22:07:40.337+02:00  INFO 11232 --- [donbosco] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-12 - Added connection com.mysql.cj.jdbc.ConnectionImpl@51a9680
+2024-09-25T22:07:40.337+02:00  INFO 11232 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Start completed.
+2024-09-25T22:07:40.444+02:00  INFO 11232 --- [donbosco] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-25T22:07:40.507+02:00  INFO 11232 --- [donbosco] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T22:07:40.651+02:00  WARN 11232 --- [donbosco] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-25T22:07:40.756+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-09-25T22:07:40.768+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-25T22:07:40.773+02:00  INFO 11232 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Started DonboscoApplication in 1.133 seconds (process running for 27608.502)
+2024-09-25T22:07:40.776+02:00  INFO 11232 --- [donbosco] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-09-25T22:17:58.458+02:00  INFO 11232 --- [donbosco] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-09-25T22:17:59.069+02:00  INFO 11232 --- [donbosco] [Thread-47] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T22:17:59.111+02:00  INFO 11232 --- [donbosco] [Thread-47] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown initiated...
+2024-09-25T22:17:59.187+02:00  INFO 11232 --- [donbosco] [Thread-47] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown completed.
+2024-09-25T22:17:59.682+02:00  INFO 11232 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Starting DonboscoApplication using Java 17.0.12 with PID 11232 (C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp\target\classes started by F5 02 SEV in C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp)
+2024-09-25T22:17:59.683+02:00  INFO 11232 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-09-25T22:18:00.238+02:00  INFO 11232 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-25T22:18:00.271+02:00  INFO 11232 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 3 JPA repository interfaces.
+2024-09-25T22:18:00.456+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-25T22:18:00.459+02:00  INFO 11232 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-25T22:18:00.459+02:00  INFO 11232 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-09-25T22:18:00.500+02:00  INFO 11232 --- [donbosco] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-25T22:18:00.501+02:00  INFO 11232 --- [donbosco] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 815 ms
+2024-09-25T22:18:00.582+02:00  INFO 11232 --- [donbosco] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-25T22:18:00.598+02:00  INFO 11232 --- [donbosco] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-25T22:18:00.611+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-25T22:18:00.614+02:00  INFO 11232 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Starting...
+2024-09-25T22:18:00.783+02:00  INFO 11232 --- [donbosco] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-13 - Added connection com.mysql.cj.jdbc.ConnectionImpl@63d23e69
+2024-09-25T22:18:00.801+02:00  INFO 11232 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Start completed.
+2024-09-25T22:18:00.955+02:00  INFO 11232 --- [donbosco] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-25T22:18:01.026+02:00  INFO 11232 --- [donbosco] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T22:18:01.213+02:00  WARN 11232 --- [donbosco] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-25T22:18:01.349+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-09-25T22:18:01.361+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-25T22:18:01.366+02:00  INFO 11232 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Started DonboscoApplication in 1.789 seconds (process running for 28229.095)
+2024-09-25T22:18:01.370+02:00  INFO 11232 --- [donbosco] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-09-25T22:18:12.765+02:00  INFO 11232 --- [donbosco] [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-25T22:18:12.766+02:00  INFO 11232 --- [donbosco] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-25T22:18:12.771+02:00  INFO 11232 --- [donbosco] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-09-25T22:18:12.812+02:00  WARN 11232 --- [donbosco] [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [jakarta.servlet.ServletException: Handler dispatch failed: java.lang.Error: Unresolved compilation problem: <EOL>?The method setUser(User) is undefined for the type Reservation<EOL>]
+2024-09-25T22:18:23.419+02:00  INFO 11232 --- [donbosco] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2024-09-25T22:18:23.845+02:00  INFO 11232 --- [donbosco] [Thread-51] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T22:18:23.847+02:00  INFO 11232 --- [donbosco] [Thread-51] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Shutdown initiated...
+2024-09-25T22:18:23.858+02:00  INFO 11232 --- [donbosco] [Thread-51] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Shutdown completed.
+2024-09-25T22:18:23.986+02:00  INFO 11232 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Starting DonboscoApplication using Java 17.0.12 with PID 11232 (C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp\target\classes started by F5 02 SEV in C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp)
+2024-09-25T22:18:23.987+02:00  INFO 11232 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-09-25T22:18:24.223+02:00  INFO 11232 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-25T22:18:24.248+02:00  INFO 11232 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 3 JPA repository interfaces.
+2024-09-25T22:18:24.399+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-25T22:18:24.400+02:00  INFO 11232 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-25T22:18:24.401+02:00  INFO 11232 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-09-25T22:18:24.479+02:00  INFO 11232 --- [donbosco] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-25T22:18:24.480+02:00  INFO 11232 --- [donbosco] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 491 ms
+2024-09-25T22:18:24.522+02:00  INFO 11232 --- [donbosco] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-25T22:18:24.529+02:00  INFO 11232 --- [donbosco] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-25T22:18:24.538+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-25T22:18:24.545+02:00  INFO 11232 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Starting...
+2024-09-25T22:18:24.567+02:00  INFO 11232 --- [donbosco] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-14 - Added connection com.mysql.cj.jdbc.ConnectionImpl@556c800d
+2024-09-25T22:18:24.568+02:00  INFO 11232 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Start completed.
+2024-09-25T22:18:24.664+02:00  INFO 11232 --- [donbosco] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-25T22:18:25.201+02:00  INFO 11232 --- [donbosco] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T22:18:25.310+02:00  WARN 11232 --- [donbosco] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-25T22:18:25.414+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-09-25T22:18:25.425+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-25T22:18:25.429+02:00  INFO 11232 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Started DonboscoApplication in 1.476 seconds (process running for 28253.158)
+2024-09-25T22:18:25.433+02:00  INFO 11232 --- [donbosco] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-09-25T22:18:43.515+02:00  INFO 11232 --- [donbosco] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-25T22:18:43.516+02:00  INFO 11232 --- [donbosco] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-25T22:18:43.519+02:00  INFO 11232 --- [donbosco] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-09-25T22:21:02.132+02:00  INFO 11232 --- [donbosco] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-09-25T22:21:02.405+02:00  INFO 11232 --- [donbosco] [Thread-55] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T22:21:02.407+02:00  INFO 11232 --- [donbosco] [Thread-55] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Shutdown initiated...
+2024-09-25T22:21:02.417+02:00  INFO 11232 --- [donbosco] [Thread-55] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Shutdown completed.
+2024-09-25T22:21:02.535+02:00  INFO 11232 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Starting DonboscoApplication using Java 17.0.12 with PID 11232 (C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp\target\classes started by F5 02 SEV in C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp)
+2024-09-25T22:21:02.539+02:00  INFO 11232 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-09-25T22:21:02.854+02:00  INFO 11232 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-25T22:21:02.894+02:00  INFO 11232 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 3 JPA repository interfaces.
+2024-09-25T22:21:03.051+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-25T22:21:03.053+02:00  INFO 11232 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-25T22:21:03.054+02:00  INFO 11232 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-09-25T22:21:03.074+02:00  INFO 11232 --- [donbosco] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-25T22:21:03.074+02:00  INFO 11232 --- [donbosco] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 532 ms
+2024-09-25T22:21:03.142+02:00  INFO 11232 --- [donbosco] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-25T22:21:03.145+02:00  INFO 11232 --- [donbosco] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-25T22:21:03.169+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-25T22:21:03.171+02:00  INFO 11232 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Starting...
+2024-09-25T22:21:03.193+02:00  INFO 11232 --- [donbosco] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-15 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6cd42812
+2024-09-25T22:21:03.194+02:00  INFO 11232 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Start completed.
+2024-09-25T22:21:03.279+02:00  INFO 11232 --- [donbosco] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-25T22:21:03.331+02:00  INFO 11232 --- [donbosco] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T22:21:03.477+02:00  WARN 11232 --- [donbosco] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-25T22:21:03.574+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-09-25T22:21:03.584+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-25T22:21:03.589+02:00  INFO 11232 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Started DonboscoApplication in 1.082 seconds (process running for 28411.319)
+2024-09-25T22:21:03.591+02:00  INFO 11232 --- [donbosco] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-09-25T22:21:13.304+02:00  INFO 11232 --- [donbosco] [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-25T22:21:13.305+02:00  INFO 11232 --- [donbosco] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-25T22:21:13.306+02:00  INFO 11232 --- [donbosco] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-09-25T22:39:03.500+02:00  INFO 11232 --- [donbosco] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-09-25T22:39:04.072+02:00  INFO 11232 --- [donbosco] [Thread-59] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T22:39:04.128+02:00  INFO 11232 --- [donbosco] [Thread-59] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Shutdown initiated...
+2024-09-25T22:39:04.191+02:00  INFO 11232 --- [donbosco] [Thread-59] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Shutdown completed.
+2024-09-25T22:39:04.771+02:00  INFO 11232 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Starting DonboscoApplication using Java 17.0.12 with PID 11232 (C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp\target\classes started by F5 02 SEV in C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp)
+2024-09-25T22:39:04.771+02:00  INFO 11232 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-09-25T22:39:05.095+02:00  INFO 11232 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-25T22:39:05.134+02:00  INFO 11232 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37 ms. Found 3 JPA repository interfaces.
+2024-09-25T22:39:05.507+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-25T22:39:05.525+02:00  INFO 11232 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-25T22:39:05.525+02:00  INFO 11232 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-09-25T22:39:05.546+02:00  INFO 11232 --- [donbosco] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-25T22:39:05.554+02:00  INFO 11232 --- [donbosco] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 778 ms
+2024-09-25T22:39:05.654+02:00  INFO 11232 --- [donbosco] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-25T22:39:05.662+02:00  INFO 11232 --- [donbosco] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-25T22:39:05.683+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-25T22:39:05.685+02:00  INFO 11232 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Starting...
+2024-09-25T22:39:05.726+02:00  INFO 11232 --- [donbosco] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-16 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7baf989c
+2024-09-25T22:39:05.727+02:00  INFO 11232 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Start completed.
+2024-09-25T22:39:05.882+02:00  INFO 11232 --- [donbosco] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-25T22:39:05.964+02:00  INFO 11232 --- [donbosco] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T22:39:06.487+02:00  WARN 11232 --- [donbosco] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-25T22:39:06.660+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-09-25T22:39:06.675+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-25T22:39:06.679+02:00  INFO 11232 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Started DonboscoApplication in 1.973 seconds (process running for 29494.409)
+2024-09-25T22:39:06.681+02:00  INFO 11232 --- [donbosco] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-09-25T22:43:23.505+02:00  INFO 11232 --- [donbosco] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-09-25T22:43:23.898+02:00  INFO 11232 --- [donbosco] [Thread-63] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T22:43:23.903+02:00  INFO 11232 --- [donbosco] [Thread-63] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Shutdown initiated...
+2024-09-25T22:43:23.927+02:00  INFO 11232 --- [donbosco] [Thread-63] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Shutdown completed.
+2024-09-25T22:43:24.080+02:00  INFO 11232 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Starting DonboscoApplication using Java 17.0.12 with PID 11232 (C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp\target\classes started by F5 02 SEV in C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp)
+2024-09-25T22:43:24.081+02:00  INFO 11232 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-09-25T22:43:24.247+02:00  INFO 11232 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-25T22:43:24.266+02:00  INFO 11232 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 3 JPA repository interfaces.
+2024-09-25T22:43:24.667+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-25T22:43:24.741+02:00  INFO 11232 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-25T22:43:24.919+02:00  INFO 11232 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-09-25T22:43:24.942+02:00  INFO 11232 --- [donbosco] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-25T22:43:24.945+02:00  INFO 11232 --- [donbosco] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 862 ms
+2024-09-25T22:43:24.992+02:00  INFO 11232 --- [donbosco] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-25T22:43:24.999+02:00  INFO 11232 --- [donbosco] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-25T22:43:25.012+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-25T22:43:25.014+02:00  INFO 11232 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Starting...
+2024-09-25T22:43:25.036+02:00  INFO 11232 --- [donbosco] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-17 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27e6a21c
+2024-09-25T22:43:25.037+02:00  INFO 11232 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Start completed.
+2024-09-25T22:43:25.150+02:00  INFO 11232 --- [donbosco] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-25T22:43:25.234+02:00  INFO 11232 --- [donbosco] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-25T22:43:25.381+02:00  WARN 11232 --- [donbosco] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-25T22:43:25.573+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-09-25T22:43:25.586+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-25T22:43:25.599+02:00  INFO 11232 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Started DonboscoApplication in 1.548 seconds (process running for 29753.329)
+2024-09-25T22:43:25.617+02:00  INFO 11232 --- [donbosco] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-09-25T22:43:51.897+02:00  INFO 11232 --- [donbosco] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-25T22:43:51.898+02:00  INFO 11232 --- [donbosco] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-25T22:43:51.902+02:00  INFO 11232 --- [donbosco] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
