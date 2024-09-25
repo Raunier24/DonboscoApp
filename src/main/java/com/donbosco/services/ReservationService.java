@@ -40,5 +40,5 @@ public class ReservationService {
         existingReservation.setSeats(existingReservation.getSeats());
         return reservationRepository.save(existingReservation);
     }
-    
+
 }

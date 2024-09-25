@@ -18,10 +18,10 @@ public class Reservation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    
+
     @Column
     private LocalDate reservationTime;
-    
+
     @Column
     private int seats;
 
@@ -33,13 +33,24 @@ public class Reservation {
     @JoinColumn(name = "flight_id")
     private Flight flight;
 
-    public Reservation(LocalDate reservationTime, int seats, User user, Flight flight, String name, String details) {
+    @Column
+    private String name;
+
+    @Column
+    private String details;
+
+    @Column
+    private String status; // Nuevo atributo para el estado
+
+    public Reservation(LocalDate reservationTime, int seats, User user, Flight flight, String name, String details,
+            String status) {
         this.reservationTime = reservationTime;
         this.seats = seats;
         this.user = user;
         this.flight = flight;
         this.name = name;
         this.details = details;
+        this.status = status; // Inicializa el estado
     }
 
     public Reservation() {
@@ -89,7 +100,7 @@ public class Reservation {
         return name;
     }
 
-    public void setName() {
+    public void setName(String name) {
         this.name = name;
     }
 
@@ -97,7 +108,15 @@ public class Reservation {
         return details;
     }
 
-    public void setDetails() {
+    public void setDetails(String details) {
         this.details = details;
+    }
+
+    public String getStatus() { // Método getter para el estado
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }
