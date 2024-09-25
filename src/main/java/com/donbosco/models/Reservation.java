@@ -33,11 +33,13 @@ public class Reservation {
     @JoinColumn(name = "flight_id")
     private Flight flight;
 
-    public Reservation(LocalDate reservationTime, int seats, User user, Flight flight) {
+    public Reservation(LocalDate reservationTime, int seats, User user, Flight flight, String name, String details) {
         this.reservationTime = reservationTime;
         this.seats = seats;
         this.user = user;
         this.flight = flight;
+        this.name = name;
+        this.details = details;
     }
 
     public Reservation() {
@@ -83,6 +85,19 @@ public class Reservation {
         this.seats = seats;
     }
 
+    public String getName() {
+        return name;
+    }
 
+    public void setName() {
+        this.name = name;
+    }
 
+    public String getDetails() {
+        return details;
+    }
+
+    public void setDetails() {
+        this.details = details;
+    }
 }
