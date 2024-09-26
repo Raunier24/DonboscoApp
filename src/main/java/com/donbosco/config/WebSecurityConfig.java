@@ -31,7 +31,7 @@ public class WebSecurityConfig {
                 .authorizeHttpRequests(authRequest ->
                         authRequest
                                 .requestMatchers("/api/auth/login").permitAll()//POST
-                                .requestMatchers("/api/auth/register").hasAnyAuthority("ADMIN")//POST
+                                .requestMatchers("/api/auth/register").permitAll()//POST
                                 .requestMatchers("/api/user/").hasAnyAuthority("ADMIN")//GETALL
                                 .requestMatchers("/api/user/{id}").hasAnyAuthority("ADMIN", "USER")//GETID
                                 .requestMatchers("/api/user/create").hasAnyAuthority("ADMIN")//CREATE
