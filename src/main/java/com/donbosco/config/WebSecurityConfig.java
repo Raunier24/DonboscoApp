@@ -27,6 +27,7 @@ public class WebSecurityConfig {
                                 .csrf(csrf -> csrf.disable())
                                 .authorizeHttpRequests(authRequest -> authRequest
                                                 .requestMatchers("/api/auth/**").permitAll()
+
                                                 .requestMatchers("/api/flights/getAll").hasAnyAuthority("ADMIN", "USER")
                                                 .requestMatchers("/api/flights/id").hasAuthority("ADMIN")
                                                 .requestMatchers("/api/flights/create").hasAuthority("USER")
