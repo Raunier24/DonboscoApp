@@ -26,16 +26,25 @@ public class WebSecurityConfig {
                 return http
                                 .csrf(csrf -> csrf.disable())
                                 .authorizeHttpRequests(authRequest -> authRequest
-                                                .requestMatchers("/api/auth/login").permitAll()
-                                                .requestMatchers("/api/auth/register").permitAll()
-                                                .requestMatchers("/api/new/vuelo").hasAuthority("ADMIN")
-                                                .requestMatchers("/api/post/delete/**").hasAuthority("ADMIN")
-                                                .requestMatchers("/api/post/update/**").hasAuthority("ADMIN")
-                                                .requestMatchers("/api/post/getAll").permitAll()
-                                                .requestMatchers("/api/donations").hasAnyAuthority("ADMIN", "USER")
-                                                .requestMatchers("/api/donations/delete/**").hasAuthority("ADMIN")
-                                                .requestMatchers("/api/donations/update/**").hasAuthority("ADMIN")
-                                                .requestMatchers("/api/donations/getAll").permitAll()
+                                                .requestMatchers("/api/auth/**").permitAll()
+                                                .requestMatchers("/api/flights/getAll").hasAnyAuthority("ADMIN", "USER")
+                                                .requestMatchers("/api/flights/id").hasAuthority("ADMIN")
+                                                .requestMatchers("/api/flights/create").hasAuthority("USER")
+                                                .requestMatchers("/api/flights/update").hasAuthority("USER")
+                                                .requestMatchers("/api/flights/delete").hasAuthority("USER")
+
+                                                .requestMatchers("/api/reservation/getAll").hasAnyAuthority("ADMIN", "USER")
+                                                .requestMatchers("/api/reservation/id").hasAuthority("ADMIN")
+                                                .requestMatchers("/api/reservation/create").hasAuthority("USER")
+                                                .requestMatchers("/api/reservation/update").hasAuthority("USER")
+                                                .requestMatchers("/api/reservation/delete").hasAuthority("USER")
+
+                                                .requestMatchers("/api/user/getAll").hasAuthority("ADMIN")
+                                                .requestMatchers("/api/user/id").hasAuthority("ADMIN")
+                                                .requestMatchers("/api/user/create").hasAuthority("USER")
+                                                .requestMatchers("/api/user/update").hasAuthority("USER")
+                                                .requestMatchers("/api/user/delete").hasAnyAuthority("ADMIN", "USER")
+
                                                 .anyRequest().authenticated())
                                 .sessionManagement(sessionManager -> sessionManager
                                                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS))
