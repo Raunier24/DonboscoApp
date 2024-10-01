@@ -18,7 +18,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
-class UserServiceImplIntegrationTest {
+class UserServiceImplTest {
 
     @Autowired
     private IUserRepository userRepository;
