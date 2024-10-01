@@ -26,3 +26,369 @@
 2024-09-26T08:56:27.559+02:00  INFO 11232 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
 2024-09-26T08:56:27.564+02:00  INFO 11232 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Started DonboscoApplication in 3.944 seconds (process running for 66537.734)
 2024-09-26T08:56:27.572+02:00  INFO 11232 --- [donbosco] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-10-01T10:51:40.346+02:00  INFO 28244 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Starting DonboscoApplication using Java 21.0.3 with PID 28244 (D:\Cursos\Programación Donbosco\Java\DonboscoApp\target\classes started by 34722 in D:\Cursos\Programación Donbosco\Java\DonboscoApp)
+2024-10-01T10:51:40.350+02:00  INFO 28244 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-10-01T10:51:40.392+02:00  INFO 28244 --- [donbosco] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-01T10:51:40.392+02:00  INFO 28244 --- [donbosco] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-01T10:51:41.101+02:00  INFO 28244 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-01T10:51:41.161+02:00  INFO 28244 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 3 JPA repository interfaces.
+2024-10-01T10:51:41.809+02:00  INFO 28244 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-10-01T10:51:41.840+02:00  INFO 28244 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-01T10:51:41.841+02:00  INFO 28244 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-01T10:51:41.928+02:00  INFO 28244 --- [donbosco] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-01T10:51:41.929+02:00  INFO 28244 --- [donbosco] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1535 ms
+2024-10-01T10:51:42.139+02:00  INFO 28244 --- [donbosco] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-01T10:51:42.197+02:00  INFO 28244 --- [donbosco] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-01T10:51:42.222+02:00  INFO 28244 --- [donbosco] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-01T10:51:42.498+02:00  INFO 28244 --- [donbosco] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-01T10:51:42.527+02:00  INFO 28244 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-01T10:51:43.682+02:00  WARN 28244 --- [donbosco] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1045, SQLState: 28000
+2024-10-01T10:51:43.682+02:00 ERROR 28244 --- [donbosco] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : Access denied for user 'root'@'localhost' (using password: NO)
+2024-10-01T10:51:43.682+02:00  WARN 28244 --- [donbosco] [restartedMain] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
+
+org.hibernate.exception.GenericJDBCException: unable to obtain isolated JDBC connection [Access denied for user 'root'@'localhost' (using password: NO)] [n/a]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:63) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:292) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:124) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:78) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:221) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:189) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.1.13.jar:6.1.13]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.1.13.jar:6.1.13]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.1.13.jar:6.1.13]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.1.13.jar:6.1.13]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.4.jar:3.3.4]
+	at com.donbosco.DonboscoApplication.main(DonboscoApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.4.jar:3.3.4]
+Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: NO)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-5.1.0.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:439) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	... 38 common frames omitted
+
+2024-10-01T10:51:43.686+02:00 ERROR 28244 --- [donbosco] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2024-10-01T10:51:43.687+02:00  WARN 28244 --- [donbosco] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2024-10-01T10:51:43.691+02:00  INFO 28244 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-10-01T10:51:43.704+02:00  INFO 28244 --- [donbosco] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-10-01T10:51:43.721+02:00 ERROR 28244 --- [donbosco] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.4.jar:3.3.4]
+	at com.donbosco.DonboscoApplication.main(DonboscoApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.4.jar:3.3.4]
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:276) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:221) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:189) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.1.13.jar:6.1.13]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.1.13.jar:6.1.13]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.1.13.jar:6.1.13]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.1.13.jar:6.1.13]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.1.13.jar:6.1.13]
+	... 18 common frames omitted
+Caused by: org.hibernate.HibernateException: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:191) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:87) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentWithDefaults(JdbcEnvironmentInitiator.java:153) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:364) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:124) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:78) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	... 33 common frames omitted
+
+2024-10-01T10:53:07.717+02:00  INFO 26528 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Starting DonboscoApplication using Java 21.0.3 with PID 26528 (D:\Cursos\Programación Donbosco\Java\DonboscoApp\target\classes started by 34722 in D:\Cursos\Programación Donbosco\Java\DonboscoApp)
+2024-10-01T10:53:07.722+02:00  INFO 26528 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-10-01T10:53:07.786+02:00  INFO 26528 --- [donbosco] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-01T10:53:07.786+02:00  INFO 26528 --- [donbosco] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-01T10:53:08.635+02:00  INFO 26528 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-01T10:53:08.716+02:00  INFO 26528 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74 ms. Found 3 JPA repository interfaces.
+2024-10-01T10:53:09.458+02:00  INFO 26528 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-10-01T10:53:09.481+02:00  INFO 26528 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-01T10:53:09.482+02:00  INFO 26528 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-01T10:53:09.549+02:00  INFO 26528 --- [donbosco] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-01T10:53:09.550+02:00  INFO 26528 --- [donbosco] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1764 ms
+2024-10-01T10:53:09.769+02:00  INFO 26528 --- [donbosco] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-01T10:53:09.824+02:00  INFO 26528 --- [donbosco] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-01T10:53:09.851+02:00  INFO 26528 --- [donbosco] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-01T10:53:10.135+02:00  INFO 26528 --- [donbosco] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-01T10:53:10.168+02:00  INFO 26528 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-01T10:53:10.293+02:00  INFO 26528 --- [donbosco] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@69d2c112
+2024-10-01T10:53:10.295+02:00  INFO 26528 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-01T10:53:10.328+02:00  WARN 26528 --- [donbosco] [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.7.24 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-10-01T10:53:11.028+02:00  INFO 26528 --- [donbosco] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-01T10:53:11.346+02:00  INFO 26528 --- [donbosco] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-01T10:53:11.814+02:00  WARN 26528 --- [donbosco] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-01T10:53:12.234+02:00  INFO 26528 --- [donbosco] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-01T10:53:12.280+02:00  INFO 26528 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-10-01T10:53:12.288+02:00  INFO 26528 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Started DonboscoApplication in 5.022 seconds (process running for 5.504)
+2024-10-01T10:53:23.103+02:00  INFO 26528 --- [donbosco] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-01T10:53:23.108+02:00  INFO 26528 --- [donbosco] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-01T10:53:23.121+02:00  INFO 26528 --- [donbosco] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-01T10:57:58.648+02:00  INFO 32296 --- [donbosco] [main] c.d.controllers.UserControllerTest       : Starting UserControllerTest using Java 21.0.3 with PID 32296 (started by 34722 in D:\Cursos\Programación Donbosco\Java\DonboscoApp)
+2024-10-01T10:57:58.651+02:00  INFO 32296 --- [donbosco] [main] c.d.controllers.UserControllerTest       : No active profile set, falling back to 1 default profile: "default"
+2024-10-01T10:57:59.266+02:00  INFO 32296 --- [donbosco] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-01T10:57:59.328+02:00  INFO 32296 --- [donbosco] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 3 JPA repository interfaces.
+2024-10-01T10:57:59.810+02:00  INFO 32296 --- [donbosco] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-01T10:57:59.890+02:00  INFO 32296 --- [donbosco] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-01T10:57:59.921+02:00  INFO 32296 --- [donbosco] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-01T10:58:00.294+02:00  INFO 32296 --- [donbosco] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-01T10:58:00.322+02:00  INFO 32296 --- [donbosco] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-01T10:58:00.454+02:00  INFO 32296 --- [donbosco] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@33ebe4f0
+2024-10-01T10:58:00.455+02:00  INFO 32296 --- [donbosco] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-01T10:58:00.490+02:00  WARN 32296 --- [donbosco] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.7.24 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-10-01T10:58:01.212+02:00  INFO 32296 --- [donbosco] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-01T10:58:01.272+02:00  INFO 32296 --- [donbosco] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-01T10:58:01.981+02:00  WARN 32296 --- [donbosco] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-01T10:58:02.381+02:00  INFO 32296 --- [donbosco] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-10-01T10:58:02.382+02:00  INFO 32296 --- [donbosco] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-10-01T10:58:02.383+02:00  INFO 32296 --- [donbosco] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-10-01T10:58:02.408+02:00  INFO 32296 --- [donbosco] [main] c.d.controllers.UserControllerTest       : Started UserControllerTest in 4.044 seconds (process running for 4.883)
+2024-10-01T10:58:02.981+02:00  INFO 32296 --- [donbosco] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-01T10:58:02.985+02:00  INFO 32296 --- [donbosco] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-01T10:58:02.996+02:00  INFO 32296 --- [donbosco] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-01T10:58:12.405+02:00  INFO 30600 --- [donbosco] [main] c.d.controllers.UserControllerTest       : Starting UserControllerTest using Java 21.0.3 with PID 30600 (started by 34722 in D:\Cursos\Programación Donbosco\Java\DonboscoApp)
+2024-10-01T10:58:12.408+02:00  INFO 30600 --- [donbosco] [main] c.d.controllers.UserControllerTest       : No active profile set, falling back to 1 default profile: "default"
+2024-10-01T10:58:13.016+02:00  INFO 30600 --- [donbosco] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-01T10:58:13.082+02:00  INFO 30600 --- [donbosco] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 3 JPA repository interfaces.
+2024-10-01T10:58:13.512+02:00  INFO 30600 --- [donbosco] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-01T10:58:13.635+02:00  INFO 30600 --- [donbosco] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-01T10:58:13.666+02:00  INFO 30600 --- [donbosco] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-01T10:58:14.036+02:00  INFO 30600 --- [donbosco] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-01T10:58:14.062+02:00  INFO 30600 --- [donbosco] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-01T10:58:14.195+02:00  INFO 30600 --- [donbosco] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5f45bc8e
+2024-10-01T10:58:14.197+02:00  INFO 30600 --- [donbosco] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-01T10:58:14.228+02:00  WARN 30600 --- [donbosco] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.7.24 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-10-01T10:58:14.920+02:00  INFO 30600 --- [donbosco] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-01T10:58:14.976+02:00  INFO 30600 --- [donbosco] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-01T10:58:15.622+02:00  WARN 30600 --- [donbosco] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-01T10:58:16.107+02:00  INFO 30600 --- [donbosco] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-10-01T10:58:16.107+02:00  INFO 30600 --- [donbosco] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-10-01T10:58:16.109+02:00  INFO 30600 --- [donbosco] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2024-10-01T10:58:16.145+02:00  INFO 30600 --- [donbosco] [main] c.d.controllers.UserControllerTest       : Started UserControllerTest in 4.045 seconds (process running for 4.906)
+2024-10-01T10:58:16.975+02:00  INFO 30600 --- [donbosco] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-01T10:58:16.976+02:00  INFO 30600 --- [donbosco] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-01T10:58:16.986+02:00  INFO 30600 --- [donbosco] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-01T11:08:08.846+02:00  INFO 34248 --- [donbosco] [main] c.d.controllers.UserControllerTest       : Starting UserControllerTest using Java 21.0.3 with PID 34248 (started by 34722 in D:\Cursos\Programación Donbosco\Java\DonboscoApp)
+2024-10-01T11:08:08.849+02:00  INFO 34248 --- [donbosco] [main] c.d.controllers.UserControllerTest       : No active profile set, falling back to 1 default profile: "default"
+2024-10-01T11:08:09.997+02:00  INFO 34248 --- [donbosco] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-01T11:08:10.134+02:00  INFO 34248 --- [donbosco] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 113 ms. Found 3 JPA repository interfaces.
+2024-10-01T11:08:11.162+02:00  INFO 34248 --- [donbosco] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-01T11:08:11.317+02:00  INFO 34248 --- [donbosco] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-01T11:08:11.395+02:00  INFO 34248 --- [donbosco] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-01T11:08:12.146+02:00  INFO 34248 --- [donbosco] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-01T11:08:12.244+02:00  INFO 34248 --- [donbosco] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-01T11:08:12.588+02:00  INFO 34248 --- [donbosco] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@ce655b9
+2024-10-01T11:08:12.596+02:00  INFO 34248 --- [donbosco] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-01T11:08:12.696+02:00  WARN 34248 --- [donbosco] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.7.24 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-10-01T11:08:14.376+02:00  INFO 34248 --- [donbosco] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-01T11:08:14.481+02:00  INFO 34248 --- [donbosco] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-01T11:08:15.927+02:00  WARN 34248 --- [donbosco] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-01T11:08:16.877+02:00  INFO 34248 --- [donbosco] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-10-01T11:08:16.878+02:00  INFO 34248 --- [donbosco] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-10-01T11:08:16.880+02:00  INFO 34248 --- [donbosco] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2024-10-01T11:08:16.929+02:00  INFO 34248 --- [donbosco] [main] c.d.controllers.UserControllerTest       : Started UserControllerTest in 8.752 seconds (process running for 10.648)
+2024-10-01T11:08:18.374+02:00  INFO 34248 --- [donbosco] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-01T11:08:18.376+02:00  INFO 34248 --- [donbosco] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-01T11:08:18.396+02:00  INFO 34248 --- [donbosco] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-01T11:18:48.509+02:00  INFO 2552 --- [donbosco] [main] c.d.s.UserServiceImplIntegrationTest     : Starting UserServiceImplIntegrationTest using Java 21.0.3 with PID 2552 (started by 34722 in D:\Cursos\Programación Donbosco\Java\DonboscoApp)
+2024-10-01T11:18:48.512+02:00  INFO 2552 --- [donbosco] [main] c.d.s.UserServiceImplIntegrationTest     : No active profile set, falling back to 1 default profile: "default"
+2024-10-01T11:18:49.266+02:00  INFO 2552 --- [donbosco] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-01T11:18:49.327+02:00  INFO 2552 --- [donbosco] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50 ms. Found 3 JPA repository interfaces.
+2024-10-01T11:18:49.880+02:00  INFO 2552 --- [donbosco] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-01T11:18:49.983+02:00  INFO 2552 --- [donbosco] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-01T11:18:50.065+02:00  INFO 2552 --- [donbosco] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-01T11:18:50.525+02:00  INFO 2552 --- [donbosco] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-01T11:18:50.589+02:00  INFO 2552 --- [donbosco] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-01T11:18:50.839+02:00  INFO 2552 --- [donbosco] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@595fed99
+2024-10-01T11:18:50.842+02:00  INFO 2552 --- [donbosco] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-01T11:18:50.892+02:00  WARN 2552 --- [donbosco] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.7.24 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-10-01T11:18:51.718+02:00  INFO 2552 --- [donbosco] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-01T11:18:51.815+02:00  INFO 2552 --- [donbosco] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-01T11:18:52.604+02:00  WARN 2552 --- [donbosco] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-01T11:18:53.085+02:00  INFO 2552 --- [donbosco] [main] c.d.s.UserServiceImplIntegrationTest     : Started UserServiceImplIntegrationTest in 4.974 seconds (process running for 5.938)
+2024-10-01T11:18:53.755+02:00  INFO 2552 --- [donbosco] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-01T11:18:53.757+02:00  INFO 2552 --- [donbosco] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-01T11:18:53.765+02:00  INFO 2552 --- [donbosco] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-01T11:37:56.408+02:00  INFO 15512 --- [donbosco] [main] c.d.controllers.FlightControllerTest     : Starting FlightControllerTest using Java 21.0.3 with PID 15512 (started by 34722 in D:\Cursos\Programación Donbosco\Java\DonboscoApp)
+2024-10-01T11:37:56.413+02:00  INFO 15512 --- [donbosco] [main] c.d.controllers.FlightControllerTest     : No active profile set, falling back to 1 default profile: "default"
+2024-10-01T11:37:57.050+02:00  INFO 15512 --- [donbosco] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-01T11:37:57.112+02:00  INFO 15512 --- [donbosco] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 3 JPA repository interfaces.
+2024-10-01T11:37:58.865+02:00  INFO 15512 --- [donbosco] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-01T11:37:58.997+02:00  INFO 15512 --- [donbosco] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-01T11:37:59.058+02:00  INFO 15512 --- [donbosco] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-01T11:37:59.197+02:00  INFO 15512 --- [donbosco] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-01T11:37:59.223+02:00  INFO 15512 --- [donbosco] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-01T11:37:59.375+02:00  INFO 15512 --- [donbosco] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@19924f15
+2024-10-01T11:37:59.377+02:00  INFO 15512 --- [donbosco] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-01T11:37:59.414+02:00  WARN 15512 --- [donbosco] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.7.24 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-10-01T11:38:00.179+02:00  INFO 15512 --- [donbosco] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-01T11:38:00.240+02:00  INFO 15512 --- [donbosco] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-01T11:38:01.337+02:00  WARN 15512 --- [donbosco] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-01T11:38:01.808+02:00  INFO 15512 --- [donbosco] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-10-01T11:38:01.809+02:00  INFO 15512 --- [donbosco] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-10-01T11:38:01.810+02:00  INFO 15512 --- [donbosco] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-10-01T11:38:01.834+02:00  INFO 15512 --- [donbosco] [main] c.d.controllers.FlightControllerTest     : Started FlightControllerTest in 5.694 seconds (process running for 6.55)
+2024-10-01T11:38:02.110+02:00  INFO 15512 --- [donbosco] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-01T11:38:02.113+02:00  INFO 15512 --- [donbosco] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-01T11:38:02.122+02:00  INFO 15512 --- [donbosco] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-01T11:38:30.344+02:00  INFO 22632 --- [donbosco] [main] c.d.controllers.UserControllerTest       : Starting UserControllerTest using Java 21.0.3 with PID 22632 (started by 34722 in D:\Cursos\Programación Donbosco\Java\DonboscoApp)
+2024-10-01T11:38:30.359+02:00  INFO 22632 --- [donbosco] [main] c.d.controllers.UserControllerTest       : No active profile set, falling back to 1 default profile: "default"
+2024-10-01T11:38:31.543+02:00  INFO 22632 --- [donbosco] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-01T11:38:31.652+02:00  INFO 22632 --- [donbosco] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 96 ms. Found 3 JPA repository interfaces.
+2024-10-01T11:38:32.530+02:00  INFO 22632 --- [donbosco] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-01T11:38:32.647+02:00  INFO 22632 --- [donbosco] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-01T11:38:32.692+02:00  INFO 22632 --- [donbosco] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-01T11:38:33.287+02:00  INFO 22632 --- [donbosco] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-01T11:38:33.329+02:00  INFO 22632 --- [donbosco] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-01T11:38:33.537+02:00  INFO 22632 --- [donbosco] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@467af68c
+2024-10-01T11:38:33.539+02:00  INFO 22632 --- [donbosco] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-01T11:38:33.587+02:00  WARN 22632 --- [donbosco] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.7.24 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-10-01T11:38:34.732+02:00  INFO 22632 --- [donbosco] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-01T11:38:34.820+02:00  INFO 22632 --- [donbosco] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-01T11:38:35.862+02:00  WARN 22632 --- [donbosco] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-01T11:38:36.623+02:00  INFO 22632 --- [donbosco] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-10-01T11:38:36.623+02:00  INFO 22632 --- [donbosco] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-10-01T11:38:36.624+02:00  INFO 22632 --- [donbosco] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-10-01T11:38:36.692+02:00  INFO 22632 --- [donbosco] [main] c.d.controllers.UserControllerTest       : Started UserControllerTest in 6.836 seconds (process running for 8.479)
+2024-10-01T11:38:38.462+02:00  INFO 22632 --- [donbosco] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.donbosco.controllers.FlightControllerTest]: FlightControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-10-01T11:38:38.468+02:00  INFO 22632 --- [donbosco] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.donbosco.DonboscoApplication for test class com.donbosco.controllers.FlightControllerTest
+2024-10-01T11:38:38.472+02:00  INFO 22632 --- [donbosco] [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2024-10-01T11:38:38.518+02:00  INFO 22632 --- [donbosco] [main] c.d.controllers.FlightControllerTest     : Starting FlightControllerTest using Java 21.0.3 with PID 22632 (started by 34722 in D:\Cursos\Programación Donbosco\Java\DonboscoApp)
+2024-10-01T11:38:38.519+02:00  INFO 22632 --- [donbosco] [main] c.d.controllers.FlightControllerTest     : No active profile set, falling back to 1 default profile: "default"
+2024-10-01T11:38:38.953+02:00  INFO 22632 --- [donbosco] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-01T11:38:38.982+02:00  INFO 22632 --- [donbosco] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 3 JPA repository interfaces.
+2024-10-01T11:38:39.665+02:00  INFO 22632 --- [donbosco] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-01T11:38:39.671+02:00  INFO 22632 --- [donbosco] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-01T11:38:39.727+02:00  INFO 22632 --- [donbosco] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-01T11:38:39.728+02:00  INFO 22632 --- [donbosco] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-10-01T11:38:39.742+02:00  INFO 22632 --- [donbosco] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2715b3ea
+2024-10-01T11:38:39.743+02:00  INFO 22632 --- [donbosco] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-10-01T11:38:39.746+02:00  WARN 22632 --- [donbosco] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.7.24 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-10-01T11:38:40.163+02:00  INFO 22632 --- [donbosco] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-01T11:38:40.229+02:00  INFO 22632 --- [donbosco] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-01T11:38:40.617+02:00  WARN 22632 --- [donbosco] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-01T11:38:41.092+02:00  INFO 22632 --- [donbosco] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-10-01T11:38:41.097+02:00  INFO 22632 --- [donbosco] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-10-01T11:38:41.102+02:00  INFO 22632 --- [donbosco] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2024-10-01T11:38:41.142+02:00  INFO 22632 --- [donbosco] [main] c.d.controllers.FlightControllerTest     : Started FlightControllerTest in 2.67 seconds (process running for 12.929)
+2024-10-01T11:38:41.794+02:00  INFO 22632 --- [donbosco] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-01T11:38:41.808+02:00  INFO 22632 --- [donbosco] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-01T11:38:41.846+02:00  INFO 22632 --- [donbosco] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-01T11:38:41.857+02:00  INFO 22632 --- [donbosco] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-01T11:38:41.858+02:00  INFO 22632 --- [donbosco] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2024-10-01T11:38:41.860+02:00  INFO 22632 --- [donbosco] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2024-10-01T11:42:15.704+02:00  INFO 29820 --- [donbosco] [main] c.d.controllers.UserControllerTest       : Starting UserControllerTest using Java 21.0.3 with PID 29820 (started by 34722 in D:\Cursos\Programación Donbosco\Java\DonboscoApp)
+2024-10-01T11:42:15.714+02:00  INFO 29820 --- [donbosco] [main] c.d.controllers.UserControllerTest       : No active profile set, falling back to 1 default profile: "default"
+2024-10-01T11:42:16.721+02:00  INFO 29820 --- [donbosco] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-01T11:42:16.820+02:00  INFO 29820 --- [donbosco] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 82 ms. Found 3 JPA repository interfaces.
+2024-10-01T11:42:17.585+02:00  INFO 29820 --- [donbosco] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-01T11:42:17.694+02:00  INFO 29820 --- [donbosco] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-01T11:42:17.758+02:00  INFO 29820 --- [donbosco] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-01T11:42:18.543+02:00  INFO 29820 --- [donbosco] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-01T11:42:18.591+02:00  INFO 29820 --- [donbosco] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-01T11:42:18.790+02:00  INFO 29820 --- [donbosco] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2e3cd732
+2024-10-01T11:42:18.794+02:00  INFO 29820 --- [donbosco] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-01T11:42:18.836+02:00  WARN 29820 --- [donbosco] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.7.24 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-10-01T11:42:19.850+02:00  INFO 29820 --- [donbosco] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-01T11:42:19.934+02:00  INFO 29820 --- [donbosco] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-01T11:42:21.298+02:00  WARN 29820 --- [donbosco] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-01T11:42:22.062+02:00  INFO 29820 --- [donbosco] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-10-01T11:42:22.062+02:00  INFO 29820 --- [donbosco] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-10-01T11:42:22.063+02:00  INFO 29820 --- [donbosco] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-10-01T11:42:22.107+02:00  INFO 29820 --- [donbosco] [main] c.d.controllers.UserControllerTest       : Started UserControllerTest in 6.82 seconds (process running for 8.428)
+2024-10-01T11:42:23.433+02:00  INFO 29820 --- [donbosco] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.donbosco.controllers.FlightControllerTest]: FlightControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-10-01T11:42:23.442+02:00  INFO 29820 --- [donbosco] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.donbosco.DonboscoApplication for test class com.donbosco.controllers.FlightControllerTest
+2024-10-01T11:42:23.456+02:00  INFO 29820 --- [donbosco] [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2024-10-01T11:42:23.502+02:00  INFO 29820 --- [donbosco] [main] c.d.controllers.FlightControllerTest     : Starting FlightControllerTest using Java 21.0.3 with PID 29820 (started by 34722 in D:\Cursos\Programación Donbosco\Java\DonboscoApp)
+2024-10-01T11:42:23.503+02:00  INFO 29820 --- [donbosco] [main] c.d.controllers.FlightControllerTest     : No active profile set, falling back to 1 default profile: "default"
+2024-10-01T11:42:23.793+02:00  INFO 29820 --- [donbosco] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-01T11:42:23.830+02:00  INFO 29820 --- [donbosco] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 3 JPA repository interfaces.
+2024-10-01T11:42:24.525+02:00  INFO 29820 --- [donbosco] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-01T11:42:24.535+02:00  INFO 29820 --- [donbosco] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-01T11:42:24.568+02:00  INFO 29820 --- [donbosco] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-01T11:42:24.570+02:00  INFO 29820 --- [donbosco] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-10-01T11:42:24.576+02:00  INFO 29820 --- [donbosco] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27d9a016
+2024-10-01T11:42:24.577+02:00  INFO 29820 --- [donbosco] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-10-01T11:42:24.579+02:00  WARN 29820 --- [donbosco] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.7.24 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-10-01T11:42:24.861+02:00  INFO 29820 --- [donbosco] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-01T11:42:24.914+02:00  INFO 29820 --- [donbosco] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-01T11:42:25.264+02:00  WARN 29820 --- [donbosco] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-01T11:42:25.594+02:00  INFO 29820 --- [donbosco] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-10-01T11:42:25.595+02:00  INFO 29820 --- [donbosco] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-10-01T11:42:25.599+02:00  INFO 29820 --- [donbosco] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2024-10-01T11:42:25.618+02:00  INFO 29820 --- [donbosco] [main] c.d.controllers.FlightControllerTest     : Started FlightControllerTest in 2.164 seconds (process running for 11.939)
+2024-10-01T11:42:26.265+02:00  INFO 29820 --- [donbosco] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-01T11:42:26.276+02:00  INFO 29820 --- [donbosco] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-01T11:42:26.326+02:00  INFO 29820 --- [donbosco] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-01T11:42:26.334+02:00  INFO 29820 --- [donbosco] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-01T11:42:26.335+02:00  INFO 29820 --- [donbosco] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2024-10-01T11:42:26.341+02:00  INFO 29820 --- [donbosco] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
