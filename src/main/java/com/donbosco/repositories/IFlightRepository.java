@@ -1,6 +1,7 @@
 package com.donbosco.repositories;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -16,7 +17,9 @@ public interface IFlightRepository extends JpaRepository<Flight, Long> {
     Optional<Flight> findByAvailableSeats(int availableSeats);
     Boolean findByStatus(boolean status);
     Optional<Flight> findByIdAndDepartureTime(Long id, LocalDateTime departureTime);
+    List<Flight> findByDeparture(String departure);
 }
+
 
     
 

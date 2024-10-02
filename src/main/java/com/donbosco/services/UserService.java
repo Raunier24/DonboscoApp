@@ -1,15 +1,16 @@
 package com.donbosco.services;
 
-import com.donbosco.models.User;
-
 import java.util.List;
 import java.util.Optional;
+
+import com.donbosco.dto.UserDto;
+import com.donbosco.models.User;
 
 public interface UserService {
     List<User> getAllUsers();
     Optional<User> getUserById(Long id);
     Optional<User> getUserByUsername(String username);
-    User createUser(User user);
+    User createUser(UserDto userDto);
     User updateUser(Long id, User userDetails);
     void deleteUser(Long id);
 }

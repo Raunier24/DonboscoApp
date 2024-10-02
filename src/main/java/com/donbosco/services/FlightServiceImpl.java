@@ -82,4 +82,13 @@ public class FlightServiceImpl implements IFlightService {
     return modelMapper.map(updatedFlight, FlightDto.class);
 }
 
+    @Override
+    public List<FlightDto> findByByDeparture(String departure) {
+        List<Flight> flights = flightRepository.findByDeparture(departure);
+        return flights.stream()
+                    .map(flight -> modelMapper.map(flight, FlightDto.class))
+                    .toList();
+    }
+
+    
 }

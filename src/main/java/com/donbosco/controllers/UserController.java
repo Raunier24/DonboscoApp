@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.donbosco.dto.UserDto;
 import com.donbosco.models.User;
 import com.donbosco.services.UserService;
 
@@ -40,8 +41,8 @@ public class UserController {
     }
 
     @PostMapping
-    public User createUser(@RequestBody User user) {
-        return userService.createUser(user);
+    public User createUser(@RequestBody UserDto userDto) {
+        return userService.createUser(userDto);     
     }
 
     @PutMapping("/{id}")

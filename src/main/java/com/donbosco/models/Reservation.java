@@ -2,6 +2,8 @@ package com.donbosco.models;
 
 import java.time.LocalDateTime;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -23,20 +25,22 @@ public class Reservation {
     private LocalDateTime reservationDate;
 
     @Column(nullable = false)
-    private int seats;
+    private Integer seats;
 
     @Column(nullable = false)
     private boolean status;
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)  // Relación con User
+    @JsonBackReference
     private User user;
 
     @ManyToOne
     @JoinColumn(name = "flight_id", nullable = false)  // Relación con Flight
+    @JsonBackReference
     private Flight flight;
 
-    public Reservation(LocalDateTime reservationDate, boolean status, User user, Flight flight, int seats) {
+    public Reservation(LocalDateTime reservationDate, boolean status, User user, Flight flight, Integer seats) {
         this.reservationDate = reservationDate;
         this.status = status;
         this.seats = seats;
@@ -115,11 +119,11 @@ public class Reservation {
         return true;
     }
 
-    public int getSeats() {
+    public Integer getSeats() {
         return seats;
     }
 
-    public void setSeats(int seats) {
+    public void setSeats(Integer seats) {
         this.seats = seats;
     }
 }
