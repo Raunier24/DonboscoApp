@@ -9,8 +9,6 @@ import org.springframework.stereotype.Repository;
 
 import com.donbosco.models.Flight;
 
-
-
 @Repository
 public interface IFlightRepository extends JpaRepository<Flight, Long> {
     Optional<Flight> findByFlightNumber(String flightNumber);

@@ -19,7 +19,7 @@ import com.donbosco.services.UserService;
 
 
 @RestController
-@RequestMapping("/api/users")
+@RequestMapping("/users")
 public class UserController {
 
      UserService userService;
@@ -28,9 +28,9 @@ public class UserController {
         this.userService = userService;
     }
 
-    @GetMapping
+    @GetMapping ("/")
     public List<User> getAllUsers() {
-        return userService.getAllUsers();
+        return userService.getAllUser();
     }
 
     @GetMapping("/{id}")
@@ -45,9 +45,11 @@ public class UserController {
         return userService.createUser(userDto);     
     }
 
+    @SuppressWarnings("rawtypes")
+
     @PutMapping("/{id}")
-    public ResponseEntity<User> updateUser(@PathVariable Long id, @RequestBody User userDetails) {
-        return ResponseEntity.ok(userService.updateUser(id, userDetails));
+    public ResponseEntity updateUser(@PathVariable Long id, @RequestBody User userDetails) {
+        return (ResponseEntity) ResponseEntity.ok();
     }
 
     @DeleteMapping("/{id}")

@@ -1,5 +1,5 @@
-2024-09-26T02:12:49.296+02:00  WARN 11232 --- [donbosco] [HikariPool-17 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-17 - Thread starvation or clock leap detected (housekeeper delta=3h1m55s652ms792µs800ns).
-2024-09-26T08:28:46.859+02:00  WARN 11232 --- [donbosco] [HikariPool-17 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-17 - Thread starvation or clock leap detected (housekeeper delta=6h15m59s993ms787µs700ns).
+2024-09-26T02:12:49.296+02:00  WARN 11232 --- [donbosco] [HikariPool-17 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-17 - Thread starvation or clock leap detected (housekeeper delta=3h1m55s652ms792ï¿½s800ns).
+2024-09-26T08:28:46.859+02:00  WARN 11232 --- [donbosco] [HikariPool-17 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-17 - Thread starvation or clock leap detected (housekeeper delta=6h15m59s993ms787ï¿½s700ns).
 2024-09-26T08:55:35.386+02:00  INFO 11232 --- [donbosco] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 30 class path changes (0 additions, 30 deletions, 0 modifications)
 2024-09-26T08:55:38.548+02:00  INFO 11232 --- [donbosco] [Thread-67] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-09-26T08:55:38.652+02:00  INFO 11232 --- [donbosco] [Thread-67] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Shutdown initiated...

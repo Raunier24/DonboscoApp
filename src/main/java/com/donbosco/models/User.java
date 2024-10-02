@@ -1,6 +1,15 @@
 package com.donbosco.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import jakarta.persistence.*;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
+import java.util.Collection;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
@@ -28,14 +37,16 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false)
     private String username;
 
-    @Column(nullable = false)
+    private String email;
+
+    @JsonIgnore
     private String password;
 
-    @Column(nullable = false, unique = true)
-    private String email;
+    @Enumerated(EnumType.STRING)
+    private ERole role;
 
     @Enumerated(EnumType.STRING)
     private ERole role;
