@@ -1,6 +1,6 @@
 package com.donbosco.servicesTest;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.List;
 
@@ -36,8 +36,8 @@ public class ReservationServiceTest {
         user = new User(); 
         flight = new Flight(); 
 
-        reservation1 = new Reservation(LocalDate.now(), 1, user, flight, "John Doe", "Economy", "Confirmed");
-        reservation2 = new Reservation(LocalDate.now().plusDays(1), 2, user, flight, "Jane Doe", "Business", "Pending");
+        reservation1 = new Reservation(LocalDateTime.now(), true, user, flight, 2);
+        reservation2 = new Reservation(LocalDateTime.now().plusDays(1), true, user, flight, 2);
     }
 
     @Test
@@ -56,7 +56,7 @@ public class ReservationServiceTest {
         when(reservationService.createReservation(any(Reservation.class))).thenReturn(reservation1);
 
         Reservation result = reservationService.createReservation(reservation1);
-        assertEquals("Confirmed", result.getStatus());
+        assertEquals("Confirmed", result.isStatus());
         verify(reservationService, times(1)).createReservation(any(Reservation.class));
     }
 }

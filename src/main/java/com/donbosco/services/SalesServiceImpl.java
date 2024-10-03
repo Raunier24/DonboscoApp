@@ -10,8 +10,8 @@ import com.donbosco.models.Flight;
 import com.donbosco.models.Reservation;
 import com.donbosco.models.User;
 import com.donbosco.repositories.IFlightRepository;
+import com.donbosco.repositories.IReservationRepository;
 import com.donbosco.repositories.IUserRepository;
-import com.donbosco.repositories.ReservationRepository;
 
 @Service
 public class SalesServiceImpl implements ISalesService {
@@ -20,7 +20,7 @@ public class SalesServiceImpl implements ISalesService {
     private IFlightRepository flightRepository;
 
     @Autowired
-    private ReservationRepository reservationRepository;
+    private IReservationRepository reservationRepository;
 
     @Autowired
     private IUserRepository userRepository;
