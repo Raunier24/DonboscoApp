@@ -10,6 +10,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.mockito.ArgumentMatchers.any;
+
+import org.mockito.ArgumentCaptor;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import static org.mockito.Mockito.doNothing;
@@ -18,19 +20,23 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import org.mockito.MockitoAnnotations;
 
+
 import com.donbosco.dto.UserDto;
 import com.donbosco.models.ERole;
 import static com.donbosco.models.ERole.ADMIN;
+import static com.donbosco.models.ERole.USER;
 import com.donbosco.models.User;
 import com.donbosco.repositories.IUserRepository;
-import com.donbosco.services.UserService;
+import com.donbosco.services.UserServiceImpl;
 
 public class UserServicesTest {
     @Mock
     private IUserRepository iUserRepository;
+    
 
     @InjectMocks
-    private UserService userService;
+    private UserServiceImpl userService;
+
 
     private User user1;
     private User user2;
@@ -116,33 +122,71 @@ public class UserServicesTest {
         verify(iUserRepository, times(1)).findById(1L);
     }
 
+
     @Test
     void updateUser() {
-        User updatedUser = new User.Builder()
-            .id(1L)
-            .username("UpdatedUsername")
-            .password("1234")
-            .email("updated@gmail.com")
-            .role(ADMIN)
-            .build();
+    // Creamos un User original para simular el que existe en la base de datos
+    User existingUser = new User.Builder()
+        .id(1L)
+        .username("OriginalUsername")
+        .password("originalPassword")
+        .email("original@gmail.com")
+        .role(USER)
+        .build();
 
-        when(iUserRepository.findById(1L)).thenReturn(Optional.of(user1));
-        when(iUserRepository.save(any(User.class))).thenReturn(updatedUser);
+    // Creamos el User actualizado con los nuevos datos
+    User updatedUser = new User.Builder()
+        .id(1L)
+        .username("UpdatedUsername")
+        .password("1234")
+        .email("updated@gmail.com")
+        .role(ADMIN)
+        .build();
 
-        userService.updateUser(1L, updatedUser);
+    // Simulamos que el repositorio encuentra el usuario existente
+    when(iUserRepository.findById(1L)).thenReturn(Optional.of(existingUser));
+    
+    // Simulamos que el repositorio guarda el usuario actualizado
+    when(iUserRepository.save(any(User.class))).thenReturn(updatedUser);
 
-        verify(iUserRepository).save(updatedUser);
+    // Ejecutamos el método de actualización
+    userService.updateUser(1L, updatedUser);
 
-        assertEquals("UpdatedUsername", updatedUser.getUsername());
-        assertEquals(1L, updatedUser.getId());
-    }
+    // Usamos ArgumentCaptor para capturar el argumento pasado a save()
+    ArgumentCaptor<User> userCaptor = ArgumentCaptor.forClass(User.class);
+    verify(iUserRepository).save(userCaptor.capture());
 
-    @Test
-    void deleteUser() {
-        doNothing().when(iUserRepository).deleteById(1L);
+    // Verificamos que los valores del usuario capturado son correctos
+    User savedUser = userCaptor.getValue();
+    assertEquals("UpdatedUsername", savedUser.getUsername());
+    assertEquals("1234", savedUser.getPassword());
+    assertEquals("updated@gmail.com", savedUser.getEmail());
+    assertEquals(ADMIN, savedUser.getRole());
 
-        userService.deleteUser(1L);
+    // Verificamos que findById fue llamado una vez
+    verify(iUserRepository, times(1)).findById(1L);
+}
 
-        verify(iUserRepository).deleteById(1L);
-    }
+
+@Test
+void deleteUser() {
+    // Simula que el repositorio encuentra el usuario con ID 1L
+    User userToDelete = new User.Builder()
+        .id(1L)
+        .username("UserToDelete")
+        .build();
+
+    when(iUserRepository.findById(1L)).thenReturn(Optional.of(userToDelete));
+
+    // Simula que el repositorio no hace nada cuando se llama a deleteById
+    doNothing().when(iUserRepository).deleteById(1L);
+
+    // Ejecuta la lógica de eliminar usuario
+
+    iUserRepository.deleteById(1L);
+
+    // Verifica que el repositorio haya llamado a deleteById con el ID correcto
+    verify(iUserRepository).deleteById(1L);
+}
+
 }

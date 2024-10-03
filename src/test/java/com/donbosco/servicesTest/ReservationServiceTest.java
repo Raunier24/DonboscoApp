@@ -56,7 +56,7 @@ public class ReservationServiceTest {
         when(reservationService.createReservation(any(Reservation.class))).thenReturn(reservation1);
 
         Reservation result = reservationService.createReservation(reservation1);
-        assertEquals("Confirmed", result.isStatus());
+        assertEquals(true, result.isStatus());
         verify(reservationService, times(1)).createReservation(any(Reservation.class));
     }
 }
