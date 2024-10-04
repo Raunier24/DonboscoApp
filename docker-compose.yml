@@ -1,4 +1,5 @@
 version: '3.8'
+<<<<<<< HEAD
 services:
   db:
     image: mysql:8.0
@@ -45,3 +46,17 @@ networks:
 
 volumes:
   db_data:
+=======
+
+services:
+  springboot-app:
+    build: .
+    container_name: donbosco-app
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://host.docker.internal:3306/db_aerolinea
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+>>>>>>> fbd44d2a69fa6e40a71fe426bb546c2164f277a7
