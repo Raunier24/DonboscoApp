@@ -20,6 +20,9 @@ import com.donbosco.controllers.ReservationController;
 import com.donbosco.models.Reservation;
 import com.donbosco.services.ReservationService;
 
+import jakarta.transaction.Transactional;
+
+@Transactional
 public class ReservationControllerTest {
 
     @Mock

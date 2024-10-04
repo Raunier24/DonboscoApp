@@ -1,6 +1,5 @@
 package com.donbosco.config;
 
-import com.donbosco.jwt.AuthTokenFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationProvider;
@@ -9,52 +8,67 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+
+import com.donbosco.jwt.AuthTokenFilter;
+
+import lombok.RequiredArgsConstructor;
 
 @Configuration
 @EnableWebSecurity
-
+@RequiredArgsConstructor
 public class WebSecurityConfig {
 
-    private final AuthenticationProvider authenticationProvider;
-    private final AuthTokenFilter authTokenFilter;
+        private final AuthenticationProvider authenticationProvider;
+        private final AuthTokenFilter authTokenFilter;
 
-    public WebSecurityConfig(AuthenticationProvider authenticationProvider, AuthTokenFilter authTokenFilter) {
-        this.authenticationProvider = authenticationProvider;
-        this.authTokenFilter = authTokenFilter;
-    }
+        @Bean
+        public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+                return http
+                                .csrf(csrf -> 
+                                        csrf.disable())
+                                .authorizeHttpRequests(authRequest -> 
+                                        authRequest
+                                                .requestMatchers("/api/auth/**").permitAll()
+                                                .requestMatchers("/api/test/**").permitAll()
+                                                .requestMatchers("/api/sales/reserve").permitAll()
 
-    @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        return http
-                .csrf(csrf ->
-                        csrf.disable())
-                .authorizeHttpRequests(authRequest ->
-                        authRequest
-                                .requestMatchers("/api/auth/login").permitAll()//POST
-                                .requestMatchers("/api/auth/register").hasAnyAuthority("ADMIN")//POST
-                                .requestMatchers("/api/user/").hasAnyAuthority("ADMIN")//GETALL
-                                .requestMatchers("/api/user/{id}").hasAnyAuthority("ADMIN", "USER")//GETID
-                                .requestMatchers("/api/user/create").hasAnyAuthority("ADMIN")//CREATE
-                                .requestMatchers("/api/user/update/{id}").hasAnyAuthority("ADMIN")//PUT
-                                .requestMatchers("/api/user/delete/{id}").hasAnyAuthority("ADMIN")//DELETEID
-                                .requestMatchers("/api/project/").permitAll()//GETALL
-                                .requestMatchers("/api/project/{id}").permitAll()//GETID
-                                .requestMatchers("/api/project/create").hasAnyAuthority("ADMIN", "MANAGER")//POST
-                                .requestMatchers("/api/project/update/{id}").hasAnyAuthority("ADMIN", "MANAGER")//PUTID
-                                .requestMatchers("/api/project/delete/{id}").hasAnyAuthority("ADMIN", "MANAGER")//DELETEID
-                                .requestMatchers("/api/task/**").hasAnyAuthority("USER","MANAGER")//GETALL
-                                .requestMatchers("/api/task/{id}").hasAnyAuthority("USER")//GETID
-                                .requestMatchers("/api/task/create").hasAnyAuthority("MANAGER")//POST
-                                .requestMatchers("/api/task/update/{id}").hasAnyAuthority("USER")//PUTID
-                                .requestMatchers("/api/task/delete/{id}").hasAnyAuthority("MANAGER")//DELETEID
-                                .anyRequest().authenticated()
+                                                .requestMatchers("/api/flights/getAll").hasAnyAuthority("ADMIN", "USER")
+                                                .requestMatchers("/api/flights/id").hasAuthority("ADMIN")
+                                                .requestMatchers("/api/flights/create").hasAuthority("USER")
+                                                .requestMatchers("/api/flights/update").hasAuthority("USER")
+                                                .requestMatchers("/api/flights/delete").hasAuthority("USER")
 
-                )
-                .sessionManagement(sessionManager ->
-                        sessionManager
-                                .sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-                .authenticationProvider(authenticationProvider)
-                .addFilterBefore(authTokenFilter, UsernamePasswordAuthenticationFilter.class)
-                .build();
-    }
+                                                .requestMatchers("/api/reservation/getAll").hasAnyAuthority("ADMIN", "USER")
+                                                .requestMatchers("/api/reservation/id").hasAuthority("ADMIN")
+                                                .requestMatchers("/api/reservation/create").hasAuthority("USER")
+                                                .requestMatchers("/api/reservation/update").hasAuthority("USER")
+                                                .requestMatchers("/api/reservation/delete").hasAuthority("USER")
+
+                                                .requestMatchers("/api/users").hasAuthority("ADMIN")
+                                                .requestMatchers("/api/users/id").hasAuthority("ADMIN")
+                                                .requestMatchers("/api/user/create").hasAuthority("USER")
+                                                .requestMatchers("/api/user/update").hasAuthority("USER")
+                                                .requestMatchers("/api/user/delete").hasAnyAuthority("ADMIN", "USER")
+
+                                                .anyRequest().authenticated())
+                                .sessionManagement(sessionManager -> sessionManager
+                                                .sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                                .authenticationProvider(authenticationProvider)
+                                .addFilterBefore(authTokenFilter, UsernamePasswordAuthenticationFilter.class)
+                                .build();
+        }
+
+        @Bean
+        public UrlBasedCorsConfigurationSource corsConfigurationSource() {
+            UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+            CorsConfiguration config = new CorsConfiguration();
+            config.setAllowCredentials(true);
+            config.addAllowedOrigin("http://127.0.0.1:5500"); // CORS configuration
+            config.addAllowedHeader("*");
+            config.addAllowedMethod("*"); // Permitir todos los métodos
+            source.registerCorsConfiguration("/**", config);
+            return source;
+        }
 }

@@ -12,22 +12,25 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.donbosco.dto.UserDto;
 import com.donbosco.models.User;
 import com.donbosco.services.UserService;
 
+
+
 @RestController
-@RequestMapping("/users")
+@RequestMapping("/api/users")
 public class UserController {
 
-    private final UserService userService;
+     UserService userService;
 
     public UserController(UserService userService) {
         this.userService = userService;
     }
 
-    @GetMapping ("/")
+    @GetMapping
     public List<User> getAllUsers() {
-        return userService.getAllUser();
+        return userService.getAllUsers();
     }
 
     @GetMapping("/{id}")
@@ -37,17 +40,17 @@ public class UserController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    @PostMapping ("/")
-    public User createUser(@RequestBody User user) {
-        return userService.createUser(user);
+    @PostMapping
+    public User createUser(@RequestBody UserDto userDto) {
+        return userService.createUser(userDto);     
     }
-
-    @SuppressWarnings("rawtypes")
 
     @PutMapping("/{id}")
-    public ResponseEntity updateUser(@PathVariable Long id, @RequestBody User userDetails) {
-        return (ResponseEntity) ResponseEntity.ok();
+    public ResponseEntity<User> updateUser(@PathVariable Long id, @RequestBody User userDetails) {
+        User updatedUser = userService.updateUser(id, userDetails); // Llama al servicio de actualización
+        return ResponseEntity.ok(updatedUser);
     }
+
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteUser(@PathVariable Long id) {

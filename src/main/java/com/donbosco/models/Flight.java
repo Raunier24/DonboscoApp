@@ -4,6 +4,8 @@ import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -24,7 +26,7 @@ public class Flight {
     @EqualsAndHashCode.Include
     private Long id;
 
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false)
     private String flightNumber;
 
     @Column
@@ -40,30 +42,38 @@ public class Flight {
     private LocalDateTime arrivalTime;
 
     @Column
-    private int availableSeats;
+    private Integer seats;
+
+    @Column
+    private Integer availableSeats;
 
     @Column
     private boolean status;
 
     @OneToMany(mappedBy = "flight", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+    @JsonManagedReference
     private Set<Reservation> reservations = new HashSet<>();
 
     @ManyToMany(mappedBy = "flights")
+    @JsonManagedReference
     private Set<User> users = new HashSet<>();
 
     public Flight(String flightNumber, String departure, String destination, LocalDateTime departureTime,
-            LocalDateTime arrivalTime, int availableSeats, boolean status, Set<Reservation> reservations,
+            LocalDateTime arrivalTime, Integer seats, Integer availableSeats, boolean status, Set<Reservation> reservations,
             Set<User> users) {
         this.flightNumber = flightNumber;
         this.departure = departure;
         this.destination = destination;
         this.departureTime = departureTime;
         this.arrivalTime = arrivalTime;
+        this.seats = seats;
         this.availableSeats = availableSeats;
         this.status = status;
         this.reservations = reservations;
         this.users = users;
     }
+
+    
 
     public Flight() {
 
@@ -141,6 +151,23 @@ public class Flight {
         this.users = users;
     }
 
+    public Set<Reservation> getReservations() {
+        return reservations;
+    }
+
+    public void setReservations(Set<Reservation> reservations) {
+        this.reservations = reservations;
+    }
+
+    public Integer getSeats() {
+        return seats;
+    }
+
+    public void setSeats(Integer seats) {
+        this.seats = seats;
+    }
+
+   
     @Override //equals tanto hascode usa id tecnico
     public int hashCode() {
         final int prime = 31;
@@ -166,15 +193,5 @@ public class Flight {
         return true;
     }
 
-    public Set<Reservation> getReservations() {
-        return reservations;
-    }
-
-    public void setReservations(Set<Reservation> reservations) {
-        this.reservations = reservations;
-    }
-
     
-
-   
 }
