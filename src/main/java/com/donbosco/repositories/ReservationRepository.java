@@ -4,6 +4,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.donbosco.models.Reservation;
 
-public interface ReservationRepository extends JpaRepository<Reservation, Long> {
+import java.util.List;
+import java.util.Optional;
 
+public interface ReservationRepository extends JpaRepository<Reservation, Long> {
 }

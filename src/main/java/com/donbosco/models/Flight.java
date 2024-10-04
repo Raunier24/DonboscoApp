@@ -51,9 +51,7 @@ public class Flight {
     @ManyToMany(mappedBy = "flights")
     private Set<User> users = new HashSet<>();
 
-    public Flight(String flightNumber, String departure, String destination, LocalDateTime departureTime,
-            LocalDateTime arrivalTime, int availableSeats, boolean status, Set<Reservation> reservations,
-            Set<User> users) {
+    public Flight(String flightNumber, String departure, String destination) {
         this.flightNumber = flightNumber;
         this.departure = departure;
         this.destination = destination;
