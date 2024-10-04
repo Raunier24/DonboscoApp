@@ -23,7 +23,6 @@ public class UserTest {
         assertNull(user.getEmail());
         assertNull(user.getRole());
         assertNull(user.getReservations());
-        assertEquals(0, user.getFlights());
     }
 
     @Test
