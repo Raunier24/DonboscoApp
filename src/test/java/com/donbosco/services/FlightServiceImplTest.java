@@ -20,7 +20,7 @@ import com.donbosco.repositories.IFlightRepository;
 
 @SpringBootTest
 @Transactional
-public class FlightServiceImplIntegrationTest {
+public class FlightServiceImplTest {
 
     @Autowired
     private IFlightRepository flightRepository;
