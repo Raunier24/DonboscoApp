@@ -13,6 +13,7 @@ public interface IFlightService {
     public List<FlightDto> getAllFlights();
     public FlightDto updateFlight(Long id, @Valid FlightDto flightDto);
     public void delete(Long id);
+    public List<FlightDto> findByByDeparture(String departure);
     
     
 }

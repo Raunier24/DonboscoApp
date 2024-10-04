@@ -1,15 +1,17 @@
-package com.donbosco.services;
-
-import static org.junit.jupiter.api.Assertions.*;
+package com.donbosco.servicesTest;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.stream.Collectors;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -17,6 +19,7 @@ import com.donbosco.dto.FlightDto;
 import com.donbosco.exceptions.BadRequestException;
 import com.donbosco.models.Flight;
 import com.donbosco.repositories.IFlightRepository;
+import com.donbosco.services.FlightServiceImpl;
 
 @SpringBootTest
 @Transactional
@@ -83,11 +86,14 @@ public class FlightServiceImplTest {
     void testGetAllFlights() {
         flightRepository.save(flightEntity);
 
-        List<FlightDto> retrievedFlights = flightService.getAllFlights();
+        List<FlightDto> retrievedFlights = flightService.getAllFlights().stream()
+        .filter(flight -> flight.getFlightNumber().equals(flightEntity.getFlightNumber()))
+        .collect(Collectors.toList());
 
         assertNotNull(retrievedFlights);
         assertEquals(1, retrievedFlights.size());
-    }
+}
+
 
     @Test
     void testDeleteFlight() {

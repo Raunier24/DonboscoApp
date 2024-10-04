@@ -42,6 +42,16 @@ public class FlightController {
         return ResponseEntity.ok(flight);  // Código 200: OK si el vuelo existe
     }
 
+    @GetMapping("/departure/{departure}")
+    public ResponseEntity<List<FlightDto>> getFlightsByDeparture(@PathVariable String departure) {
+    List<FlightDto> flights = flightService.findByByDeparture(departure);
+        if (flights.isEmpty()) {
+            return ResponseEntity.noContent().build();  // Código 204: No Content si no hay vuelos con esa ciudad de salida
+        }
+        return ResponseEntity.ok(flights);  // Código 200: OK si se encuentran vuelos
+    }
+
+
     @PostMapping
     public ResponseEntity<FlightDto> createFlight(@Valid @RequestBody FlightDto flightDto) {
         try {
@@ -73,7 +83,5 @@ public class FlightController {
             throw new ResourceNotFoundException("Flight not found with id: " + id);  // Código 404: Not Found si no se encuentra
         } 
     }
-
-    
 
 }

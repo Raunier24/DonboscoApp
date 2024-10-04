@@ -6,6 +6,7 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
+import com.donbosco.dto.UserDto;
 import com.donbosco.models.User;
 import com.donbosco.repositories.IUserRepository;
 
@@ -35,28 +36,44 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User createUser(User user) {
-        if (userRepository.existsByUsername(user.getUsername())) {
-            throw new RuntimeException("Username already exists.");
-        }
-        if (userRepository.existsByEmail(user.getEmail())) {
-            throw new RuntimeException("Email already exists.");
-        }
-        return userRepository.save(user);
+    public User createUser(UserDto userDto) {
+    if (userRepository.existsByUsername(userDto.getUsername())) {
+        throw new RuntimeException("Username already exists.");
     }
+    if (userRepository.existsByEmail(userDto.getEmail())) {
+        throw new RuntimeException("Email already exists.");
+    }
+
+    User user = new User.Builder()
+        .username(userDto.getUsername())
+        .password(userDto.getPassword())
+        .email(userDto.getEmail())
+        .role(userDto.getRole())
+        .build();
+        System.out.println(user);
+    return userRepository.save(user);
+}
+
 
     @Override
     public User updateUser(Long id, User userDetails) {
-        User user = userRepository.findById(id)
+       
+        var user = userRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("User not found."));
 
-        user.setUsername(userDetails.getUsername());
-        user.setEmail(userDetails.getEmail());
-        user.setPassword(userDetails.getPassword());  // Deberías cifrar la contraseña
-        user.setRoles(userDetails.getRole());
-        
+       
+        user = new User.Builder()
+                .id(user.getId()) // Mantener el mismo ID
+                .username(userDetails.getUsername())
+                .email(userDetails.getEmail())
+                .password(userDetails.getPassword())  
+                .role(userDetails.getRole())
+                .reservations(user.getReservations()) 
+                .flights(user.getFlights())
+                .build();
         return userRepository.save(user);
-    }
+}
+
 
     @Override
     public void deleteUser(Long id) {

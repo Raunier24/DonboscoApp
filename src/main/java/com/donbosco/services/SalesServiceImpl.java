@@ -10,8 +10,8 @@ import com.donbosco.models.Flight;
 import com.donbosco.models.Reservation;
 import com.donbosco.models.User;
 import com.donbosco.repositories.IFlightRepository;
+import com.donbosco.repositories.IReservationRepository;
 import com.donbosco.repositories.IUserRepository;
-import com.donbosco.repositories.ReservationRepository;
 
 @Service
 public class SalesServiceImpl implements ISalesService {
@@ -20,81 +20,77 @@ public class SalesServiceImpl implements ISalesService {
     private IFlightRepository flightRepository;
 
     @Autowired
-    private ReservationRepository reservationRepository;
+    private IReservationRepository reservationRepository;
 
     @Autowired
     private IUserRepository userRepository;
 
     @Override
     public void verifyFlightAvailability(SalesDto salesDto) {
-    try {
-        System.out.println("Inicio de verificación de vuelo con ID: " + salesDto.getFlightId());
+        try {
 
-        // Buscar el vuelo solo por el flightId
+            Flight flight = flightRepository.findById(salesDto.getFlightId())
+                    .orElseThrow(() -> new RuntimeException("Vuelo no encontrado con ID: " + salesDto.getFlightId()));
+
+            verifyFlightStatus(flight);
+            verifySeatAvailability(flight, salesDto.getSeats());
+
+        } catch (RuntimeException e) {
+            System.out.println("Error durante la verificación: " + e.getMessage());
+            throw e;
+        }
+    }
+
+    @Override
+    public void processReservation(SalesDto salesDto) {
+        System.out.println("Inicio del proceso de reserva para vuelo con ID: " + salesDto.getFlightId());
+
         Flight flight = flightRepository.findById(salesDto.getFlightId())
-                .orElseThrow(() -> new RuntimeException("Vuelo no encontrado con ID: " + salesDto.getFlightId()));
+                .orElseThrow(() -> new RuntimeException("El vuelo no existe"));
 
-        System.out.println("Vuelo encontrado: " + flight.getFlightNumber());
+        User user = userRepository.findById(salesDto.getUserId())
+                .orElseThrow(() -> new RuntimeException("El usuario no existe"));
 
-        // Verificar si el vuelo está activo
+        updateSeatsAndStatus(flight, salesDto.getSeats());
+        createReservation(flight, user, salesDto.getSeats());
+    }
+
+    private void verifyFlightStatus(Flight flight) {
         if (!flight.isStatus()) {
-            System.out.println("El vuelo con ID: " + salesDto.getFlightId() + " no está disponible.");
-            throw new RuntimeException("El vuelo ya no está disponible");
+            System.out.println("El vuelo con ID: " + flight.getId() + " no está disponible.");
+            throw new RuntimeException("El vuelo con ID: " + flight.getId() + " no está disponible.");
         } else {
             System.out.println("El vuelo está activo.");
         }
+    }
 
-        // Verificar si hay suficientes asientos disponibles
-        if (flight.getAvailableSeats() < salesDto.getSeats()) {
+    private void verifySeatAvailability(Flight flight, int requestedSeats) {
+        if (flight.getAvailableSeats() < requestedSeats) {
             System.out.println("No hay suficientes asientos. Disponibles: " + flight.getAvailableSeats());
             throw new RuntimeException("No hay suficientes asientos disponibles");
         } else {
             System.out.println("Asientos disponibles: " + flight.getAvailableSeats());
         }
-
-    } catch (RuntimeException e) {
-        System.out.println("Error durante la verificación: " + e.getMessage());
-        throw e;  // Rethrow la excepción para que se gestione más arriba si es necesario
     }
-}
 
-
-
-    @Override
-    public void processReservation(SalesDto salesDto) {
-        System.out.println("Inicio del proceso de reserva para vuelo con ID: " + salesDto.getFlightId());
-        // Lógica para procesar la reserva (descontar asientos y crear reserva)
-        Flight flight = flightRepository.findByIdAndDepartureTime(salesDto.getFlightId(), salesDto.getDepartureTime())
-                .orElseThrow(() -> new RuntimeException("El vuelo no existe"));
-        
-        System.out.println("User con ID: " + salesDto.getUserId());
-        User user = userRepository.findById(salesDto.getUserId())
-                .orElseThrow(() -> new RuntimeException("El usuario no existe"));
-        // Actualizar el número de asientos
-        flight.setAvailableSeats(flight.getAvailableSeats() - salesDto.getSeats());
-
-         // Verificar si quedan asientos
-         if (flight.getAvailableSeats() == 0) {
-            flight.setStatus(false);  
-            flightRepository.save(flight);
+    private void updateSeatsAndStatus(Flight flight, int bookedSeats) {
+        flight.setAvailableSeats(flight.getAvailableSeats() - bookedSeats);
+        if (flight.getAvailableSeats() == 0) {
+            flight.setStatus(false);
         }
-
-        // Guardar los cambios en el vuelo
         flightRepository.save(flight);
+    }
 
-        // Crear la reserva
-        System.out.println("User ID en SalesDto: " + salesDto.getUserId());
-
+    private void createReservation(Flight flight, User user, int seats) {
         Reservation reservation = new Reservation();
         reservation.setFlight(flight);
         reservation.setUser(user);
         reservation.setReservationDate(LocalDateTime.now());
-        reservation.setSeats(salesDto.getSeats());
+        reservation.setSeats(seats);
         reservation.setStatus(true);
 
-        // Guardar la reserva
         reservationRepository.save(reservation);
-
-       
+        System.out.println("Reserva creada para el vuelo con ID: " + flight.getId());
     }
 }
+

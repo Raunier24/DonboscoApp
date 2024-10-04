@@ -1,18 +1,19 @@
 package com.donbosco.services;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
 import com.donbosco.models.Reservation;
-import com.donbosco.repositories.ReservationRepository;
+import com.donbosco.repositories.IReservationRepository;
 
 @Service
 public class ReservationService {
 
-    private final ReservationRepository reservationRepository;
+    private final IReservationRepository reservationRepository;
 
-    public ReservationService(ReservationRepository reservationRepository) {
+    public ReservationService(IReservationRepository reservationRepository) {
         this.reservationRepository = reservationRepository;
     }
 
@@ -32,4 +33,12 @@ public class ReservationService {
     public void deleteReservation(Long id) {
         reservationRepository.deleteById(id);
     }
+
+    public Reservation updateReservation(Long id, Reservation reservationDetails) {
+        Reservation existingReservation = findReservationById(id);
+        existingReservation.setReservationDate(LocalDateTime.now());
+        existingReservation.setSeats(existingReservation.getSeats());
+        return reservationRepository.save(existingReservation);
+    }
+
 }
