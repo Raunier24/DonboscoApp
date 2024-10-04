@@ -19,6 +19,9 @@ import com.donbosco.models.Reservation;
 import com.donbosco.models.User;
 import com.donbosco.services.ReservationService;
 
+import jakarta.transaction.Transactional;
+
+@Transactional
 public class ReservationServiceTest {
 
     @Mock

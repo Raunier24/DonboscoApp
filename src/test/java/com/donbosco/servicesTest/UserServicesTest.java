@@ -29,6 +29,9 @@ import com.donbosco.models.User;
 import com.donbosco.repositories.IUserRepository;
 import com.donbosco.services.UserServiceImpl;
 
+import jakarta.transaction.Transactional;
+
+@Transactional
 public class UserServicesTest {
     @Mock
     private IUserRepository iUserRepository;
