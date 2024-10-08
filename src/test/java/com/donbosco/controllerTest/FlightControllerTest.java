@@ -15,6 +15,7 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
@@ -27,7 +28,12 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import com.donbosco.dto.FlightDto;
+import com.donbosco.models.ERole;
+import com.donbosco.models.User;
+import com.donbosco.repositories.IUserRepository;
 import com.donbosco.services.IFlightService;
+import com.donbosco.services.JwtService;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import jakarta.transaction.Transactional;
 
@@ -43,10 +49,42 @@ public class FlightControllerTest {
     @MockBean
     private IFlightService flightService;
 
+    @Autowired
+    private IUserRepository userRepository;
+
+    @Autowired
+    private JwtService jwtService;
+
+    @Autowired
+    private ObjectMapper objectMapper;
+
     private FlightDto flightDto;
+    private String token; // Token JWT generado
 
     @BeforeEach
     void setUp() {
+        // Limpiar la base de datos antes de cada prueba
+        userRepository.deleteAll();
+
+        // Crear un usuario administrador de prueba
+        User user = new User.Builder()
+                .username("admin_user")
+                .password("password123")
+                .email("admin@example.com")
+                .role(ERole.ADMIN)
+                .build();
+
+        user = userRepository.save(user);
+
+        // Generar un token JWT para el usuario creado
+        UserDetails userDetails = org.springframework.security.core.userdetails.User.builder()
+                .username(user.getUsername())
+                .password(user.getPassword())
+                .authorities("ROLE_ADMIN")
+                .build();
+
+        token = jwtService.getTokenService(userDetails); // Generar el token
+
         // Crear un FlightDto para usar en los tests
         flightDto = new FlightDto(
                 1L,
@@ -65,7 +103,8 @@ public class FlightControllerTest {
     void testGetAllFlights() throws Exception {
         Mockito.when(flightService.getAllFlights()).thenReturn(List.of(flightDto));
 
-        mockMvc.perform(get("/api/flights"))
+        mockMvc.perform(get("/api/flights")
+                        .header("Authorization", "Bearer " + token)) // Incluir el token JWT
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$[0].flightNumber").value(flightDto.getFlightNumber()))
@@ -76,7 +115,8 @@ public class FlightControllerTest {
     void testGetFlightById() throws Exception {
         Mockito.when(flightService.get(flightDto.getId())).thenReturn(flightDto);
 
-        mockMvc.perform(get("/api/flights/{id}", flightDto.getId()))
+        mockMvc.perform(get("/api/flights/{id}", flightDto.getId())
+                        .header("Authorization", "Bearer " + token)) // Incluir el token JWT
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.flightNumber").value(flightDto.getFlightNumber()))
@@ -88,8 +128,9 @@ public class FlightControllerTest {
         Mockito.when(flightService.save(any(FlightDto.class))).thenReturn(flightDto);
 
         mockMvc.perform(post("/api/flights")
+                        .header("Authorization", "Bearer " + token) // Incluir el token JWT
                         .contentType(MediaType.APPLICATION_JSON)
-                        .content("{ \"flightNumber\": \"FL123\", \"departure\": \"New York\", \"destination\": \"London\", \"departureTime\": \"" + flightDto.getDepartureTime() + "\", \"arrivalTime\": \"" + flightDto.getArrivalTime() + "\", \"availableSeats\": 100, \"status\": true }"))
+                        .content(objectMapper.writeValueAsString(flightDto)))
                 .andExpect(status().isCreated())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.flightNumber").value(flightDto.getFlightNumber()))
@@ -101,8 +142,9 @@ public class FlightControllerTest {
         Mockito.when(flightService.updateFlight(eq(flightDto.getId()), any(FlightDto.class))).thenReturn(flightDto);
 
         mockMvc.perform(put("/api/flights/{id}", flightDto.getId())
+                        .header("Authorization", "Bearer " + token) // Incluir el token JWT
                         .contentType(MediaType.APPLICATION_JSON)
-                        .content("{ \"flightNumber\": \"FL123\", \"departure\": \"New York\", \"destination\": \"London\", \"departureTime\": \"" + flightDto.getDepartureTime() + "\", \"arrivalTime\": \"" + flightDto.getArrivalTime() + "\", \"availableSeats\": 100, \"status\": true }"))
+                        .content(objectMapper.writeValueAsString(flightDto)))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.flightNumber").value(flightDto.getFlightNumber()))
@@ -113,7 +155,8 @@ public class FlightControllerTest {
     void testDeleteFlight() throws Exception {
         Mockito.doNothing().when(flightService).delete(flightDto.getId());
 
-        mockMvc.perform(delete("/api/flights/{id}", flightDto.getId()))
+        mockMvc.perform(delete("/api/flights/{id}", flightDto.getId())
+                        .header("Authorization", "Bearer " + token)) // Incluir el token JWT
                 .andExpect(status().isNoContent())
                 .andDo(print());
     }

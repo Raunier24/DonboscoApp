@@ -31,24 +31,63 @@ public class Reservation {
     private boolean status;
 
     @ManyToOne
-    @JoinColumn(name = "user_id", nullable = false)  // Relación con User
+    @JoinColumn(name = "user_id", nullable = false)
     @JsonBackReference
     private User user;
 
     @ManyToOne
-    @JoinColumn(name = "flight_id", nullable = false)  // Relación con Flight
+    @JoinColumn(name = "flight_id", nullable = false)
     @JsonBackReference
     private Flight flight;
 
-    public Reservation(LocalDateTime reservationDate, boolean status, User user, Flight flight, Integer seats) {
-        this.reservationDate = reservationDate;
-        this.status = status;
-        this.seats = seats;
-        this.user = user;
-        this.flight = flight;
+    private Reservation(Builder builder) {
+        this.reservationDate = builder.reservationDate;
+        this.status = builder.status;
+        this.seats = builder.seats;
+        this.user = builder.user;
+        this.flight = builder.flight;
     }
 
-    public Reservation() {
+    // Constructor sin parámetros
+    public Reservation() {}
+
+    // Getters y Setters...
+
+    public static class Builder {
+        private LocalDateTime reservationDate;
+        private Integer seats;
+        private boolean status;
+        private User user;
+        private Flight flight;
+
+        public Builder reservationDate(LocalDateTime reservationDate) {
+            this.reservationDate = reservationDate;
+            return this;
+        }
+
+        public Builder seats(Integer seats) {
+            this.seats = seats;
+            return this;
+        }
+
+        public Builder status(boolean status) {
+            this.status = status;
+            return this;
+        }
+
+        public Builder user(User user) {
+            this.user = user;
+            return this;
+        }
+
+        public Builder flight(Flight flight) {
+            this.flight = flight;
+            return this;
+        }
+
+        public Reservation build() {
+            return new Reservation(this);
+        }
     }
 
     // Getters y Setters
@@ -61,21 +100,12 @@ public class Reservation {
         this.id = id;
     }
 
-    public User getUser() {
-        return user;
+    public LocalDateTime getReservationDate() {
+        return reservationDate;
     }
 
-    public void setUser(User user) {
-        this.user = user;
-    }
-    
-
-    public Flight getFlight() {
-        return flight;
-    }
-
-    public void setFlight(Flight flight) {
-        this.flight = flight;
+    public void setReservationDate(LocalDateTime reservationDate) {
+        this.reservationDate = reservationDate;
     }
 
     public boolean isStatus() {
@@ -86,13 +116,22 @@ public class Reservation {
         this.status = status;
     }
 
-    public LocalDateTime getReservationDate() {
-        return reservationDate;
+    public User getUser() {
+        return user;
     }
 
-    public void setReservationDate(LocalDateTime reservationDate) {
-        this.reservationDate = reservationDate;
+    public void setUser(User user) {
+        this.user = user;
     }
+
+    public Flight getFlight() {
+        return flight;
+    }
+
+    public void setFlight(Flight flight) {
+        this.flight = flight;
+    }
+
 
     @Override
     public int hashCode() {

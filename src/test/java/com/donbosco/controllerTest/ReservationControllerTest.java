@@ -9,6 +9,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.util.Arrays;
 import java.util.List;
 
+import com.donbosco.models.Flight;
+import com.donbosco.models.User;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
@@ -38,7 +40,11 @@ public class ReservationControllerTest {
 
     @Test
     public void testGetAllReservations() {
+        User user = new User();
+        Flight flight = new Flight();
+
         Reservation reservation1 = new Reservation();
+
         Reservation reservation2 = new Reservation();
         List<Reservation> reservations = Arrays.asList(reservation1, reservation2);
 
@@ -54,6 +60,9 @@ public class ReservationControllerTest {
 
     @Test
     public void testGetReservationById() {
+        User user = new User();
+        Flight flight = new Flight();
+
         Reservation reservation = new Reservation();
 
         when(reservationService.findReservationById(1L)).thenReturn(reservation);
@@ -67,6 +76,9 @@ public class ReservationControllerTest {
 
     @Test
     public void testCreateReservation() {
+        User user = new User();
+        Flight flight = new Flight();
+
         Reservation newReservation = new Reservation();
         Reservation createdReservation = new Reservation();
 

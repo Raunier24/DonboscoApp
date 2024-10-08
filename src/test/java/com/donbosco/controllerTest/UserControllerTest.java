@@ -123,36 +123,42 @@ public class UserControllerTest {
     }
 
     @Test
-    void shouldUpdateUser() throws Exception {
-        // Crear o reutilizar un usuario que ya exista en la base de datos para esta prueba
+    @Transactional
+    void TestUpdateUser() throws Exception {
+        // Crear un UserDto para simular la actualización
+        UserDto userDto = new UserDto();
+        userDto.setUsername("frodo");
+        userDto.setEmail("frodo@example.com");
+        userDto.setPassword("password123");
+        userDto.setRole(ERole.ADMIN);
+
+        // Crear un usuario existente en la base de datos
         User user = new User.Builder()
                 .username("unique_username")
                 .password("password123")
                 .email("unique@example.com")
                 .role(ERole.ADMIN)
                 .build();
-
         user = userRepository.save(user);  // Guardar el usuario en la base de datos
-
-        // Actualizar el nombre de usuario del usuario
-        user.setUsername("frodo");
 
         // Generar un nuevo token JWT para este usuario
         UserDetails userDetails = org.springframework.security.core.userdetails.User.builder()
-            .username(user.getUsername())
-            .password(user.getPassword())
-            .authorities("ROLE_ADMIN")
-            .build();
-        token = jwtService.getTokenService(userDetails); // Generar el token JWT para el usuario actualizado
+                .username(user.getUsername())
+                .password(user.getPassword())
+                .authorities("ROLE_ADMIN")
+                .build();
+        String token = jwtService.getTokenService(userDetails); // Generar el token JWT
 
         // Ejecutar la prueba de actualización
         mockMvc.perform(put("/api/users/{id}", user.getId())
                         .header("Authorization", "Bearer " + token) // Usar el token generado
                         .contentType(MediaType.APPLICATION_JSON)
-                        .content(objectMapper.writeValueAsString(user)))
+                        .content(objectMapper.writeValueAsString(userDto))) // Usar UserDto aquí
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.username", is(user.getUsername())));
-}
+                .andExpect(jsonPath("$.username", is(userDto.getUsername())));
+    }
+
+
 
 
     @Test

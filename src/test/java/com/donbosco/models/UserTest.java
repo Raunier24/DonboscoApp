@@ -1,74 +1,47 @@
 package com.donbosco.models;
 
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.security.core.GrantedAuthority;
 
-import java.util.HashSet;
-import java.util.Set;
-
+import java.util.Collection;
 import static org.junit.jupiter.api.Assertions.*;
 
-@ExtendWith(MockitoExtension.class)
-public class UserTest {
-    @Test
-    void testConstructorSinArgumentos() {
-        // Given
-        User user = new User();
+class UserTest {
 
-        // Then
-        assertNull(user.getId());
-        assertNull(user.getUsername());
-        assertNull(user.getPassword());
-        assertNull(user.getEmail());
-        assertNull(user.getRole());
-        assertNull(user.getReservations());
+    @Test
+    void testGetAuthorities() {
+        User user = new User.Builder()
+                .username("testUser")
+                .password("password")
+                .role(ERole.USER)
+                .build();
+
+        Collection<? extends GrantedAuthority> authorities = user.getAuthorities();
+        assertEquals(1, authorities.size());
+        assertEquals("USER", authorities.iterator().next().getAuthority());
     }
 
     @Test
-    void testConstructorConArgumentos() {
-        // Given
-        String username = "username";
-        String password = "password";
-        String email = "email";
-        ERole role = ERole.ADMIN;
-        Set<Reservation> reservations = new HashSet<>();
-        Set<Flight> flights = new HashSet<>();
-
-        User user = new User(username, password, email, role, reservations, flights);
-
-        // Then
-        assertEquals(username, user.getUsername());
-        assertEquals(password, user.getPassword());
-        assertEquals(email, user.getEmail());
-        assertEquals(role, user.getRole());
-        assertEquals(reservations, user.getReservations());
-        assertEquals(flights, user.getFlights());
+    void testIsAccountNonExpired() {
+        User user = new User.Builder().build();
+        assertTrue(user.isAccountNonExpired());
     }
 
     @Test
-    void testGettersYSetters() {
-        // Given
-        User user = new User();
+    void testIsAccountNonLocked() {
+        User user = new User.Builder().build();
+        assertTrue(user.isAccountNonLocked());
+    }
 
-        // When
-        user.setId(1L);
-        user.setUsername("username");
-        user.setPassword("password");
-        user.setEmail("email");
-        user.setRole(ERole.ADMIN);
-        Set<Reservation> reservations = new HashSet<>();
-        user.setReservations(reservations);
-        Set<Flight> flights = new HashSet<>();
-        user.setFlights(flights);
+    @Test
+    void testIsCredentialsNonExpired() {
+        User user = new User.Builder().build();
+        assertTrue(user.isCredentialsNonExpired());
+    }
 
-        // Then
-        assertEquals(1L, user.getId());
-        assertEquals("username", user.getUsername());
-        assertEquals("password", user.getPassword());
-        assertEquals("email", user.getEmail());
-        assertEquals(ERole.ADMIN, user.getRole());
-        assertEquals(reservations, user.getReservations());
-        assertEquals(flights, user.getFlights());
+    @Test
+    void testIsEnabled() {
+        User user = new User.Builder().build();
+        assertTrue(user.isEnabled());
     }
 }
