@@ -11,6 +11,6 @@ public interface UserService {
     Optional<User> getUserById(Long id);
     Optional<User> getUserByUsername(String username);
     User createUser(UserDto userDto);
-    User updateUser(Long id, User userDetails);
+    User updateUser(Long id, UserDto userDetails);
     void deleteUser(Long id);
 }

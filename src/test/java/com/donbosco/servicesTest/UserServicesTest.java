@@ -10,8 +10,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.mockito.ArgumentMatchers.any;
-
-import org.mockito.ArgumentCaptor;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import static org.mockito.Mockito.doNothing;
@@ -20,11 +18,9 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import org.mockito.MockitoAnnotations;
 
-
 import com.donbosco.dto.UserDto;
 import com.donbosco.models.ERole;
 import static com.donbosco.models.ERole.ADMIN;
-import static com.donbosco.models.ERole.USER;
 import com.donbosco.models.User;
 import com.donbosco.repositories.IUserRepository;
 import com.donbosco.services.UserServiceImpl;
@@ -128,47 +124,45 @@ public class UserServicesTest {
 
     @Test
     void updateUser() {
-    // Creamos un User original para simular el que existe en la base de datos
-    User existingUser = new User.Builder()
-        .id(1L)
-        .username("OriginalUsername")
-        .password("originalPassword")
-        .email("original@gmail.com")
-        .role(USER)
-        .build();
-
-    // Creamos el User actualizado con los nuevos datos
-    User updatedUser = new User.Builder()
-        .id(1L)
-        .username("UpdatedUsername")
-        .password("1234")
-        .email("updated@gmail.com")
-        .role(ADMIN)
-        .build();
-
-    // Simulamos que el repositorio encuentra el usuario existente
-    when(iUserRepository.findById(1L)).thenReturn(Optional.of(existingUser));
+        // Simulamos que el repositorio encuentra el usuario existente
+        when(iUserRepository.findById(1L)).thenReturn(Optional.of(user1));
     
-    // Simulamos que el repositorio guarda el usuario actualizado
-    when(iUserRepository.save(any(User.class))).thenReturn(updatedUser);
+        // Creamos el UserDto con los nuevos datos que se usarán para actualizar el usuario
+        UserDto userDtoUpdate = new UserDto();
+        userDtoUpdate.setUsername("updateduser"); // Este será el nuevo nombre de usuario
+        userDtoUpdate.setPassword("1234");
+        userDtoUpdate.setEmail("updated@gmail.com");
+        userDtoUpdate.setRole(ADMIN);
+    
+        // Creamos el User actualizado con los nuevos datos
+        User updatedUser = new User.Builder()
+            .id(1L)
+            .username(userDtoUpdate.getUsername())
+            .password(userDtoUpdate.getPassword())
+            .email(userDtoUpdate.getEmail())
+            .role(userDtoUpdate.getRole())
+            .build();
+    
+        // Simulamos que el repositorio guarda el usuario actualizado
+        when(iUserRepository.save(any(User.class))).thenReturn(updatedUser);
+    
+        // Ejecutamos el método de actualización con el UserDto
+        User resultUser = userService.updateUser(1L, userDtoUpdate);
+    
+        // Verificamos que los valores actualizados son correctos
+        assertEquals("updateduser", resultUser.getUsername());
+        assertEquals("1234", resultUser.getPassword());
+        assertEquals("updated@gmail.com", resultUser.getEmail());
+        assertEquals(ADMIN, resultUser.getRole());
+    
+        // Verificamos que el repositorio haya sido llamado correctamente
+        verify(iUserRepository, times(1)).findById(1L);
+        verify(iUserRepository, times(1)).save(any(User.class));
+    }
+    
+    
+    
 
-    // Ejecutamos el método de actualización
-    userService.updateUser(1L, updatedUser);
-
-    // Usamos ArgumentCaptor para capturar el argumento pasado a save()
-    ArgumentCaptor<User> userCaptor = ArgumentCaptor.forClass(User.class);
-    verify(iUserRepository).save(userCaptor.capture());
-
-    // Verificamos que los valores del usuario capturado son correctos
-    User savedUser = userCaptor.getValue();
-    assertEquals("UpdatedUsername", savedUser.getUsername());
-    assertEquals("1234", savedUser.getPassword());
-    assertEquals("updated@gmail.com", savedUser.getEmail());
-    assertEquals(ADMIN, savedUser.getRole());
-
-    // Verificamos que findById fue llamado una vez
-    verify(iUserRepository, times(1)).findById(1L);
-}
 
 
 @Test

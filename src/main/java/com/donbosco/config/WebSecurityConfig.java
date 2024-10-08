@@ -33,7 +33,9 @@ public class WebSecurityConfig {
                                                 .requestMatchers("/api/auth/**").permitAll()
                                                 .requestMatchers("/api/test/**").permitAll()
                                                 .requestMatchers("/api/sales/reserve").permitAll()
+                                                .requestMatchers("/actuator").permitAll()
 
+                                                .requestMatchers("/api/flights/departure/{departure}").permitAll()
                                                 .requestMatchers("/api/flights/getAll").hasAnyAuthority("ADMIN", "USER")
                                                 .requestMatchers("/api/flights/id").hasAuthority("ADMIN")
                                                 .requestMatchers("/api/flights/create").hasAuthority("USER")

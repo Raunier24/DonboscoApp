@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import jakarta.persistence.CascadeType;
@@ -55,7 +56,7 @@ public class Flight {
     private Set<Reservation> reservations = new HashSet<>();
 
     @ManyToMany(mappedBy = "flights")
-    @JsonManagedReference
+    @JsonBackReference
     private Set<User> users = new HashSet<>();
 
     public Flight(String flightNumber, String departure, String destination, LocalDateTime departureTime,

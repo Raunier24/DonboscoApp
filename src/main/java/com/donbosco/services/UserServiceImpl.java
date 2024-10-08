@@ -55,23 +55,23 @@ public class UserServiceImpl implements UserService {
 }
 
 
-    @Override
-    public User updateUser(Long id, User userDetails) {
-       
-        var user = userRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("User not found."));
+@Override
+public User updateUser(Long id, UserDto userDetails) {
+    var user = userRepository.findById(id)
+            .orElseThrow(() -> new RuntimeException("User not found."));
+    
+    // Aquí usa el UserDto para actualizar los campos del usuario
+    user = new User.Builder()
+            .id(user.getId()) // Mantener el mismo ID
+            .username(userDetails.getUsername())
+            .email(userDetails.getEmail())
+            .password(userDetails.getPassword())  // Si estás usando Spring Security, no olvides codificar la contraseña si es necesario
+            .role(userDetails.getRole())
+            .reservations(user.getReservations()) 
+            .flights(user.getFlights())
+            .build();
 
-       
-        user = new User.Builder()
-                .id(user.getId()) // Mantener el mismo ID
-                .username(userDetails.getUsername())
-                .email(userDetails.getEmail())
-                .password(userDetails.getPassword())  
-                .role(userDetails.getRole())
-                .reservations(user.getReservations()) 
-                .flights(user.getFlights())
-                .build();
-        return userRepository.save(user);
+    return userRepository.save(user);
 }
 
 

@@ -1,42 +1,77 @@
 version: '3.8'
-<<<<<<< HEAD
+
+name: aerolinea_app
+
 services:
   db:
     image: mysql:8.0
     container_name: db_aerolinea
     environment:
-      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: db_aerolinea
-      MYSQL_USER: root
-      MYSQL_PASSWORD: root_password
     ports:
-      - "3306:3306"
+      - "3307:3306"  # Cambia el puerto a 3306 internamente ya que MySQL usa este puerto
     volumes:
       - db_data:/var/lib/mysql
     networks:
       - app-network
 
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    environment:
+      PMA_HOST: db  # El nombre del servicio 'db' como host de la base de datos
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "8081:80"  # Exponer phpMyAdmin en el puerto 8081
+    depends_on:
+      - db
+    networks:
+      - app-network
+
   app:
-    image: openjdk:17
-    container_name: spring_app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: aerolinea_app
     depends_on:
       - db
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/db_aerolinea
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/db_aerolinea?createDatabaseIfNotExist=true&serverTimezone=UTC
       SPRING_DATASOURCE_USERNAME: root
-      SPRING_DATASOURCE_PASSWORD: root_password
+      SPRING_DATASOURCE_PASSWORD: root
       SPRING_DATASOURCE_DRIVER_CLASS_NAME: com.mysql.cj.jdbc.Driver
       SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT: org.hibernate.dialect.MySQL8Dialect
       SPRING_JPA_HIBERNATE_DDL_AUTO: update
       SPRING_JPA_SHOW_SQL: "true"
       SPRING_APPLICATION_NAME: donbosco
       SERVER_PORT: 8080
-      LOGGING_FILE_NAME: logs/spring-boot-app.log
+      LOGGING_FILE_NAME: /logs/spring-boot-app.log
       LOGGING_LEVEL_ORG_SPRINGFRAMEWORK_SECURITY: DEBUG
     ports:
       - "8080:8080"
     volumes:
       - ./logs:/logs
+    networks:
+      - app-network
+
+  prometheus:
+    image: prom/prometheus
+    container_name: prometheus
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - "9090:9090"
+    networks:
+      - app-network
+
+  grafana:
+    image: grafana/grafana
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    depends_on:
+      - prometheus
     networks:
       - app-network
 
@@ -46,17 +81,3 @@ networks:
 
 volumes:
   db_data:
-=======
-
-services:
-  springboot-app:
-    build: .
-    container_name: donbosco-app
-    ports:
-      - "8080:8080"
-    environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://host.docker.internal:3306/db_aerolinea
-      SPRING_DATASOURCE_USERNAME: root
-      SPRING_DATASOURCE_PASSWORD: root
-      SPRING_JPA_HIBERNATE_DDL_AUTO: update
->>>>>>> fbd44d2a69fa6e40a71fe426bb546c2164f277a7

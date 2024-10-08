@@ -96,13 +96,24 @@ class UserServiceImplTest {
 
     @Test
     void testUpdateUser() {
-        user.setUsername("updateduser");
-        user.setEmail("updateduser@example.com");
-
-        User result = userService.updateUser(user.getId(), user);
+        // Primero, actualizamos el UserDto
+        userDto.setUsername("updateduser");
+        userDto.setEmail("updateduser@example.com");
+    
+        // Ejecutamos el método de actualización
+        User result = userService.updateUser(user.getId(), userDto);
+    
+        // Verificamos que los cambios se han realizado correctamente
         assertEquals("updateduser", result.getUsername());
         assertEquals("updateduser@example.com", result.getEmail());
+    
+        // Verificar también que el usuario en la base de datos se ha actualizado
+        Optional<User> updatedUser = userRepository.findById(user.getId());
+        assertTrue(updatedUser.isPresent());
+        assertEquals("updateduser", updatedUser.get().getUsername());
+        assertEquals("updateduser@example.com", updatedUser.get().getEmail());
     }
+    
 
     @Test
     void testDeleteUser() {

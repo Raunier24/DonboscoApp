@@ -1,11 +1,9 @@
 package com.donbosco.controllerTest;
 
-import com.donbosco.models.ERole;
-import com.donbosco.models.User;
-import com.donbosco.repositories.IUserRepository;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import java.util.Optional;
 
-import jakarta.transaction.Transactional;
+import static org.hamcrest.Matchers.hasSize;
+import static org.hamcrest.Matchers.is;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,15 +11,23 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
-import java.util.Optional;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
-import static org.hamcrest.Matchers.*;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
 import com.donbosco.dto.UserDto;
-import com.donbosco.services.UserService;
+import com.donbosco.models.ERole;
+import com.donbosco.models.User;
+import com.donbosco.repositories.IUserRepository;
 import com.donbosco.services.JwtService;
+import com.donbosco.services.UserService;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import jakarta.transaction.Transactional;
 
 @SpringBootTest
 @AutoConfigureMockMvc
@@ -124,35 +130,41 @@ public class UserControllerTest {
 
     @Test
     void shouldUpdateUser() throws Exception {
-        // Crear o reutilizar un usuario que ya exista en la base de datos para esta prueba
+        // Crear un UserDto para simular la actualización
+        UserDto userDto = new UserDto();
+        userDto.setUsername("frodo");
+        userDto.setEmail("frodo@example.com");
+        userDto.setPassword("password123");
+        userDto.setRole(ERole.ADMIN);
+    
+        // Crear un usuario existente en la base de datos
         User user = new User.Builder()
                 .username("unique_username")
                 .password("password123")
                 .email("unique@example.com")
                 .role(ERole.ADMIN)
                 .build();
-
         user = userRepository.save(user);  // Guardar el usuario en la base de datos
-
-        // Actualizar el nombre de usuario del usuario
-        user.setUsername("frodo");
-
+    
         // Generar un nuevo token JWT para este usuario
         UserDetails userDetails = org.springframework.security.core.userdetails.User.builder()
             .username(user.getUsername())
             .password(user.getPassword())
             .authorities("ROLE_ADMIN")
             .build();
-        token = jwtService.getTokenService(userDetails); // Generar el token JWT para el usuario actualizado
-
+        String token = jwtService.getTokenService(userDetails); // Generar el token JWT
+    
         // Ejecutar la prueba de actualización
         mockMvc.perform(put("/api/users/{id}", user.getId())
                         .header("Authorization", "Bearer " + token) // Usar el token generado
                         .contentType(MediaType.APPLICATION_JSON)
-                        .content(objectMapper.writeValueAsString(user)))
+                        .content(objectMapper.writeValueAsString(userDto))) // Usar UserDto aquí
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.username", is(user.getUsername())));
-}
+                .andExpect(jsonPath("$.username", is(userDto.getUsername())));
+    }
+    
+    
+
 
 
     @Test
