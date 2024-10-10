@@ -125,3 +125,109 @@
 2024-10-08T15:28:49.471+02:00  INFO 25620 --- [donbosco] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-10-08T15:28:49.490+02:00  INFO 25620 --- [donbosco] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2024-10-08T15:28:49.498+02:00  INFO 25620 --- [donbosco] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-10T11:02:24.445+02:00  INFO 14820 --- [donbosco] [main] c.d.servicesTest.FlightServiceImplTest   : Starting FlightServiceImplTest using Java 21.0.3 with PID 14820 (started by 34722 in D:\Cursos\Programación Donbosco\Java\DonboscoApp)
+2024-10-10T11:02:24.453+02:00  INFO 14820 --- [donbosco] [main] c.d.servicesTest.FlightServiceImplTest   : No active profile set, falling back to 1 default profile: "default"
+2024-10-10T11:02:25.980+02:00  INFO 14820 --- [donbosco] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-10T11:02:26.051+02:00  INFO 14820 --- [donbosco] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61 ms. Found 4 JPA repository interfaces.
+2024-10-10T11:02:28.152+02:00  INFO 14820 --- [donbosco] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-10T11:02:28.330+02:00  INFO 14820 --- [donbosco] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-10T11:02:28.405+02:00  INFO 14820 --- [donbosco] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-10T11:02:28.564+02:00  INFO 14820 --- [donbosco] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-10T11:02:28.593+02:00  INFO 14820 --- [donbosco] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-10T11:02:28.799+02:00  INFO 14820 --- [donbosco] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@64908ab9
+2024-10-10T11:02:28.803+02:00  INFO 14820 --- [donbosco] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-10T11:02:28.836+02:00  WARN 14820 --- [donbosco] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-10T11:02:28.840+02:00  WARN 14820 --- [donbosco] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-10-10T11:02:29.776+02:00  INFO 14820 --- [donbosco] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-10T11:02:29.959+02:00  INFO 14820 --- [donbosco] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-10T11:02:30.983+02:00  INFO 14820 --- [donbosco] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-10-10T11:02:30.983+02:00  WARN 14820 --- [donbosco] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-10-10T11:02:31.116+02:00  WARN 14820 --- [donbosco] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-10T11:02:32.405+02:00  INFO 14820 --- [donbosco] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2024-10-10T11:02:32.530+02:00 DEBUG 14820 --- [donbosco] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, AuthTokenFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2024-10-10T11:02:33.363+02:00  INFO 14820 --- [donbosco] [main] c.d.servicesTest.FlightServiceImplTest   : Started FlightServiceImplTest in 9.4 seconds (process running for 14.153)
+2024-10-10T11:02:34.251+02:00  INFO 14820 --- [donbosco] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.donbosco.controllerTest.UserControllerTest]: UserControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-10-10T11:02:34.410+02:00  INFO 14820 --- [donbosco] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.donbosco.DonboscoApplication for test class com.donbosco.controllerTest.UserControllerTest
+2024-10-10T11:02:34.440+02:00  INFO 14820 --- [donbosco] [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2024-10-10T11:02:34.598+02:00  INFO 14820 --- [donbosco] [main] c.d.controllerTest.UserControllerTest    : Starting UserControllerTest using Java 21.0.3 with PID 14820 (started by 34722 in D:\Cursos\Programación Donbosco\Java\DonboscoApp)
+2024-10-10T11:02:34.599+02:00  INFO 14820 --- [donbosco] [main] c.d.controllerTest.UserControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2024-10-10T11:02:35.741+02:00  INFO 14820 --- [donbosco] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-10T11:02:35.794+02:00  INFO 14820 --- [donbosco] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 4 JPA repository interfaces.
+2024-10-10T11:02:36.258+02:00  INFO 14820 --- [donbosco] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-10T11:02:36.261+02:00  INFO 14820 --- [donbosco] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-10T11:02:36.272+02:00  INFO 14820 --- [donbosco] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-10T11:02:36.276+02:00  INFO 14820 --- [donbosco] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-10-10T11:02:36.285+02:00  INFO 14820 --- [donbosco] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@37711f1a
+2024-10-10T11:02:36.285+02:00  INFO 14820 --- [donbosco] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-10-10T11:02:36.287+02:00  WARN 14820 --- [donbosco] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-10T11:02:36.287+02:00  WARN 14820 --- [donbosco] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-10-10T11:02:36.395+02:00  INFO 14820 --- [donbosco] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-10T11:02:36.463+02:00  INFO 14820 --- [donbosco] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-10T11:02:36.971+02:00  INFO 14820 --- [donbosco] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-10-10T11:02:36.972+02:00  WARN 14820 --- [donbosco] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-10-10T11:02:37.104+02:00  WARN 14820 --- [donbosco] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-10T11:02:37.925+02:00  INFO 14820 --- [donbosco] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2024-10-10T11:02:37.965+02:00 DEBUG 14820 --- [donbosco] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, AuthTokenFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2024-10-10T11:02:38.902+02:00  INFO 14820 --- [donbosco] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-10-10T11:02:38.903+02:00  INFO 14820 --- [donbosco] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-10-10T11:02:38.907+02:00  INFO 14820 --- [donbosco] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2024-10-10T11:02:38.960+02:00  INFO 14820 --- [donbosco] [main] c.d.controllerTest.UserControllerTest    : Started UserControllerTest in 4.524 seconds (process running for 19.75)
+2024-10-10T11:02:39.649+02:00 DEBUG 14820 --- [donbosco] [main] o.s.security.web.FilterChainProxy        : Securing GET /api/users/3
+2024-10-10T11:02:39.992+02:00 DEBUG 14820 --- [donbosco] [main] o.s.security.web.FilterChainProxy        : Secured GET /api/users/3
+2024-10-10T11:02:40.325+02:00 DEBUG 14820 --- [donbosco] [main] o.s.security.web.FilterChainProxy        : Securing PUT /api/users/5
+2024-10-10T11:02:40.341+02:00 DEBUG 14820 --- [donbosco] [main] o.s.security.web.FilterChainProxy        : Secured PUT /api/users/5
+2024-10-10T11:02:40.445+02:00 DEBUG 14820 --- [donbosco] [main] o.s.security.web.FilterChainProxy        : Securing POST /api/users
+2024-10-10T11:02:40.508+02:00 DEBUG 14820 --- [donbosco] [main] o.s.security.web.FilterChainProxy        : Secured POST /api/users
+2024-10-10T11:02:40.608+02:00 DEBUG 14820 --- [donbosco] [main] o.s.security.web.FilterChainProxy        : Securing GET /api/users
+2024-10-10T11:02:40.622+02:00 DEBUG 14820 --- [donbosco] [main] o.s.security.web.FilterChainProxy        : Secured GET /api/users
+2024-10-10T11:02:40.686+02:00 DEBUG 14820 --- [donbosco] [main] o.s.security.web.FilterChainProxy        : Securing GET /api/users/999
+2024-10-10T11:02:40.700+02:00 DEBUG 14820 --- [donbosco] [main] o.s.security.web.FilterChainProxy        : Secured GET /api/users/999
+2024-10-10T11:02:40.756+02:00 DEBUG 14820 --- [donbosco] [main] o.s.security.web.FilterChainProxy        : Securing DELETE /api/users/10
+2024-10-10T11:02:40.787+02:00 DEBUG 14820 --- [donbosco] [main] o.s.security.web.FilterChainProxy        : Secured DELETE /api/users/10
+2024-10-10T11:02:40.834+02:00  INFO 14820 --- [donbosco] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.donbosco.controllerTest.FlightControllerTest]: FlightControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-10-10T11:02:40.849+02:00  INFO 14820 --- [donbosco] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.donbosco.DonboscoApplication for test class com.donbosco.controllerTest.FlightControllerTest
+2024-10-10T11:02:40.861+02:00  INFO 14820 --- [donbosco] [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2024-10-10T11:02:40.907+02:00  INFO 14820 --- [donbosco] [main] c.d.controllerTest.FlightControllerTest  : Starting FlightControllerTest using Java 21.0.3 with PID 14820 (started by 34722 in D:\Cursos\Programación Donbosco\Java\DonboscoApp)
+2024-10-10T11:02:40.911+02:00  INFO 14820 --- [donbosco] [main] c.d.controllerTest.FlightControllerTest  : No active profile set, falling back to 1 default profile: "default"
+2024-10-10T11:02:41.564+02:00  INFO 14820 --- [donbosco] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-10T11:02:41.612+02:00  INFO 14820 --- [donbosco] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 4 JPA repository interfaces.
+2024-10-10T11:02:41.916+02:00  INFO 14820 --- [donbosco] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-10T11:02:41.918+02:00  INFO 14820 --- [donbosco] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-10T11:02:41.925+02:00  INFO 14820 --- [donbosco] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-10T11:02:41.926+02:00  INFO 14820 --- [donbosco] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2024-10-10T11:02:41.932+02:00  INFO 14820 --- [donbosco] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2b3d662e
+2024-10-10T11:02:41.932+02:00  INFO 14820 --- [donbosco] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2024-10-10T11:02:41.933+02:00  WARN 14820 --- [donbosco] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-10T11:02:41.933+02:00  WARN 14820 --- [donbosco] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-10-10T11:02:42.054+02:00  INFO 14820 --- [donbosco] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-10T11:02:42.083+02:00  INFO 14820 --- [donbosco] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-10T11:02:42.305+02:00  INFO 14820 --- [donbosco] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-10-10T11:02:42.305+02:00  WARN 14820 --- [donbosco] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-10-10T11:02:42.345+02:00  WARN 14820 --- [donbosco] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-10T11:02:42.493+02:00  INFO 14820 --- [donbosco] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2024-10-10T11:02:42.513+02:00 DEBUG 14820 --- [donbosco] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, AuthTokenFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2024-10-10T11:02:42.743+02:00  INFO 14820 --- [donbosco] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-10-10T11:02:42.743+02:00  INFO 14820 --- [donbosco] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-10-10T11:02:42.744+02:00  INFO 14820 --- [donbosco] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-10-10T11:02:42.789+02:00  INFO 14820 --- [donbosco] [main] c.d.controllerTest.FlightControllerTest  : Started FlightControllerTest in 1.929 seconds (process running for 23.579)
+2024-10-10T11:02:42.894+02:00 DEBUG 14820 --- [donbosco] [main] o.s.security.web.FilterChainProxy        : Securing POST /api/flights
+2024-10-10T11:02:42.933+02:00 DEBUG 14820 --- [donbosco] [main] o.s.security.web.FilterChainProxy        : Secured POST /api/flights
+2024-10-10T11:02:43.084+02:00 DEBUG 14820 --- [donbosco] [main] o.s.security.web.FilterChainProxy        : Securing GET /api/flights
+2024-10-10T11:02:43.105+02:00 DEBUG 14820 --- [donbosco] [main] o.s.security.web.FilterChainProxy        : Secured GET /api/flights
+2024-10-10T11:02:43.201+02:00 DEBUG 14820 --- [donbosco] [main] o.s.security.web.FilterChainProxy        : Securing GET /api/flights/1
+2024-10-10T11:02:43.258+02:00 DEBUG 14820 --- [donbosco] [main] o.s.security.web.FilterChainProxy        : Secured GET /api/flights/1
+2024-10-10T11:02:43.343+02:00 DEBUG 14820 --- [donbosco] [main] o.s.security.web.FilterChainProxy        : Securing PUT /api/flights/1
+2024-10-10T11:02:43.379+02:00 DEBUG 14820 --- [donbosco] [main] o.s.security.web.FilterChainProxy        : Secured PUT /api/flights/1
+2024-10-10T11:02:43.446+02:00 DEBUG 14820 --- [donbosco] [main] o.s.security.web.FilterChainProxy        : Securing DELETE /api/flights/1
+2024-10-10T11:02:43.482+02:00 DEBUG 14820 --- [donbosco] [main] o.s.security.web.FilterChainProxy        : Secured DELETE /api/flights/1
+2024-10-10T11:02:43.557+02:00  INFO 14820 --- [donbosco] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.donbosco.servicesTest.UserServiceImplTest]: UserServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-10-10T11:02:43.565+02:00  INFO 14820 --- [donbosco] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.donbosco.DonboscoApplication for test class com.donbosco.servicesTest.UserServiceImplTest
+2024-10-10T11:02:43.887+02:00  INFO 14820 --- [donbosco] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-10T11:02:43.896+02:00  INFO 14820 --- [donbosco] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-10T11:02:43.915+02:00  INFO 14820 --- [donbosco] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-10T11:02:43.920+02:00  INFO 14820 --- [donbosco] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-10T11:02:43.923+02:00  INFO 14820 --- [donbosco] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2024-10-10T11:02:43.931+02:00  INFO 14820 --- [donbosco] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2024-10-10T11:02:43.934+02:00  INFO 14820 --- [donbosco] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-10T11:02:43.938+02:00  INFO 14820 --- [donbosco] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2024-10-10T11:02:43.942+02:00  INFO 14820 --- [donbosco] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
