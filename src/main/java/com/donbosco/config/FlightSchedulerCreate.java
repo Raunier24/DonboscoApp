@@ -15,7 +15,7 @@ public class FlightSchedulerCreate {
     @Autowired
     private IFlightRepository flightRepository;
 
-    @Scheduled(cron = "45 21 * * 4 ?")  // Se ejecuta todos los días a las 00:30 "0 30 0 * * ?"   1
+    @Scheduled(cron = "0 30 0 * * ?")  // Se ejecuta todos los días a las 00:30 "0 30 0 * * ?"   1
     public void generateNextDayFlights() {
         System.out.println("Iniciando la creación de vuelos para el día siguiente...");
 
