@@ -52,9 +52,9 @@ public class User implements UserDetails {
 
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
     @JoinTable(
-        name = "user_flight",
-        joinColumns = @JoinColumn(name = "user_id"),
-        inverseJoinColumns = @JoinColumn(name = "flight_id")
+            name = "user_flight",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "flight_id")
     )
     @JsonManagedReference
     private Set<Flight> flights = new HashSet<>();
@@ -70,19 +70,20 @@ public class User implements UserDetails {
         this.flights = builder.flights;
     }
 
-    public static User fromJson(String username, String password, String email, ERole role) {//para el Crud
+    // Método para crear usuario desde JSON
+    public static User fromJson(String username, String password, String email, ERole role) {
         return new Builder()
-            .username(username)
-            .password(password)
-            .email(email)
-            .role(role)
-            .build();
+                .username(username)
+                .password(password)
+                .email(email)
+                .role(role)
+                .build();
     }
-    
 
-    // Constructor vacío
+    // Constructor vacío (necesario para JPA)
     public User() {}
 
+    // Getters y Setters (necesarios para JPA y otros usos)
     public Set<Reservation> getReservations() {
         return reservations;
     }
@@ -91,7 +92,49 @@ public class User implements UserDetails {
         return flights;
     }
 
-    // Builder estático
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    @Override
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    @Override
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public ERole getRole() {
+        return role;
+    }
+
+    public void setRole(ERole role) {
+        this.role = role;
+    }
+
+    // Implementación del Builder
     public static class Builder {
         private Long id;
         private String username;
@@ -140,20 +183,11 @@ public class User implements UserDetails {
             return new User(this);
         }
     }
-    @Override
-    public String toString() {
-        return "User{" +
-                "username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                ", email='" + email + '\'' +
-                ", role='" + role + '\'' +
-                '}';
-    }
-    
 
+    // Métodos para UserDetails
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of(new SimpleGrantedAuthority((role.name())));
+        return List.of(new SimpleGrantedAuthority(role.name()));
     }
 
     @Override
@@ -176,47 +210,13 @@ public class User implements UserDetails {
         return true;
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
     @Override
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    @Override
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public ERole getRole() {
-        return role;
-    }
-
-    public void setRole(ERole role) {
-        this.role = role;
+    public String toString() {
+        return "User{" +
+                "username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", email='" + email + '\'' +
+                ", role='" + role + '\'' +
+                '}';
     }
 }
-
-

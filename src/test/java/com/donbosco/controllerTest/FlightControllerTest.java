@@ -103,6 +103,7 @@ public class FlightControllerTest {
     void testGetAllFlights() throws Exception {
         Mockito.when(flightService.getAllFlights()).thenReturn(List.of(flightDto));
 
+        
         mockMvc.perform(get("/api/flights")
                         .header("Authorization", "Bearer " + token)) // Incluir el token JWT
                 .andExpect(status().isOk())
@@ -115,6 +116,7 @@ public class FlightControllerTest {
     void testGetFlightById() throws Exception {
         Mockito.when(flightService.get(flightDto.getId())).thenReturn(flightDto);
 
+        
         mockMvc.perform(get("/api/flights/{id}", flightDto.getId())
                         .header("Authorization", "Bearer " + token)) // Incluir el token JWT
                 .andExpect(status().isOk())

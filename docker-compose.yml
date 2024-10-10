@@ -1,14 +1,12 @@
 version: '3.8'
 
-name: aerolinea_app
-
 services:
   db:
     image: mysql:8.0
-    container_name: db_aerolinea
+    container_name: db-aerolinea
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: db_aerolinea
+      MYSQL_DATABASE: db-aerolinea
     ports:
       - "3307:3306"  # Cambia el puerto a 3306 internamente ya que MySQL usa este puerto
     volumes:
@@ -33,7 +31,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: aerolinea_app
+    container_name: aerolinea-app
     depends_on:
       - db
     environment:
