@@ -159,6 +159,7 @@ public class UserControllerTest {
                         .header("Authorization", "Bearer " + token) // Usar el token generado
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(userDto))) // Usar UserDto aquí
+                        .content(objectMapper.writeValueAsString(userDto))) // Usar UserDto aquí
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.username", is(userDto.getUsername())));
     }
