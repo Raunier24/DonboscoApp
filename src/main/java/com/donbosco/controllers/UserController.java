@@ -45,11 +45,7 @@ public class UserController {
         return userService.createUser(userDto);     
     }
 
-    /*@PutMapping("/{id}")
-    public ResponseEntity<User> updateUser(@PathVariable Long id, @RequestBody User userDetails) {
-        User updatedUser = userService.updateUser(id, userDetails); // Llama al servicio de actualización
-        return ResponseEntity.ok(updatedUser);
-    } */
+
     @PutMapping("/{id}")
         public ResponseEntity<User> updateUser(@PathVariable Long id, @RequestBody UserDto userDetails) {
         var updatedUser = userService.updateUser(id, userDetails); // Cambia User por UserDto
