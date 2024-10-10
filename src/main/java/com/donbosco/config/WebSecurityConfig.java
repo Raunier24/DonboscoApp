@@ -30,11 +30,15 @@ public class WebSecurityConfig {
                                         csrf.disable())
                                 .authorizeHttpRequests(authRequest -> 
                                         authRequest
+                                                .requestMatchers("/error/**").permitAll()
+                                                .requestMatchers("/favicon.ico").permitAll()//para opera
+                                                .requestMatchers("/actuator/**").permitAll()
                                                 .requestMatchers("/api/auth/**").permitAll()
                                                 .requestMatchers("/api/test/**").permitAll()
                                                 .requestMatchers("/api/sales/reserve").permitAll()
-                                                .requestMatchers("/actuator").permitAll()
-
+                                                
+                                
+                                                
                                                 .requestMatchers("/api/flights/departure/{departure}").permitAll()
                                                 .requestMatchers("/api/flights/getAll").hasAnyAuthority("ADMIN", "USER")
                                                 .requestMatchers("/api/flights/id").hasAuthority("ADMIN")
