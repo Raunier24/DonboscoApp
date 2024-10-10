@@ -67,7 +67,7 @@ Extras:
 ![KEY POINTS](https://github.com/Raunier24/DonboscoApp/blob/dev/src/main/resources/11.jpg)
 
 
-## Panel de Administración del Frontend
+## Capturas del Frontend
 ![KEY POINTS]()
 
 # Videos funcionamiento del Front
