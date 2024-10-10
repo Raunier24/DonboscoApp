@@ -124,3 +124,24 @@
 2024-10-10T06:44:38.062Z DEBUG 1 --- [donbosco] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /actuator/prometheus
 2024-10-10T06:44:38.064Z DEBUG 1 --- [donbosco] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
 2024-10-10T06:44:38.066Z DEBUG 1 --- [donbosco] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /actuator/prometheus
+2024-10-10T06:44:53.058Z DEBUG 1 --- [donbosco] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /actuator/prometheus
+2024-10-10T06:44:53.060Z DEBUG 1 --- [donbosco] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-10-10T06:44:53.064Z DEBUG 1 --- [donbosco] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /actuator/prometheus
+2024-10-10T06:45:08.061Z DEBUG 1 --- [donbosco] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /actuator/prometheus
+2024-10-10T06:45:08.064Z DEBUG 1 --- [donbosco] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-10-10T06:45:08.068Z DEBUG 1 --- [donbosco] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /actuator/prometheus
+2024-10-10T06:45:23.059Z DEBUG 1 --- [donbosco] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /actuator/prometheus
+2024-10-10T06:45:23.061Z DEBUG 1 --- [donbosco] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-10-10T06:45:23.063Z DEBUG 1 --- [donbosco] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /actuator/prometheus
+2024-10-10T06:45:38.059Z DEBUG 1 --- [donbosco] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /actuator/prometheus
+2024-10-10T06:45:38.061Z DEBUG 1 --- [donbosco] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-10-10T06:45:38.064Z DEBUG 1 --- [donbosco] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /actuator/prometheus
+2024-10-10T06:45:53.053Z DEBUG 1 --- [donbosco] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /actuator/prometheus
+2024-10-10T06:45:53.057Z DEBUG 1 --- [donbosco] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-10-10T06:45:53.060Z DEBUG 1 --- [donbosco] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /actuator/prometheus
+2024-10-10T06:46:08.057Z DEBUG 1 --- [donbosco] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /actuator/prometheus
+2024-10-10T06:46:08.059Z DEBUG 1 --- [donbosco] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-10-10T06:46:08.060Z DEBUG 1 --- [donbosco] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /actuator/prometheus
+2024-10-10T06:46:23.076Z DEBUG 1 --- [donbosco] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /actuator/prometheus
+2024-10-10T06:46:23.103Z DEBUG 1 --- [donbosco] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-10-10T06:46:23.111Z DEBUG 1 --- [donbosco] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /actuator/prometheus
