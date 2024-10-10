@@ -1,6 +1,6 @@
 # DonboscoApp Aerolíneas
 
-![Logo](https://github.com/Raunier24/DonboscoApp/blob/dev/src/main/resources/Logo_F5_d_bosco_airlines.jpg)
+![Logo](src/main/resources/mini_Logo_F5_d_bosco_airlines.png)
 
 # Team 4:
 * Ana Maria Martin -------->> https://github.com/anamartin99
@@ -8,6 +8,10 @@
 * Abraham Martin Moya ----->> https://github.com/abmmm19888
 * Raunier, Raunier24 ------>> https://github.com/Raunier24
 * Jose M. Alonso Tirado ---->> https://github.com/jmatisam
+
+![Documentación](src/main/resources/Doc.jpg)
+# * [Documentación](https://www.canva.com/design/DAGRRwTYhYo/pbsLMFyFdP_47cmAtT1z3Q/view?utm_content=DAGRRwTYhYo&utm_campaign=designshare&utm_medium=link&utm_source=editor)
+
 
 # Project Context: 
 
@@ -62,18 +66,21 @@ Extras:
 * Aplicar patrón de diseño DTO
  
 ## ORM
-![ORM](https://github.com/Raunier24/DonboscoApp/blob/feature/flight/src/main/resources/orm.jpg)
-## Diagrama Spring Security
-![KEY POINTS](https://github.com/Raunier24/DonboscoApp/blob/dev/src/main/resources/11.jpg)
+![ORM](src/main/resources/orm.jpg)
+# Despliegue en Docker
+![KEY POINTS](src/main/resources/Docker.jpg)
 
 
-## Panel de Administración del Frontend
-![KEY POINTS]()
+# Monitoriaación en Docker
+![KEY POINTS](src/main/resources/Docker_Grafana.jpg)
 
-# Videos funcionamiento del Front
-* [Presentación Front]()
-* [Logeo OK]()
+# Recurso Extra: El Frontend
+![Presentación Front](src/main/resources/Frontend.jpg)
+* [Enlace al Front](https://github.com/jmatisam/DonBosco_Airlines)
 
-![KEY POINTS]()
-## The documentation ;) Summary of the work carried out, in the Backend and the frontend.
-## * [Documentación](https://www.canva.com/design/DAGRRwTYhYo/pbsLMFyFdP_47cmAtT1z3Q/view?utm_content=DAGRRwTYhYo&utm_campaign=designshare&utm_medium=link&utm_source=editor)
+# The documentation ;) Summary of the work carried out, in the Backend and the frontend.
+## * [Presentación](https://www.canva.com/design/DAGSO3gUpJk/bfFAwv5H2VinnjPdHvmzkQ/view?utm_content=DAGSO3gUpJk&utm_campaign=designshare&utm_medium=link&utm_source=editor)
+
+
+# TEAM 4 
+![](src/main/resources/Team%204.jpg)
