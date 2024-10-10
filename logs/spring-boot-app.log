@@ -1,494 +1,127 @@
-2024-10-08T00:00:17.910+02:00  INFO 3928 --- [donbosco] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
-2024-10-08T00:00:18.403+02:00  INFO 3928 --- [donbosco] [Thread-79] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-08T00:00:18.425+02:00  INFO 3928 --- [donbosco] [Thread-79] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Shutdown initiated...
-2024-10-08T00:00:18.454+02:00  INFO 3928 --- [donbosco] [Thread-79] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Shutdown completed.
-2024-10-08T00:00:18.844+02:00  INFO 3928 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Starting DonboscoApplication using Java 21.0.3 with PID 3928 (C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp\target\classes started by F5 02 SEV in C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp)
-2024-10-08T00:00:18.846+02:00  INFO 3928 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : No active profile set, falling back to 1 default profile: "default"
-2024-10-08T00:00:19.512+02:00  INFO 3928 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-08T00:00:19.565+02:00  INFO 3928 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 3 JPA repository interfaces.
-2024-10-08T00:00:19.896+02:00  INFO 3928 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
-2024-10-08T00:00:19.897+02:00  INFO 3928 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-10-08T00:00:19.898+02:00  INFO 3928 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-10-08T00:00:19.959+02:00  INFO 3928 --- [donbosco] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-10-08T00:00:19.960+02:00  INFO 3928 --- [donbosco] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1110 ms
-2024-10-08T00:00:20.226+02:00  INFO 3928 --- [donbosco] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-08T00:00:20.231+02:00  INFO 3928 --- [donbosco] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-10-08T00:00:20.250+02:00  INFO 3928 --- [donbosco] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-08T00:00:20.252+02:00  INFO 3928 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-21 - Starting...
-2024-10-08T00:00:20.290+02:00  INFO 3928 --- [donbosco] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-21 - Added connection com.mysql.cj.jdbc.ConnectionImpl@8e0fffe
-2024-10-08T00:00:20.291+02:00  INFO 3928 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-21 - Start completed.
-2024-10-08T00:00:20.293+02:00  WARN 3928 --- [donbosco] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-10-08T00:00:20.294+02:00  WARN 3928 --- [donbosco] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2024-10-08T00:00:20.548+02:00  INFO 3928 --- [donbosco] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-10-08T00:00:21.712+02:00  INFO 3928 --- [donbosco] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-08T00:00:22.095+02:00  INFO 3928 --- [donbosco] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
-2024-10-08T00:00:22.096+02:00  WARN 3928 --- [donbosco] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
-2024-10-08T00:00:22.179+02:00  WARN 3928 --- [donbosco] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-08T00:00:22.608+02:00  INFO 3928 --- [donbosco] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 4 endpoints beneath base path '/actuator'
-2024-10-08T00:00:22.659+02:00 DEBUG 3928 --- [donbosco] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, AuthTokenFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
-2024-10-08T00:00:22.971+02:00  INFO 3928 --- [donbosco] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-10-08T00:00:23.019+02:00  INFO 3928 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
-2024-10-08T00:00:23.031+02:00  INFO 3928 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Started DonboscoApplication in 4.249 seconds (process running for 7819.31)
-2024-10-08T00:00:23.036+02:00  INFO 3928 --- [donbosco] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2024-10-08T00:01:18.451+02:00  INFO 3928 --- [donbosco] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 41 class path changes (0 additions, 40 deletions, 1 modification)
-2024-10-08T00:01:18.475+02:00  INFO 3928 --- [donbosco] [Thread-83] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-08T00:01:18.478+02:00  INFO 3928 --- [donbosco] [Thread-83] com.zaxxer.hikari.HikariDataSource       : HikariPool-21 - Shutdown initiated...
-2024-10-08T00:01:18.497+02:00  INFO 3928 --- [donbosco] [Thread-83] com.zaxxer.hikari.HikariDataSource       : HikariPool-21 - Shutdown completed.
-2024-10-08T00:01:18.711+02:00  INFO 3928 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Starting DonboscoApplication using Java 21.0.3 with PID 3928 (C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp\target\classes started by F5 02 SEV in C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp)
-2024-10-08T00:01:18.712+02:00  INFO 3928 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : No active profile set, falling back to 1 default profile: "default"
-2024-10-08T00:01:19.376+02:00  INFO 3928 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-08T00:01:19.407+02:00  INFO 3928 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 JPA repository interfaces.
-2024-10-08T00:01:19.775+02:00  INFO 3928 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
-2024-10-08T00:01:19.783+02:00  INFO 3928 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-10-08T00:01:19.786+02:00  INFO 3928 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-10-08T00:01:19.844+02:00  INFO 3928 --- [donbosco] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-10-08T00:01:19.847+02:00  INFO 3928 --- [donbosco] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1132 ms
-2024-10-08T00:01:20.240+02:00  INFO 3928 --- [donbosco] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-08T00:01:20.292+02:00  INFO 3928 --- [donbosco] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-10-08T00:01:20.353+02:00  INFO 3928 --- [donbosco] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-08T00:01:20.355+02:00  INFO 3928 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-22 - Starting...
-2024-10-08T00:01:20.383+02:00  INFO 3928 --- [donbosco] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-22 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3c18db2b
-2024-10-08T00:01:20.383+02:00  INFO 3928 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-22 - Start completed.
-2024-10-08T00:01:20.385+02:00  WARN 3928 --- [donbosco] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-10-08T00:01:20.386+02:00  WARN 3928 --- [donbosco] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2024-10-08T00:01:20.461+02:00  INFO 3928 --- [donbosco] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-10-08T00:01:20.463+02:00  INFO 3928 --- [donbosco] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-08T00:01:20.631+02:00  WARN 3928 --- [donbosco] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-08T00:01:21.946+02:00  WARN 3928 --- [donbosco] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
-
-Using generated security password: 4a14b9e8-d599-49af-87d1-826e1e93a6f4
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
-
-2024-10-08T00:01:21.960+02:00  INFO 3928 --- [donbosco] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2024-10-08T00:01:22.047+02:00  INFO 3928 --- [donbosco] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 4 endpoints beneath base path '/actuator'
-2024-10-08T00:01:22.069+02:00 DEBUG 3928 --- [donbosco] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, CsrfFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
-2024-10-08T00:01:22.251+02:00  INFO 3928 --- [donbosco] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-10-08T00:01:22.308+02:00  INFO 3928 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
-2024-10-08T00:01:22.326+02:00  INFO 3928 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Started DonboscoApplication in 3.655 seconds (process running for 7878.605)
-2024-10-08T00:01:22.354+02:00  INFO 3928 --- [donbosco] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation delta:
-
-
-==========================
-CONDITION EVALUATION DELTA
-==========================
-
-
-Positive matches:
------------------
-
-   ManagementWebSecurityAutoConfiguration matched:
-      - found 'session' scope (OnWebApplicationCondition)
-      - AllNestedConditions 2 matched 0 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) did not find any beans; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
-
-   SpringBootWebSecurityConfiguration.WebSecurityEnablerConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity' (OnClassCondition)
-      - @ConditionalOnMissingBean (names: springSecurityFilterChain; SearchStrategy: all) did not find any beans (OnBeanCondition)
-
-   UserDetailsServiceAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.security.authentication.AuthenticationManager' (OnClassCondition)
-      - AnyNestedCondition 1 matched 2 did not; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.PasswordConfigured @ConditionalOnProperty (spring.security.user.password) did not find property 'password'; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.NameConfigured @ConditionalOnProperty (spring.security.user.name) did not find property 'name'; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.MissingAlternative @ConditionalOnMissingClass did not find unwanted classes 'org.springframework.security.oauth2.client.registration.ClientRegistrationRepository', 'org.springframework.security.oauth2.server.resource.introspection.OpaqueTokenIntrospector', 'org.springframework.security.saml2.provider.service.registration.RelyingPartyRegistrationRepository' (UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured)
-      - @ConditionalOnBean (types: org.springframework.security.config.annotation.ObjectPostProcessor; SearchStrategy: all) found bean 'objectPostProcessor'; @ConditionalOnMissingBean (types: org.springframework.security.authentication.AuthenticationManager,org.springframework.security.authentication.AuthenticationProvider,org.springframework.security.core.userdetails.UserDetailsService,org.springframework.security.authentication.AuthenticationManagerResolver,org.springframework.security.oauth2.jwt.JwtDecoder; SearchStrategy: all) did not find any beans (OnBeanCondition)
-
-
-Negative matches:
------------------
-
-   TaskSchedulingAutoConfiguration#scheduledBeanLazyInitializationExcludeFilter:
-      Did not match:
-         - @ConditionalOnBean (names: org.springframework.context.annotation.internalScheduledAnnotationProcessor; SearchStrategy: all) did not find any beans named org.springframework.context.annotation.internalScheduledAnnotationProcessor (OnBeanCondition)
-
-   TaskSchedulingConfigurations.TaskSchedulerConfiguration:
-      Did not match:
-         - @ConditionalOnBean (names: org.springframework.context.annotation.internalScheduledAnnotationProcessor; SearchStrategy: all) did not find any beans named org.springframework.context.annotation.internalScheduledAnnotationProcessor (OnBeanCondition)
-
-
-Exclusions:
------------
-
-    None
-
-
-Unconditional classes:
-----------------------
-
-    None
-
-
-
-2024-10-08T00:01:24.804+02:00  INFO 3928 --- [donbosco] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 40 class path changes (40 additions, 0 deletions, 0 modifications)
-2024-10-08T00:01:24.827+02:00  INFO 3928 --- [donbosco] [Thread-87] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-08T00:01:24.829+02:00  INFO 3928 --- [donbosco] [Thread-87] com.zaxxer.hikari.HikariDataSource       : HikariPool-22 - Shutdown initiated...
-2024-10-08T00:01:24.849+02:00  INFO 3928 --- [donbosco] [Thread-87] com.zaxxer.hikari.HikariDataSource       : HikariPool-22 - Shutdown completed.
-2024-10-08T00:01:25.082+02:00  INFO 3928 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Starting DonboscoApplication using Java 21.0.3 with PID 3928 (C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp\target\classes started by F5 02 SEV in C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp)
-2024-10-08T00:01:25.092+02:00  INFO 3928 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : No active profile set, falling back to 1 default profile: "default"
-2024-10-08T00:01:25.948+02:00  INFO 3928 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-08T00:01:26.048+02:00  INFO 3928 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 76 ms. Found 3 JPA repository interfaces.
-2024-10-08T00:01:26.585+02:00  INFO 3928 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
-2024-10-08T00:01:26.743+02:00  INFO 3928 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-10-08T00:01:26.802+02:00  INFO 3928 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-10-08T00:01:26.915+02:00  INFO 3928 --- [donbosco] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-10-08T00:01:26.965+02:00  INFO 3928 --- [donbosco] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1869 ms
-2024-10-08T00:01:27.778+02:00  INFO 3928 --- [donbosco] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-08T00:01:27.838+02:00  INFO 3928 --- [donbosco] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-10-08T00:01:27.873+02:00  INFO 3928 --- [donbosco] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-08T00:01:27.942+02:00  INFO 3928 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-23 - Starting...
-2024-10-08T00:01:27.976+02:00  INFO 3928 --- [donbosco] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-23 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7534f449
-2024-10-08T00:01:27.977+02:00  INFO 3928 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-23 - Start completed.
-2024-10-08T00:01:27.978+02:00  WARN 3928 --- [donbosco] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-10-08T00:01:27.979+02:00  WARN 3928 --- [donbosco] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2024-10-08T00:01:28.303+02:00  INFO 3928 --- [donbosco] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-10-08T00:01:30.162+02:00  INFO 3928 --- [donbosco] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-08T00:01:30.538+02:00  INFO 3928 --- [donbosco] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
-2024-10-08T00:01:30.539+02:00  WARN 3928 --- [donbosco] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
-2024-10-08T00:01:30.638+02:00  WARN 3928 --- [donbosco] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-08T00:01:31.091+02:00  INFO 3928 --- [donbosco] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 4 endpoints beneath base path '/actuator'
-2024-10-08T00:01:31.154+02:00 DEBUG 3928 --- [donbosco] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, AuthTokenFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
-2024-10-08T00:01:32.862+02:00  INFO 3928 --- [donbosco] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-10-08T00:01:32.891+02:00  INFO 3928 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
-2024-10-08T00:01:32.899+02:00  INFO 3928 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Started DonboscoApplication in 7.875 seconds (process running for 7889.178)
-2024-10-08T00:01:32.905+02:00  INFO 3928 --- [donbosco] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation delta:
-
-
-==========================
-CONDITION EVALUATION DELTA
-==========================
-
-
-Positive matches:
------------------
-
-   TaskSchedulingAutoConfiguration#scheduledBeanLazyInitializationExcludeFilter matched:
-      - @ConditionalOnBean (names: org.springframework.context.annotation.internalScheduledAnnotationProcessor; SearchStrategy: all) found bean 'org.springframework.context.annotation.internalScheduledAnnotationProcessor' (OnBeanCondition)
-
-   TaskSchedulingConfigurations.TaskSchedulerConfiguration matched:
-      - @ConditionalOnBean (names: org.springframework.context.annotation.internalScheduledAnnotationProcessor; SearchStrategy: all) found bean 'org.springframework.context.annotation.internalScheduledAnnotationProcessor'; @ConditionalOnMissingBean (types: org.springframework.scheduling.TaskScheduler,java.util.concurrent.ScheduledExecutorService; SearchStrategy: all) did not find any beans (OnBeanCondition)
-
-   TaskSchedulingConfigurations.TaskSchedulerConfiguration#taskScheduler matched:
-      - @ConditionalOnThreading found PLATFORM (OnThreadingCondition)
-
-
-Negative matches:
------------------
-
-   ManagementWebSecurityAutoConfiguration:
-      Did not match:
-         - AllNestedConditions 1 matched 1 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) found beans of type 'org.springframework.security.web.SecurityFilterChain' securityFilterChain; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
-      Matched:
-         - found 'session' scope (OnWebApplicationCondition)
-
-   SpringBootWebSecurityConfiguration.WebSecurityEnablerConfiguration:
-      Did not match:
-         - @ConditionalOnMissingBean (names: springSecurityFilterChain; SearchStrategy: all) found beans named springSecurityFilterChain (OnBeanCondition)
-      Matched:
-         - @ConditionalOnClass found required class 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity' (OnClassCondition)
-
-   TaskSchedulingConfigurations.TaskSchedulerConfiguration#taskSchedulerVirtualThreads:
-      Did not match:
-         - @ConditionalOnThreading did not find VIRTUAL (OnThreadingCondition)
-
-   UserDetailsServiceAutoConfiguration:
-      Did not match:
-         - @ConditionalOnMissingBean (types: org.springframework.security.authentication.AuthenticationManager,org.springframework.security.authentication.AuthenticationProvider,org.springframework.security.core.userdetails.UserDetailsService,org.springframework.security.authentication.AuthenticationManagerResolver,org.springframework.security.oauth2.jwt.JwtDecoder; SearchStrategy: all) found beans of type 'org.springframework.security.authentication.AuthenticationManager' authenticationManager and found beans of type 'org.springframework.security.core.userdetails.UserDetailsService' userDetailsService and found beans of type 'org.springframework.security.authentication.AuthenticationProvider' authenticationProvider (OnBeanCondition)
-      Matched:
-         - @ConditionalOnClass found required class 'org.springframework.security.authentication.AuthenticationManager' (OnClassCondition)
-         - AnyNestedCondition 1 matched 2 did not; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.PasswordConfigured @ConditionalOnProperty (spring.security.user.password) did not find property 'password'; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.NameConfigured @ConditionalOnProperty (spring.security.user.name) did not find property 'name'; NestedCondition on UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured.MissingAlternative @ConditionalOnMissingClass did not find unwanted classes 'org.springframework.security.oauth2.client.registration.ClientRegistrationRepository', 'org.springframework.security.oauth2.server.resource.introspection.OpaqueTokenIntrospector', 'org.springframework.security.saml2.provider.service.registration.RelyingPartyRegistrationRepository' (UserDetailsServiceAutoConfiguration.MissingAlternativeOrUserPropertiesConfigured)
-
-
-Exclusions:
------------
-
-    None
-
-
-Unconditional classes:
-----------------------
-
-    None
-
-
-
-2024-10-08T00:01:34.021+02:00  INFO 14692 --- [donbosco] [main] c.d.controllerTest.FlightControllerTest  : Starting FlightControllerTest using Java 21.0.3 with PID 14692 (started by F5 02 SEV in C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp)
-2024-10-08T00:01:34.030+02:00  INFO 14692 --- [donbosco] [main] c.d.controllerTest.FlightControllerTest  : No active profile set, falling back to 1 default profile: "default"
-2024-10-08T00:01:36.600+02:00  INFO 14692 --- [donbosco] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-08T00:01:36.751+02:00  INFO 14692 --- [donbosco] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 134 ms. Found 3 JPA repository interfaces.
-2024-10-08T00:01:40.128+02:00  INFO 14692 --- [donbosco] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-08T00:01:40.303+02:00  INFO 14692 --- [donbosco] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-10-08T00:01:40.400+02:00  INFO 14692 --- [donbosco] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-10-08T00:01:40.733+02:00  INFO 14692 --- [donbosco] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-08T00:01:40.813+02:00  INFO 14692 --- [donbosco] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-10-08T00:01:41.661+02:00  INFO 14692 --- [donbosco] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@32245b66
-2024-10-08T00:01:41.666+02:00  INFO 14692 --- [donbosco] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-10-08T00:01:41.751+02:00  WARN 14692 --- [donbosco] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-10-08T00:01:41.753+02:00  WARN 14692 --- [donbosco] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2024-10-08T00:01:43.498+02:00  INFO 14692 --- [donbosco] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-10-08T00:01:44.630+02:00  INFO 14692 --- [donbosco] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-08T00:01:45.475+02:00  INFO 14692 --- [donbosco] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
-2024-10-08T00:01:45.476+02:00  WARN 14692 --- [donbosco] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
-2024-10-08T00:01:45.620+02:00  WARN 14692 --- [donbosco] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-08T00:01:46.559+02:00  INFO 14692 --- [donbosco] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
-2024-10-08T00:01:46.665+02:00 DEBUG 14692 --- [donbosco] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, AuthTokenFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
-2024-10-08T00:01:47.835+02:00  INFO 14692 --- [donbosco] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2024-10-08T00:01:47.836+02:00  INFO 14692 --- [donbosco] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2024-10-08T00:01:47.839+02:00  INFO 14692 --- [donbosco] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
-2024-10-08T00:01:47.951+02:00  INFO 14692 --- [donbosco] [main] c.d.controllerTest.FlightControllerTest  : Started FlightControllerTest in 14.608 seconds (process running for 17.785)
-2024-10-08T00:01:48.654+02:00 DEBUG 14692 --- [donbosco] [main] o.s.security.web.FilterChainProxy        : Securing POST /api/flights
-2024-10-08T00:01:48.758+02:00 DEBUG 14692 --- [donbosco] [main] o.s.security.web.FilterChainProxy        : Secured POST /api/flights
-2024-10-08T00:01:49.023+02:00 DEBUG 14692 --- [donbosco] [main] o.s.security.web.FilterChainProxy        : Securing GET /api/flights
-2024-10-08T00:01:49.043+02:00 DEBUG 14692 --- [donbosco] [main] o.s.security.web.FilterChainProxy        : Secured GET /api/flights
-2024-10-08T00:01:49.093+02:00 DEBUG 14692 --- [donbosco] [main] o.s.security.web.FilterChainProxy        : Securing GET /api/flights/1
-2024-10-08T00:01:49.114+02:00 DEBUG 14692 --- [donbosco] [main] o.s.security.web.FilterChainProxy        : Secured GET /api/flights/1
-2024-10-08T00:01:49.156+02:00 DEBUG 14692 --- [donbosco] [main] o.s.security.web.FilterChainProxy        : Securing PUT /api/flights/1
-2024-10-08T00:01:49.179+02:00 DEBUG 14692 --- [donbosco] [main] o.s.security.web.FilterChainProxy        : Secured PUT /api/flights/1
-2024-10-08T00:01:49.223+02:00 DEBUG 14692 --- [donbosco] [main] o.s.security.web.FilterChainProxy        : Securing DELETE /api/flights/1
-2024-10-08T00:01:49.246+02:00 DEBUG 14692 --- [donbosco] [main] o.s.security.web.FilterChainProxy        : Secured DELETE /api/flights/1
-2024-10-08T00:01:49.599+02:00  INFO 14692 --- [donbosco] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.donbosco.controllerTest.UserControllerTest]: UserControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2024-10-08T00:01:49.628+02:00  INFO 14692 --- [donbosco] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.donbosco.DonboscoApplication for test class com.donbosco.controllerTest.UserControllerTest
-2024-10-08T00:01:49.638+02:00  INFO 14692 --- [donbosco] [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
-2024-10-08T00:01:49.743+02:00  INFO 14692 --- [donbosco] [main] c.d.controllerTest.UserControllerTest    : Starting UserControllerTest using Java 21.0.3 with PID 14692 (started by F5 02 SEV in C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp)
-2024-10-08T00:01:49.745+02:00  INFO 14692 --- [donbosco] [main] c.d.controllerTest.UserControllerTest    : No active profile set, falling back to 1 default profile: "default"
-2024-10-08T00:01:50.863+02:00  INFO 14692 --- [donbosco] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-08T00:01:50.905+02:00  INFO 14692 --- [donbosco] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 3 JPA repository interfaces.
-2024-10-08T00:01:51.311+02:00  INFO 14692 --- [donbosco] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-08T00:01:51.318+02:00  INFO 14692 --- [donbosco] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-10-08T00:01:51.350+02:00  INFO 14692 --- [donbosco] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-08T00:01:51.356+02:00  INFO 14692 --- [donbosco] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2024-10-08T00:01:51.405+02:00  INFO 14692 --- [donbosco] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@32be264e
-2024-10-08T00:01:51.406+02:00  INFO 14692 --- [donbosco] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2024-10-08T00:01:51.407+02:00  WARN 14692 --- [donbosco] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-10-08T00:01:51.408+02:00  WARN 14692 --- [donbosco] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2024-10-08T00:01:51.712+02:00  INFO 14692 --- [donbosco] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-10-08T00:01:54.089+02:00  INFO 14692 --- [donbosco] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-08T00:01:54.540+02:00  INFO 14692 --- [donbosco] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
-2024-10-08T00:01:54.540+02:00  WARN 14692 --- [donbosco] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
-2024-10-08T00:01:54.672+02:00  WARN 14692 --- [donbosco] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-08T00:01:55.176+02:00  INFO 14692 --- [donbosco] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
-2024-10-08T00:01:55.249+02:00 DEBUG 14692 --- [donbosco] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, AuthTokenFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
-2024-10-08T00:01:55.762+02:00  INFO 14692 --- [donbosco] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2024-10-08T00:01:55.762+02:00  INFO 14692 --- [donbosco] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2024-10-08T00:01:55.765+02:00  INFO 14692 --- [donbosco] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
-2024-10-08T00:01:55.809+02:00  INFO 14692 --- [donbosco] [main] c.d.controllerTest.UserControllerTest    : Started UserControllerTest in 6.171 seconds (process running for 25.643)
-2024-10-08T00:01:55.914+02:00 DEBUG 14692 --- [donbosco] [main] o.s.security.web.FilterChainProxy        : Securing GET /api/users/1
-2024-10-08T00:01:55.932+02:00 DEBUG 14692 --- [donbosco] [main] o.s.security.web.FilterChainProxy        : Secured GET /api/users/1
-2024-10-08T00:01:56.038+02:00 DEBUG 14692 --- [donbosco] [main] o.s.security.web.FilterChainProxy        : Securing PUT /api/users/3
-2024-10-08T00:01:56.058+02:00 DEBUG 14692 --- [donbosco] [main] o.s.security.web.FilterChainProxy        : Secured PUT /api/users/3
-2024-10-08T00:01:56.112+02:00 DEBUG 14692 --- [donbosco] [main] o.s.security.web.FilterChainProxy        : Securing POST /api/users
-2024-10-08T00:01:56.133+02:00 DEBUG 14692 --- [donbosco] [main] o.s.security.web.FilterChainProxy        : Secured POST /api/users
-2024-10-08T00:01:56.201+02:00 DEBUG 14692 --- [donbosco] [main] o.s.security.web.FilterChainProxy        : Securing GET /api/users
-2024-10-08T00:01:56.218+02:00 DEBUG 14692 --- [donbosco] [main] o.s.security.web.FilterChainProxy        : Secured GET /api/users
-2024-10-08T00:01:56.283+02:00 DEBUG 14692 --- [donbosco] [main] o.s.security.web.FilterChainProxy        : Securing GET /api/users/999
-2024-10-08T00:01:56.317+02:00 DEBUG 14692 --- [donbosco] [main] o.s.security.web.FilterChainProxy        : Secured GET /api/users/999
-2024-10-08T00:01:56.366+02:00 DEBUG 14692 --- [donbosco] [main] o.s.security.web.FilterChainProxy        : Securing DELETE /api/users/8
-2024-10-08T00:01:56.386+02:00 DEBUG 14692 --- [donbosco] [main] o.s.security.web.FilterChainProxy        : Secured DELETE /api/users/8
-2024-10-08T00:01:56.429+02:00  INFO 14692 --- [donbosco] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.donbosco.servicesTest.FlightServiceImplTest]: FlightServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2024-10-08T00:01:56.450+02:00  INFO 14692 --- [donbosco] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.donbosco.DonboscoApplication for test class com.donbosco.servicesTest.FlightServiceImplTest
-2024-10-08T00:01:56.458+02:00  INFO 14692 --- [donbosco] [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
-2024-10-08T00:01:56.499+02:00  INFO 14692 --- [donbosco] [main] c.d.servicesTest.FlightServiceImplTest   : Starting FlightServiceImplTest using Java 21.0.3 with PID 14692 (started by F5 02 SEV in C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp)
-2024-10-08T00:01:56.499+02:00  INFO 14692 --- [donbosco] [main] c.d.servicesTest.FlightServiceImplTest   : No active profile set, falling back to 1 default profile: "default"
-2024-10-08T00:01:57.445+02:00  INFO 14692 --- [donbosco] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-08T00:01:57.520+02:00  INFO 14692 --- [donbosco] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 75 ms. Found 3 JPA repository interfaces.
-2024-10-08T00:01:57.810+02:00  INFO 14692 --- [donbosco] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-08T00:01:57.817+02:00  INFO 14692 --- [donbosco] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-10-08T00:01:57.847+02:00  INFO 14692 --- [donbosco] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-08T00:01:57.849+02:00  INFO 14692 --- [donbosco] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
-2024-10-08T00:01:57.985+02:00  INFO 14692 --- [donbosco] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@117f1636
-2024-10-08T00:01:57.985+02:00  INFO 14692 --- [donbosco] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
-2024-10-08T00:01:57.986+02:00  WARN 14692 --- [donbosco] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-10-08T00:01:57.986+02:00  WARN 14692 --- [donbosco] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2024-10-08T00:01:58.415+02:00  INFO 14692 --- [donbosco] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-10-08T00:02:00.018+02:00  INFO 14692 --- [donbosco] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-08T00:02:00.184+02:00  INFO 14692 --- [donbosco] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
-2024-10-08T00:02:00.184+02:00  WARN 14692 --- [donbosco] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
-2024-10-08T00:02:00.255+02:00  WARN 14692 --- [donbosco] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-08T00:02:00.521+02:00  INFO 14692 --- [donbosco] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
-2024-10-08T00:02:00.560+02:00 DEBUG 14692 --- [donbosco] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, AuthTokenFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
-2024-10-08T00:02:00.947+02:00  INFO 14692 --- [donbosco] [main] c.d.servicesTest.FlightServiceImplTest   : Started FlightServiceImplTest in 4.489 seconds (process running for 30.781)
-2024-10-08T00:02:01.154+02:00  INFO 14692 --- [donbosco] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.donbosco.servicesTest.UserServiceImplTest]: UserServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2024-10-08T00:02:01.159+02:00  INFO 14692 --- [donbosco] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.donbosco.DonboscoApplication for test class com.donbosco.servicesTest.UserServiceImplTest
-2024-10-08T00:02:01.537+02:00  INFO 14692 --- [donbosco] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-08T00:02:01.541+02:00  INFO 14692 --- [donbosco] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-10-08T00:02:01.558+02:00  INFO 14692 --- [donbosco] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-10-08T00:02:01.564+02:00  INFO 14692 --- [donbosco] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-08T00:02:01.565+02:00  INFO 14692 --- [donbosco] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2024-10-08T00:02:01.576+02:00  INFO 14692 --- [donbosco] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
-2024-10-08T00:02:01.581+02:00  INFO 14692 --- [donbosco] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-08T00:02:01.582+02:00  INFO 14692 --- [donbosco] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
-2024-10-08T00:02:01.592+02:00  INFO 14692 --- [donbosco] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
-2024-10-08T00:05:34.557+02:00  INFO 3928 --- [donbosco] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-08T00:05:34.558+02:00  INFO 3928 --- [donbosco] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-23 - Shutdown initiated...
-2024-10-08T00:05:34.567+02:00  INFO 3928 --- [donbosco] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-23 - Shutdown completed.
-2024-10-08T00:05:46.331+02:00  INFO 17372 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Starting DonboscoApplication using Java 21.0.3 with PID 17372 (C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp\target\classes started by F5 02 SEV in C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp)
-2024-10-08T00:05:46.344+02:00  INFO 17372 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : No active profile set, falling back to 1 default profile: "default"
-2024-10-08T00:05:46.459+02:00  INFO 17372 --- [donbosco] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-10-08T00:05:46.460+02:00  INFO 17372 --- [donbosco] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-10-08T00:05:49.868+02:00  INFO 17372 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-08T00:05:50.040+02:00  INFO 17372 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 136 ms. Found 3 JPA repository interfaces.
-2024-10-08T00:05:52.228+02:00  INFO 17372 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
-2024-10-08T00:05:52.302+02:00  INFO 17372 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-10-08T00:05:52.304+02:00  INFO 17372 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-10-08T00:05:52.445+02:00  INFO 17372 --- [donbosco] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-10-08T00:05:52.447+02:00  INFO 17372 --- [donbosco] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5984 ms
-2024-10-08T00:05:53.424+02:00  INFO 17372 --- [donbosco] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-08T00:05:53.713+02:00  INFO 17372 --- [donbosco] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-10-08T00:05:53.832+02:00  INFO 17372 --- [donbosco] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-10-08T00:05:54.592+02:00  INFO 17372 --- [donbosco] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-08T00:05:54.659+02:00  INFO 17372 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-10-08T00:05:55.401+02:00  INFO 17372 --- [donbosco] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@debe067
-2024-10-08T00:05:55.408+02:00  INFO 17372 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-10-08T00:05:55.616+02:00  WARN 17372 --- [donbosco] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-10-08T00:05:55.619+02:00  WARN 17372 --- [donbosco] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2024-10-08T00:05:57.588+02:00  INFO 17372 --- [donbosco] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-10-08T00:05:58.751+02:00  INFO 17372 --- [donbosco] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-08T00:05:59.835+02:00  INFO 17372 --- [donbosco] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
-2024-10-08T00:05:59.838+02:00  WARN 17372 --- [donbosco] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
-2024-10-08T00:06:00.027+02:00  WARN 17372 --- [donbosco] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-08T00:06:01.284+02:00  INFO 17372 --- [donbosco] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 4 endpoints beneath base path '/actuator'
-2024-10-08T00:06:01.455+02:00 DEBUG 17372 --- [donbosco] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, AuthTokenFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
-2024-10-08T00:06:02.715+02:00  INFO 17372 --- [donbosco] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-10-08T00:06:02.931+02:00  INFO 17372 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
-2024-10-08T00:06:03.002+02:00  INFO 17372 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Started DonboscoApplication in 17.569 seconds (process running for 18.929)
-2024-10-08T00:06:05.035+02:00  INFO 17372 --- [donbosco] [RMI TCP Connection(3)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-10-08T00:06:05.036+02:00  INFO 17372 --- [donbosco] [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-10-08T00:06:05.041+02:00  INFO 17372 --- [donbosco] [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2024-10-08T03:43:51.571+02:00  WARN 17372 --- [donbosco] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3h1m55s438ms613µs800ns).
-2024-10-08T07:09:56.600+02:00  WARN 17372 --- [donbosco] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3h26m8s145ms35µs100ns).
-2024-10-08T07:15:29.785+02:00  INFO 17372 --- [donbosco] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2024-10-08T07:15:30.737+02:00  INFO 17372 --- [donbosco] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-08T07:15:30.865+02:00  INFO 17372 --- [donbosco] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-10-08T07:15:30.915+02:00  INFO 17372 --- [donbosco] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-10-08T07:15:31.873+02:00  INFO 17372 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Starting DonboscoApplication using Java 21.0.3 with PID 17372 (C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp\target\classes started by F5 02 SEV in C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp)
-2024-10-08T07:15:31.885+02:00  INFO 17372 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : No active profile set, falling back to 1 default profile: "default"
-2024-10-08T07:15:34.883+02:00  INFO 17372 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-08T07:15:35.088+02:00  INFO 17372 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 182 ms. Found 3 JPA repository interfaces.
-2024-10-08T07:15:36.089+02:00  INFO 17372 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
-2024-10-08T07:15:36.097+02:00  INFO 17372 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-10-08T07:15:36.107+02:00  INFO 17372 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-10-08T07:15:36.174+02:00  INFO 17372 --- [donbosco] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-10-08T07:15:36.177+02:00  INFO 17372 --- [donbosco] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4190 ms
-2024-10-08T07:15:36.677+02:00  INFO 17372 --- [donbosco] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-08T07:15:36.687+02:00  INFO 17372 --- [donbosco] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-10-08T07:15:36.767+02:00  INFO 17372 --- [donbosco] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-08T07:15:36.771+02:00  INFO 17372 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2024-10-08T07:15:36.865+02:00  INFO 17372 --- [donbosco] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3891d6cd
-2024-10-08T07:15:36.867+02:00  INFO 17372 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2024-10-08T07:15:36.869+02:00  WARN 17372 --- [donbosco] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-10-08T07:15:36.870+02:00  WARN 17372 --- [donbosco] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2024-10-08T07:15:37.373+02:00  INFO 17372 --- [donbosco] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-10-08T07:15:39.194+02:00  INFO 17372 --- [donbosco] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-08T07:15:40.725+02:00  INFO 17372 --- [donbosco] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
-2024-10-08T07:15:40.765+02:00  WARN 17372 --- [donbosco] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
-2024-10-08T07:15:40.925+02:00  WARN 17372 --- [donbosco] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-08T07:15:42.042+02:00  INFO 17372 --- [donbosco] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 4 endpoints beneath base path '/actuator'
-2024-10-08T07:15:42.131+02:00 DEBUG 17372 --- [donbosco] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, AuthTokenFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
-2024-10-08T07:15:42.913+02:00  INFO 17372 --- [donbosco] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-10-08T07:15:43.014+02:00  INFO 17372 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
-2024-10-08T07:15:43.140+02:00  INFO 17372 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Started DonboscoApplication in 11.556 seconds (process running for 25802.181)
-2024-10-08T07:15:43.149+02:00  INFO 17372 --- [donbosco] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2024-10-08T07:17:08.660+02:00  INFO 17372 --- [donbosco] [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-10-08T07:17:08.661+02:00  INFO 17372 --- [donbosco] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-10-08T07:17:08.665+02:00  INFO 17372 --- [donbosco] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2024-10-08T07:17:08.727+02:00 DEBUG 17372 --- [donbosco] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /actuator
-2024-10-08T07:17:08.761+02:00 DEBUG 17372 --- [donbosco] [http-nio-8082-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2024-10-08T07:17:08.775+02:00 DEBUG 17372 --- [donbosco] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /actuator
-2024-10-08T07:17:09.052+02:00 DEBUG 17372 --- [donbosco] [http-nio-8082-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
-2024-10-08T07:17:09.056+02:00 DEBUG 17372 --- [donbosco] [http-nio-8082-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2024-10-08T07:17:09.074+02:00 DEBUG 17372 --- [donbosco] [http-nio-8082-exec-2] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
-2024-10-08T07:17:09.091+02:00 DEBUG 17372 --- [donbosco] [http-nio-8082-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /error
-2024-10-08T07:17:09.097+02:00 DEBUG 17372 --- [donbosco] [http-nio-8082-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2024-10-08T07:17:09.099+02:00 DEBUG 17372 --- [donbosco] [http-nio-8082-exec-2] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
-2024-10-08T08:25:35.153+02:00  WARN 17372 --- [donbosco] [HikariPool-2 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=21m57s252ms808µs300ns).
-2024-10-08T08:28:38.767+02:00  INFO 22692 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Starting DonboscoApplication using Java 21.0.3 with PID 22692 (C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp\target\classes started by F5 02 SEV in C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp)
-2024-10-08T08:28:38.793+02:00  INFO 22692 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : No active profile set, falling back to 1 default profile: "default"
-2024-10-08T08:28:38.957+02:00  INFO 22692 --- [donbosco] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-10-08T08:28:38.964+02:00  INFO 22692 --- [donbosco] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-10-08T08:28:43.345+02:00  INFO 22692 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-08T08:28:43.545+02:00  INFO 22692 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 161 ms. Found 3 JPA repository interfaces.
-2024-10-08T08:28:45.690+02:00  INFO 22692 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-10-08T08:28:45.738+02:00  INFO 22692 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-10-08T08:28:45.741+02:00  INFO 22692 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-10-08T08:28:45.865+02:00  INFO 22692 --- [donbosco] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-10-08T08:28:45.867+02:00  INFO 22692 --- [donbosco] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6898 ms
-2024-10-08T08:28:46.673+02:00  INFO 22692 --- [donbosco] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-08T08:28:46.916+02:00  INFO 22692 --- [donbosco] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-10-08T08:28:47.048+02:00  INFO 22692 --- [donbosco] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-10-08T08:28:48.015+02:00  INFO 22692 --- [donbosco] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-08T08:28:48.090+02:00  INFO 22692 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-10-08T08:28:48.899+02:00  INFO 22692 --- [donbosco] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@74b08c97
-2024-10-08T08:28:48.905+02:00  INFO 22692 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-10-08T08:28:49.063+02:00  WARN 22692 --- [donbosco] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-10-08T08:28:49.069+02:00  WARN 22692 --- [donbosco] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2024-10-08T08:28:52.542+02:00  INFO 22692 --- [donbosco] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-10-08T08:28:54.330+02:00  INFO 22692 --- [donbosco] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-08T08:28:55.827+02:00  INFO 22692 --- [donbosco] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
-2024-10-08T08:28:55.838+02:00  WARN 22692 --- [donbosco] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
-2024-10-08T08:28:56.178+02:00  WARN 22692 --- [donbosco] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-08T08:28:58.024+02:00  INFO 22692 --- [donbosco] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 4 endpoints beneath base path '/actuator'
-2024-10-08T08:28:58.356+02:00 DEBUG 22692 --- [donbosco] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, AuthTokenFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
-2024-10-08T08:29:00.245+02:00  INFO 22692 --- [donbosco] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-10-08T08:29:00.509+02:00  INFO 22692 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-10-08T08:29:00.579+02:00  INFO 22692 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Started DonboscoApplication in 23.931 seconds (process running for 26.575)
-2024-10-08T08:29:00.757+02:00  INFO 22692 --- [donbosco] [RMI TCP Connection(3)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-10-08T08:29:00.759+02:00  INFO 22692 --- [donbosco] [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-10-08T08:29:00.764+02:00  INFO 22692 --- [donbosco] [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
-2024-10-08T08:29:15.128+02:00  INFO 22692 --- [donbosco] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2024-10-08T08:29:15.167+02:00  INFO 22692 --- [donbosco] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-08T08:29:15.179+02:00  INFO 22692 --- [donbosco] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-10-08T08:29:15.224+02:00  INFO 22692 --- [donbosco] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-10-08T08:29:15.417+02:00  INFO 22692 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Starting DonboscoApplication using Java 21.0.3 with PID 22692 (C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp\target\classes started by F5 02 SEV in C:\jmat_DEVOps\07_proyectos\FINAL_PROYECT\DonboscoApp)
-2024-10-08T08:29:15.418+02:00  INFO 22692 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : No active profile set, falling back to 1 default profile: "default"
-2024-10-08T08:29:16.928+02:00  INFO 22692 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-08T08:29:17.038+02:00  INFO 22692 --- [donbosco] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 109 ms. Found 3 JPA repository interfaces.
-2024-10-08T08:29:17.569+02:00  INFO 22692 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-10-08T08:29:17.571+02:00  INFO 22692 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-10-08T08:29:17.572+02:00  INFO 22692 --- [donbosco] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-10-08T08:29:17.642+02:00  INFO 22692 --- [donbosco] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-10-08T08:29:17.643+02:00  INFO 22692 --- [donbosco] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2220 ms
-2024-10-08T08:29:18.313+02:00  INFO 22692 --- [donbosco] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-08T08:29:18.334+02:00  INFO 22692 --- [donbosco] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-10-08T08:29:18.397+02:00  INFO 22692 --- [donbosco] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-08T08:29:18.402+02:00  INFO 22692 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2024-10-08T08:29:18.436+02:00  INFO 22692 --- [donbosco] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@35189bd1
-2024-10-08T08:29:18.437+02:00  INFO 22692 --- [donbosco] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2024-10-08T08:29:18.439+02:00  WARN 22692 --- [donbosco] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-10-08T08:29:18.439+02:00  WARN 22692 --- [donbosco] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2024-10-08T08:29:18.698+02:00  INFO 22692 --- [donbosco] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-10-08T08:29:18.940+02:00  INFO 22692 --- [donbosco] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-08T08:29:19.265+02:00  INFO 22692 --- [donbosco] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
-2024-10-08T08:29:19.266+02:00  WARN 22692 --- [donbosco] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
-2024-10-08T08:29:19.372+02:00  WARN 22692 --- [donbosco] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-08T08:29:19.904+02:00  INFO 22692 --- [donbosco] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 4 endpoints beneath base path '/actuator'
-2024-10-08T08:29:19.975+02:00 DEBUG 22692 --- [donbosco] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, AuthTokenFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
-2024-10-08T08:29:20.459+02:00  INFO 22692 --- [donbosco] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-10-08T08:29:20.513+02:00  INFO 22692 --- [donbosco] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-10-08T08:29:20.526+02:00  INFO 22692 --- [donbosco] [restartedMain] com.donbosco.DonboscoApplication         : Started DonboscoApplication in 5.19 seconds (process running for 46.522)
-2024-10-08T08:29:20.547+02:00  INFO 22692 --- [donbosco] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2024-10-08T08:29:43.362+02:00  INFO 22692 --- [donbosco] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-10-08T08:29:43.363+02:00  INFO 22692 --- [donbosco] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-10-08T08:29:43.368+02:00  INFO 22692 --- [donbosco] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
-2024-10-08T08:29:43.409+02:00 DEBUG 22692 --- [donbosco] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /actuator
-2024-10-08T08:29:43.431+02:00 DEBUG 22692 --- [donbosco] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2024-10-08T08:29:43.439+02:00 DEBUG 22692 --- [donbosco] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /actuator
-2024-10-08T08:29:43.629+02:00 DEBUG 22692 --- [donbosco] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
-2024-10-08T08:29:43.632+02:00 DEBUG 22692 --- [donbosco] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2024-10-08T08:29:43.643+02:00 DEBUG 22692 --- [donbosco] [http-nio-8080-exec-3] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
-2024-10-08T08:29:43.656+02:00 DEBUG 22692 --- [donbosco] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /error
-2024-10-08T08:29:43.661+02:00 DEBUG 22692 --- [donbosco] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2024-10-08T08:29:43.676+02:00 DEBUG 22692 --- [donbosco] [http-nio-8080-exec-3] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
-2024-10-08T08:51:33.262+02:00 DEBUG 22692 --- [donbosco] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /actuator
-2024-10-08T08:51:33.372+02:00 DEBUG 22692 --- [donbosco] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2024-10-08T08:51:33.407+02:00 DEBUG 22692 --- [donbosco] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /actuator
-2024-10-08T08:51:33.846+02:00 DEBUG 22692 --- [donbosco] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
-2024-10-08T08:51:33.853+02:00 DEBUG 22692 --- [donbosco] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2024-10-08T08:51:33.858+02:00 DEBUG 22692 --- [donbosco] [http-nio-8080-exec-5] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
-2024-10-08T08:51:33.865+02:00 DEBUG 22692 --- [donbosco] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /error
-2024-10-08T08:51:33.874+02:00 DEBUG 22692 --- [donbosco] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2024-10-08T08:51:33.881+02:00 DEBUG 22692 --- [donbosco] [http-nio-8080-exec-5] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
-2024-10-08T08:57:20.409+02:00 DEBUG 22692 --- [donbosco] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/flights/departure/Barcelona
-2024-10-08T08:57:21.213+02:00 DEBUG 22692 --- [donbosco] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2024-10-08T08:57:21.243+02:00 DEBUG 22692 --- [donbosco] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/flights/departure/Barcelona
-2024-10-08T08:57:34.307+02:00 DEBUG 22692 --- [donbosco] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/flights/departure/Huelva
-2024-10-08T08:57:34.312+02:00 DEBUG 22692 --- [donbosco] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2024-10-08T08:57:34.328+02:00 DEBUG 22692 --- [donbosco] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/flights/departure/Huelva
-2024-10-08T09:07:34.753+02:00  INFO 22692 --- [donbosco] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-08T09:07:34.805+02:00  INFO 22692 --- [donbosco] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2024-10-08T09:07:34.872+02:00  INFO 22692 --- [donbosco] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2024-10-08T11:52:36.433+02:00  INFO 25620 --- [donbosco] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-08T11:52:36.435+02:00  INFO 25620 --- [donbosco] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-08T11:52:36.441+02:00  INFO 25620 --- [donbosco] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2024-10-08T11:52:36.520+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/register
+2024-10-08T11:52:36.589+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-10-08T11:52:36.623+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/register
+2024-10-08T11:52:57.795+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/auth/login
+2024-10-08T11:52:57.800+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-10-08T11:52:57.803+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /api/auth/login
+2024-10-08T11:52:57.818+02:00  WARN 25620 --- [donbosco] [http-nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2024-10-08T11:53:10.957+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2024-10-08T11:53:10.959+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-10-08T11:53:10.960+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2024-10-08T11:53:11.567+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-2] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-10-08T11:56:08.097+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/users
+2024-10-08T11:56:08.285+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/users
+2024-10-08T11:59:44.073+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2024-10-08T11:59:44.075+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-10-08T11:59:44.078+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2024-10-08T11:59:44.181+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-5] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-10-08T12:11:58.694+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/reservation/create
+2024-10-08T12:11:58.697+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-10-08T12:11:58.717+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-4] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-10-08T12:11:58.760+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /error
+2024-10-08T12:11:58.765+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-10-08T12:11:58.769+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-4] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-10-08T12:12:35.312+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/reservation/create
+2024-10-08T12:12:35.318+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-10-08T12:12:35.322+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-2] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-10-08T12:12:35.327+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /error
+2024-10-08T12:12:35.331+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-10-08T12:12:35.333+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-2] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-10-08T12:14:20.149+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2024-10-08T12:14:20.152+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-10-08T12:14:20.154+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2024-10-08T12:14:20.261+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-3] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-10-08T12:14:35.992+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/users
+2024-10-08T12:14:36.022+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /api/users
+2024-10-08T12:16:11.722+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/register
+2024-10-08T12:16:11.726+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-10-08T12:16:11.729+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/register
+2024-10-08T12:19:23.383+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/reservation/create
+2024-10-08T12:19:23.436+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-2] o.s.s.w.access.AccessDeniedHandlerImpl   : Responding with 403 status code
+2024-10-08T12:19:23.440+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /error
+2024-10-08T12:19:23.442+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-10-08T12:19:23.442+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-2] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-10-08T12:20:46.243+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/reservation/create
+2024-10-08T12:20:46.284+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-3] o.s.s.w.access.AccessDeniedHandlerImpl   : Responding with 403 status code
+2024-10-08T12:20:46.289+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /error
+2024-10-08T12:20:46.290+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-10-08T12:20:46.292+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-3] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-10-08T12:26:36.028+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/flights
+2024-10-08T12:26:36.067+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /api/flights
+2024-10-08T12:26:36.423+02:00  WARN 25620 --- [donbosco] [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.donbosco.dto.FlightDto> com.donbosco.controllers.FlightController.createFlight(com.donbosco.dto.FlightDto) with 4 errors: [Field error in object 'flightDto' on field 'availableSeats': rejected value [0]; codes [Positive.flightDto.availableSeats,Positive.availableSeats,Positive.int,Positive]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [flightDto.availableSeats,availableSeats]; arguments []; default message [availableSeats]]; default message [debe ser mayor que 0]] [Field error in object 'flightDto' on field 'flightNumber': rejected value [null]; codes [NotBlank.flightDto.flightNumber,NotBlank.flightNumber,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [flightDto.flightNumber,flightNumber]; arguments []; default message [flightNumber]]; default message [no debe estar vacío]] [Field error in object 'flightDto' on field 'arrivalTime': rejected value [null]; codes [NotNull.flightDto.arrivalTime,NotNull.arrivalTime,NotNull.java.time.LocalDateTime,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [flightDto.arrivalTime,arrivalTime]; arguments []; default message [arrivalTime]]; default message [no debe ser nulo]] [Field error in object 'flightDto' on field 'departureTime': rejected value [null]; codes [NotNull.flightDto.departureTime,NotNull.departureTime,NotNull.java.time.LocalDateTime,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [flightDto.departureTime,departureTime]; arguments []; default message [departureTime]]; default message [no debe ser nulo]] ]
+2024-10-08T12:27:58.309+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /api/flights
+2024-10-08T12:27:58.347+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /api/flights
+2024-10-08T12:27:58.362+02:00  WARN 25620 --- [donbosco] [http-nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.donbosco.dto.FlightDto> com.donbosco.controllers.FlightController.createFlight(com.donbosco.dto.FlightDto) with 4 errors: [Field error in object 'flightDto' on field 'arrivalTime': rejected value [null]; codes [NotNull.flightDto.arrivalTime,NotNull.arrivalTime,NotNull.java.time.LocalDateTime,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [flightDto.arrivalTime,arrivalTime]; arguments []; default message [arrivalTime]]; default message [no debe ser nulo]] [Field error in object 'flightDto' on field 'availableSeats': rejected value [0]; codes [Positive.flightDto.availableSeats,Positive.availableSeats,Positive.int,Positive]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [flightDto.availableSeats,availableSeats]; arguments []; default message [availableSeats]]; default message [debe ser mayor que 0]] [Field error in object 'flightDto' on field 'flightNumber': rejected value [null]; codes [NotBlank.flightDto.flightNumber,NotBlank.flightNumber,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [flightDto.flightNumber,flightNumber]; arguments []; default message [flightNumber]]; default message [no debe estar vacío]] [Field error in object 'flightDto' on field 'departureTime': rejected value [null]; codes [NotNull.flightDto.departureTime,NotNull.departureTime,NotNull.java.time.LocalDateTime,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [flightDto.departureTime,departureTime]; arguments []; default message [departureTime]]; default message [no debe ser nulo]] ]
+2024-10-08T12:28:17.496+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/flights
+2024-10-08T12:28:17.539+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/flights
+2024-10-08T12:28:17.550+02:00  WARN 25620 --- [donbosco] [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.donbosco.dto.FlightDto> com.donbosco.controllers.FlightController.createFlight(com.donbosco.dto.FlightDto) with 4 errors: [Field error in object 'flightDto' on field 'arrivalTime': rejected value [null]; codes [NotNull.flightDto.arrivalTime,NotNull.arrivalTime,NotNull.java.time.LocalDateTime,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [flightDto.arrivalTime,arrivalTime]; arguments []; default message [arrivalTime]]; default message [no debe ser nulo]] [Field error in object 'flightDto' on field 'availableSeats': rejected value [0]; codes [Positive.flightDto.availableSeats,Positive.availableSeats,Positive.int,Positive]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [flightDto.availableSeats,availableSeats]; arguments []; default message [availableSeats]]; default message [debe ser mayor que 0]] [Field error in object 'flightDto' on field 'flightNumber': rejected value [null]; codes [NotBlank.flightDto.flightNumber,NotBlank.flightNumber,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [flightDto.flightNumber,flightNumber]; arguments []; default message [flightNumber]]; default message [no debe estar vacío]] [Field error in object 'flightDto' on field 'departureTime': rejected value [null]; codes [NotNull.flightDto.departureTime,NotNull.departureTime,NotNull.java.time.LocalDateTime,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [flightDto.departureTime,departureTime]; arguments []; default message [departureTime]]; default message [no debe ser nulo]] ]
+2024-10-08T12:28:49.459+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /api/flights/create
+2024-10-08T12:28:49.512+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-7] o.s.s.w.access.AccessDeniedHandlerImpl   : Responding with 403 status code
+2024-10-08T12:28:49.516+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /error
+2024-10-08T12:28:49.519+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-10-08T12:28:49.520+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-7] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2024-10-08T12:29:20.025+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/register
+2024-10-08T12:29:20.027+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-10-08T12:29:20.028+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/register
+2024-10-08T12:32:19.709+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2024-10-08T12:32:19.712+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-10-08T12:32:19.715+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2024-10-08T12:32:19.826+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-5] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-10-08T12:34:29.859+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/flights/create
+2024-10-08T12:34:29.906+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /api/flights/create
+2024-10-08T12:34:29.915+02:00  WARN 25620 --- [donbosco] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2024-10-08T12:34:50.393+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /api/flights
+2024-10-08T12:34:50.430+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /api/flights
+2024-10-08T12:34:50.444+02:00  WARN 25620 --- [donbosco] [http-nio-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.donbosco.dto.FlightDto> com.donbosco.controllers.FlightController.createFlight(com.donbosco.dto.FlightDto) with 4 errors: [Field error in object 'flightDto' on field 'arrivalTime': rejected value [null]; codes [NotNull.flightDto.arrivalTime,NotNull.arrivalTime,NotNull.java.time.LocalDateTime,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [flightDto.arrivalTime,arrivalTime]; arguments []; default message [arrivalTime]]; default message [no debe ser nulo]] [Field error in object 'flightDto' on field 'availableSeats': rejected value [0]; codes [Positive.flightDto.availableSeats,Positive.availableSeats,Positive.int,Positive]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [flightDto.availableSeats,availableSeats]; arguments []; default message [availableSeats]]; default message [debe ser mayor que 0]] [Field error in object 'flightDto' on field 'flightNumber': rejected value [null]; codes [NotBlank.flightDto.flightNumber,NotBlank.flightNumber,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [flightDto.flightNumber,flightNumber]; arguments []; default message [flightNumber]]; default message [no debe estar vacío]] [Field error in object 'flightDto' on field 'departureTime': rejected value [null]; codes [NotNull.flightDto.departureTime,NotNull.departureTime,NotNull.java.time.LocalDateTime,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [flightDto.departureTime,departureTime]; arguments []; default message [departureTime]]; default message [no debe ser nulo]] ]
+2024-10-08T12:35:38.649+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/flights/create
+2024-10-08T12:35:38.687+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/flights/create
+2024-10-08T12:35:38.691+02:00  WARN 25620 --- [donbosco] [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2024-10-08T12:35:54.986+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /api/flights
+2024-10-08T12:35:55.041+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /api/flights
+2024-10-08T12:35:55.055+02:00  WARN 25620 --- [donbosco] [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.donbosco.dto.FlightDto> com.donbosco.controllers.FlightController.createFlight(com.donbosco.dto.FlightDto) with 4 errors: [Field error in object 'flightDto' on field 'availableSeats': rejected value [0]; codes [Positive.flightDto.availableSeats,Positive.availableSeats,Positive.int,Positive]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [flightDto.availableSeats,availableSeats]; arguments []; default message [availableSeats]]; default message [debe ser mayor que 0]] [Field error in object 'flightDto' on field 'flightNumber': rejected value [null]; codes [NotBlank.flightDto.flightNumber,NotBlank.flightNumber,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [flightDto.flightNumber,flightNumber]; arguments []; default message [flightNumber]]; default message [no debe estar vacío]] [Field error in object 'flightDto' on field 'departureTime': rejected value [null]; codes [NotNull.flightDto.departureTime,NotNull.departureTime,NotNull.java.time.LocalDateTime,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [flightDto.departureTime,departureTime]; arguments []; default message [departureTime]]; default message [no debe ser nulo]] [Field error in object 'flightDto' on field 'arrivalTime': rejected value [null]; codes [NotNull.flightDto.arrivalTime,NotNull.arrivalTime,NotNull.java.time.LocalDateTime,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [flightDto.arrivalTime,arrivalTime]; arguments []; default message [arrivalTime]]; default message [no debe ser nulo]] ]
+2024-10-08T12:36:24.509+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/flights
+2024-10-08T12:36:24.543+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/flights
+2024-10-08T12:36:24.559+02:00  WARN 25620 --- [donbosco] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.donbosco.dto.FlightDto> com.donbosco.controllers.FlightController.createFlight(com.donbosco.dto.FlightDto) with 4 errors: [Field error in object 'flightDto' on field 'flightNumber': rejected value [null]; codes [NotBlank.flightDto.flightNumber,NotBlank.flightNumber,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [flightDto.flightNumber,flightNumber]; arguments []; default message [flightNumber]]; default message [no debe estar vacío]] [Field error in object 'flightDto' on field 'departureTime': rejected value [null]; codes [NotNull.flightDto.departureTime,NotNull.departureTime,NotNull.java.time.LocalDateTime,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [flightDto.departureTime,departureTime]; arguments []; default message [departureTime]]; default message [no debe ser nulo]] [Field error in object 'flightDto' on field 'arrivalTime': rejected value [null]; codes [NotNull.flightDto.arrivalTime,NotNull.arrivalTime,NotNull.java.time.LocalDateTime,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [flightDto.arrivalTime,arrivalTime]; arguments []; default message [arrivalTime]]; default message [no debe ser nulo]] [Field error in object 'flightDto' on field 'availableSeats': rejected value [0]; codes [Positive.flightDto.availableSeats,Positive.availableSeats,Positive.int,Positive]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [flightDto.availableSeats,availableSeats]; arguments []; default message [availableSeats]]; default message [debe ser mayor que 0]] ]
+2024-10-08T12:37:31.573+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/flights
+2024-10-08T12:37:31.617+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /api/flights
+2024-10-08T12:37:31.631+02:00  WARN 25620 --- [donbosco] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.donbosco.dto.FlightDto> com.donbosco.controllers.FlightController.createFlight(com.donbosco.dto.FlightDto) with 4 errors: [Field error in object 'flightDto' on field 'flightNumber': rejected value [null]; codes [NotBlank.flightDto.flightNumber,NotBlank.flightNumber,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [flightDto.flightNumber,flightNumber]; arguments []; default message [flightNumber]]; default message [no debe estar vacío]] [Field error in object 'flightDto' on field 'departureTime': rejected value [null]; codes [NotNull.flightDto.departureTime,NotNull.departureTime,NotNull.java.time.LocalDateTime,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [flightDto.departureTime,departureTime]; arguments []; default message [departureTime]]; default message [no debe ser nulo]] [Field error in object 'flightDto' on field 'arrivalTime': rejected value [null]; codes [NotNull.flightDto.arrivalTime,NotNull.arrivalTime,NotNull.java.time.LocalDateTime,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [flightDto.arrivalTime,arrivalTime]; arguments []; default message [arrivalTime]]; default message [no debe ser nulo]] [Field error in object 'flightDto' on field 'availableSeats': rejected value [0]; codes [Positive.flightDto.availableSeats,Positive.availableSeats,Positive.int,Positive]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [flightDto.availableSeats,availableSeats]; arguments []; default message [availableSeats]]; default message [debe ser mayor que 0]] ]
+2024-10-08T12:37:54.642+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /api/flights
+2024-10-08T12:37:54.677+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /api/flights
+2024-10-08T12:37:54.692+02:00  WARN 25620 --- [donbosco] [http-nio-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.donbosco.dto.FlightDto> com.donbosco.controllers.FlightController.createFlight(com.donbosco.dto.FlightDto) with 3 errors: [Field error in object 'flightDto' on field 'arrivalTime': rejected value [null]; codes [NotNull.flightDto.arrivalTime,NotNull.arrivalTime,NotNull.java.time.LocalDateTime,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [flightDto.arrivalTime,arrivalTime]; arguments []; default message [arrivalTime]]; default message [no debe ser nulo]] [Field error in object 'flightDto' on field 'availableSeats': rejected value [0]; codes [Positive.flightDto.availableSeats,Positive.availableSeats,Positive.int,Positive]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [flightDto.availableSeats,availableSeats]; arguments []; default message [availableSeats]]; default message [debe ser mayor que 0]] [Field error in object 'flightDto' on field 'departureTime': rejected value [null]; codes [NotNull.flightDto.departureTime,NotNull.departureTime,NotNull.java.time.LocalDateTime,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [flightDto.departureTime,departureTime]; arguments []; default message [departureTime]]; default message [no debe ser nulo]] ]
+2024-10-08T12:38:40.096+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/flights
+2024-10-08T12:38:40.139+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/flights
+2024-10-08T12:49:13.309+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/reservation
+2024-10-08T12:49:13.361+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /api/reservation
+2024-10-08T12:49:13.373+02:00  WARN 25620 --- [donbosco] [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/reservation.]
+2024-10-08T12:49:30.629+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /api/reservation
+2024-10-08T12:49:30.672+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /api/reservation
+2024-10-08T12:49:30.693+02:00  WARN 25620 --- [donbosco] [http-nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/reservation.]
+2024-10-08T12:50:00.956+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/reservation
+2024-10-08T12:50:01.001+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/reservation
+2024-10-08T12:50:01.005+02:00  WARN 25620 --- [donbosco] [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/reservation.]
+2024-10-08T12:50:27.862+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /api/reservations
+2024-10-08T12:50:27.904+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /api/reservations
+2024-10-08T12:50:27.933+02:00  WARN 25620 --- [donbosco] [http-nio-8080-exec-7] .c.j.MappingJackson2HttpMessageConverter : Failed to evaluate Jackson deserialization for type [[simple type, class com.donbosco.models.Reservation]]: com.fasterxml.jackson.databind.exc.InvalidDefinitionException: Multiple back-reference properties with name 'defaultReference'
+2024-10-08T12:50:27.939+02:00  WARN 25620 --- [donbosco] [http-nio-8080-exec-7] .c.j.MappingJackson2HttpMessageConverter : Failed to evaluate Jackson deserialization for type [[simple type, class com.donbosco.models.Reservation]]: com.fasterxml.jackson.databind.exc.InvalidDefinitionException: Multiple back-reference properties with name 'defaultReference'
+2024-10-08T12:50:27.954+02:00  WARN 25620 --- [donbosco] [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'application/json;charset=UTF-8' is not supported]
+2024-10-08T12:51:02.375+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing POST /api/reservations
+2024-10-08T12:51:02.414+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured POST /api/reservations
+2024-10-08T12:51:02.419+02:00  WARN 25620 --- [donbosco] [http-nio-8080-exec-9] .c.j.MappingJackson2HttpMessageConverter : Failed to evaluate Jackson deserialization for type [[simple type, class com.donbosco.models.Reservation]]: com.fasterxml.jackson.databind.exc.InvalidDefinitionException: Multiple back-reference properties with name 'defaultReference'
+2024-10-08T12:51:02.425+02:00  WARN 25620 --- [donbosco] [http-nio-8080-exec-9] .c.j.MappingJackson2HttpMessageConverter : Failed to evaluate Jackson deserialization for type [[simple type, class com.donbosco.models.Reservation]]: com.fasterxml.jackson.databind.exc.InvalidDefinitionException: Multiple back-reference properties with name 'defaultReference'
+2024-10-08T12:51:02.431+02:00  WARN 25620 --- [donbosco] [http-nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'application/json;charset=UTF-8' is not supported]
+2024-10-08T12:51:13.603+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/reservations
+2024-10-08T12:51:13.637+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /api/reservations
+2024-10-08T12:51:13.645+02:00  WARN 25620 --- [donbosco] [http-nio-8080-exec-5] .c.j.MappingJackson2HttpMessageConverter : Failed to evaluate Jackson deserialization for type [[simple type, class com.donbosco.models.Reservation]]: com.fasterxml.jackson.databind.exc.InvalidDefinitionException: Multiple back-reference properties with name 'defaultReference'
+2024-10-08T12:51:13.648+02:00  WARN 25620 --- [donbosco] [http-nio-8080-exec-5] .c.j.MappingJackson2HttpMessageConverter : Failed to evaluate Jackson deserialization for type [[simple type, class com.donbosco.models.Reservation]]: com.fasterxml.jackson.databind.exc.InvalidDefinitionException: Multiple back-reference properties with name 'defaultReference'
+2024-10-08T12:51:13.653+02:00  WARN 25620 --- [donbosco] [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'application/json;charset=UTF-8' is not supported]
+2024-10-08T12:56:16.186+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /sales/reserve
+2024-10-08T12:56:16.221+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /sales/reserve
+2024-10-08T12:56:16.237+02:00  WARN 25620 --- [donbosco] [http-nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource sales/reserve.]
+2024-10-08T12:56:42.765+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/sales/reserve
+2024-10-08T12:56:42.807+02:00 DEBUG 25620 --- [donbosco] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/sales/reserve
+2024-10-08T15:28:49.471+02:00  INFO 25620 --- [donbosco] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-08T15:28:49.490+02:00  INFO 25620 --- [donbosco] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-08T15:28:49.498+02:00  INFO 25620 --- [donbosco] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
