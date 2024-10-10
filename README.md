@@ -71,7 +71,7 @@ Extras:
 ![KEY POINTS](src/main/resources/Docker.jpg)
 
 
-# Monitoriaación en Docker
+# Monitorizaación en Docker
 ![KEY POINTS](src/main/resources/Docker_Grafana.jpg)
 
 # Recurso Extra: El Frontend
