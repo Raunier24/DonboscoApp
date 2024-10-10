@@ -21,13 +21,13 @@ import com.donbosco.services.IFlightService;
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("/flights")
+@RequestMapping("/api/flights")
 public class FlightController {
 
     @Autowired
     private IFlightService flightService;
 
-    @GetMapping ("/")
+    @GetMapping
     public ResponseEntity<List<FlightDto>> getAllFlights() {
         List<FlightDto> flights = flightService.getAllFlights();
         if (flights.isEmpty()) {
@@ -42,7 +42,17 @@ public class FlightController {
         return ResponseEntity.ok(flight);  // Código 200: OK si el vuelo existe
     }
 
-    @PostMapping ("/")
+    @GetMapping("/departure/{departure}")
+    public ResponseEntity<List<FlightDto>> getFlightsByDeparture(@PathVariable String departure) {
+    List<FlightDto> flights = flightService.findByByDeparture(departure);
+        if (flights.isEmpty()) {
+            return ResponseEntity.noContent().build();  // Código 204: No Content si no hay vuelos con esa ciudad de salida
+        }
+        return ResponseEntity.ok(flights);  // Código 200: OK si se encuentran vuelos
+    }
+
+
+    @PostMapping
     public ResponseEntity<FlightDto> createFlight(@Valid @RequestBody FlightDto flightDto) {
         try {
             FlightDto createdFlight = flightService.save(flightDto);
@@ -55,7 +65,7 @@ public class FlightController {
     @PutMapping("/{id}")
     public ResponseEntity<FlightDto> updateFlight(@PathVariable Long id, @Valid @RequestBody FlightDto flightDto) {
         try {
-            FlightDto updatedFlight = flightService.save(flightDto);
+            FlightDto updatedFlight = flightService.updateFlight(id, flightDto);
             return ResponseEntity.ok(updatedFlight); // Código 200: OK si se actualiza correctamente
         } catch (ResourceNotFoundException ex) {
             throw new ResourceNotFoundException("Flight not found with id: " + id); // Código 404: Not Found si el vuelo no existe
@@ -73,4 +83,5 @@ public class FlightController {
             throw new ResourceNotFoundException("Flight not found with id: " + id);  // Código 404: Not Found si no se encuentra
         } 
     }
+
 }

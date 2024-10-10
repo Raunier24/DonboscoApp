@@ -1,11 +1,12 @@
 package com.donbosco.services;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
-import com.donbosco.repositories.IReservationRepository;
 import org.springframework.stereotype.Service;
 
 import com.donbosco.models.Reservation;
+import com.donbosco.repositories.IReservationRepository;
 
 @Service
 public class ReservationService {
@@ -35,9 +36,9 @@ public class ReservationService {
 
     public Reservation updateReservation(Long id, Reservation reservationDetails) {
         Reservation existingReservation = findReservationById(id);
-        existingReservation.setName(reservationDetails.getName());
-        existingReservation.setDetails(reservationDetails.getDetails());
+        existingReservation.setReservationDate(LocalDateTime.now());
+        existingReservation.setSeats(existingReservation.getSeats());
         return reservationRepository.save(existingReservation);
     }
-    
+
 }

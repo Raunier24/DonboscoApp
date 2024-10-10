@@ -4,24 +4,28 @@ import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToMany;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
-import lombok.EqualsAndHashCode;
 
 @Entity
 @Table(name = "flight")
 public class Flight {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @EqualsAndHashCode.Include
     private Long id;
 
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false)
     private String flightNumber;
 
     @Column
@@ -37,119 +41,132 @@ public class Flight {
     private LocalDateTime arrivalTime;
 
     @Column
-    private int availableSeats;
+    private Integer seats;
+
+    @Column
+    private Integer availableSeats;
 
     @Column
     private boolean status;
 
-    //@OneToMany(mappedBy = "flight", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
-    //private Set<Reservation> reservations;
+    @OneToMany(mappedBy = "flight", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+    @JsonManagedReference
+    private Set<Reservation> reservations = new HashSet<>();
 
     @ManyToMany(mappedBy = "flights")
+    @JsonBackReference
     private Set<User> users = new HashSet<>();
 
-    public Flight() {
-
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getFlightNumber() {
-        return flightNumber;
-    }
-
-    public void setFlightNumber(String flightNumber) {
+    // Constructor privado para uso solo del Builder
+    private Flight(String flightNumber, String departure, String destination,
+                   LocalDateTime departureTime, LocalDateTime arrivalTime,
+                   Integer seats, Integer availableSeats, boolean status,
+                   Set<Reservation> reservations, Set<User> users) {
         this.flightNumber = flightNumber;
-    }
-
-    public String getDeparture() {
-        return departure;
-    }
-
-    public void setDeparture(String departure) {
         this.departure = departure;
-    }
-
-    public String getDestination() {
-        return destination;
-    }
-
-    public void setDestination(String destination) {
         this.destination = destination;
-    }
-
-    public LocalDateTime getDepartureTime() {
-        return departureTime;
-    }
-
-    public void setDepartureTime(LocalDateTime departureTime) {
         this.departureTime = departureTime;
-    }
-
-    public LocalDateTime getArrivalTime() {
-        return arrivalTime;
-    }
-
-    public void setArrivalTime(LocalDateTime arrivalTime) {
         this.arrivalTime = arrivalTime;
-    }
-
-    public int getAvailableSeats() {
-        return availableSeats;
-    }
-
-    public void setAvailableSeats(int availableSeats) {
+        this.seats = seats;
         this.availableSeats = availableSeats;
-    }
-
-    public boolean isStatus() {
-        return status;
-    }
-
-    public void setStatus(boolean status) {
         this.status = status;
-    }
-
-    public Set<User> getUsers() {
-        return users;
-    }
-
-    public void setUsers(Set<User> users) {
+        this.reservations = reservations;
         this.users = users;
     }
 
-    @Override //tanto hascode usa id tecnico
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + ((id == null) ? 0 : id.hashCode());
-        return result;
+    // Constructor sin parámetros para JPA
+    public Flight() {}
+
+    // Getters
+    public Long getId() { return id; }
+    public String getFlightNumber() { return flightNumber; }
+    public String getDeparture() { return departure; }
+    public String getDestination() { return destination; }
+    public LocalDateTime getDepartureTime() { return departureTime; }
+    public LocalDateTime getArrivalTime() { return arrivalTime; }
+    public Integer getSeats() { return seats; }
+    public Integer getAvailableSeats() { return availableSeats; }
+    public boolean isStatus() { return status; }
+    public Set<Reservation> getReservations() { return reservations; }
+    public Set<User> getUsers() { return users; }
+
+    // Setters
+    public void setId(Long id) { this.id = id; }
+    public void setFlightNumber(String flightNumber) { this.flightNumber = flightNumber; }
+    public void setDeparture(String departure) { this.departure = departure; }
+    public void setDestination(String destination) { this.destination = destination; }
+    public void setAvailableSeats(Integer availableSeats) { this.availableSeats = availableSeats; }
+    public void setStatus(boolean status) { this.status = status; }
+    public void setDepartureTime(LocalDateTime departureTime) { this.departureTime = departureTime; }
+    public void setArrivalTime(LocalDateTime arrivalTime) { this.arrivalTime = arrivalTime; }
+
+    // Clase Builder
+    public static class FlightBuilder {
+        private String flightNumber;
+        private String departure;
+        private String destination;
+        private LocalDateTime departureTime;
+        private LocalDateTime arrivalTime;
+        private Integer seats;
+        private Integer availableSeats;
+        private boolean status;
+        private Set<Reservation> reservations = new HashSet<>();
+        private Set<User> users = new HashSet<>();
+
+        public FlightBuilder setFlightNumber(String flightNumber) {
+            this.flightNumber = flightNumber;
+            return this;
+        }
+
+        public FlightBuilder setDeparture(String departure) {
+            this.departure = departure;
+            return this;
+        }
+
+        public FlightBuilder setDestination(String destination) {
+            this.destination = destination;
+            return this;
+        }
+
+        public FlightBuilder setDepartureTime(LocalDateTime departureTime) {
+            this.departureTime = departureTime;
+            return this;
+        }
+
+        public FlightBuilder setArrivalTime(LocalDateTime arrivalTime) {
+            this.arrivalTime = arrivalTime;
+            return this;
+        }
+
+        public FlightBuilder setSeats(Integer seats) {
+            this.seats = seats;
+            return this;
+        }
+
+        public FlightBuilder setAvailableSeats(Integer availableSeats) {
+            this.availableSeats = availableSeats;
+            return this;
+        }
+
+        public FlightBuilder setStatus(boolean status) {
+            this.status = status;
+            return this;
+        }
+
+        public FlightBuilder setReservations(Set<Reservation> reservations) {
+            this.reservations = reservations;
+            return this;
+        }
+
+        public FlightBuilder setUsers(Set<User> users) {
+            this.users = users;
+            return this;
+        }
+
+        public Flight build() {
+            return new Flight(flightNumber, departure, destination,
+                    departureTime, arrivalTime, seats,
+                    availableSeats, status, reservations, users);
+        }
     }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj)
-            return true;
-        if (obj == null)
-            return false;
-        if (getClass() != obj.getClass())
-            return false;
-        Flight other = (Flight) obj;
-        if (id == null) {
-            if (other.id != null)
-                return false;
-        } else if (!id.equals(other.id))
-            return false;
-        return true;
-    }
-
-    
-
-   
 }

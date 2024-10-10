@@ -11,7 +11,9 @@ public interface IFlightService {
     public FlightDto save(@Valid FlightDto FlightDto);
     public FlightDto get(Long id);
     public List<FlightDto> getAllFlights();
+    public FlightDto updateFlight(Long id, @Valid FlightDto flightDto);
     public void delete(Long id);
+    public List<FlightDto> findByByDeparture(String departure);
     
     
 }
