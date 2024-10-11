@@ -27,6 +27,8 @@
 7. [Deployment in Docker](#deployment-in-docker)
 8. [Monitoring](#monitoring)
 9. [Extra Resources](#extra-resources)
+10. [Contribution Guide](#contribution-guide)
+11. [Copyright and License](#copyright-and-license)
 
 ## Project Description
 
